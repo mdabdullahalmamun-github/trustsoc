@@ -58,19 +58,26 @@ trustsoc/
 │   ├── parse_attack.py          parses the MITRE ATT&CK STIX bundle
 │   ├── parse_vulnerabilities.py parses NVD CVE feeds and the CISA KEV CSV
 │   ├── build_kb.py              embeds and indexes everything into ChromaDB
-│   └── rag_pipeline.py          the citation-enforcing prompt, retriever, and generation
+│   └── rag_pipeline.py          the citation-enforcing prompt, retriever, citation
+│                                 validation, and generation
 ├── ui/
 │   └── dashboard.py         Streamlit dashboard - visual demo with a trust-signals panel
 ├── demo/
-│   ├── Live_Demo.py             interactive terminal demo (RAG vs no-RAG, side by side)
-│   └── test_retrieval.py        standalone retrieval-quality check
+│   └── Live_Demo.py             interactive terminal demo (RAG vs no-RAG, side by side)
 ├── kb/                      generated ChromaDB vector store (not committed - see below)
 ├── evaluation/, results/, figures/, tests/   Phase 4/5 evaluation work (in progress)
 ├── check_setup.py           verifies the environment is set up correctly
+├── check_retrieval.py       manual retrieval-quality check (run after building the knowledge base)
 ├── setup_project.py         one-time script that scaffolded this project (already run)
 ├── requirements.txt         pinned dependency versions
 └── .gitignore
 ```
+
+> `check_retrieval.py` was moved from `demo/` to the project root and renamed
+> from `test_retrieval.py` — it's a manual, human-read sanity check (not an
+> automated test, despite the old name), so it's grouped with `check_setup.py`
+> rather than the interactive demos or the automated suite that will live in
+> `tests/` once Phase 4 adds it.
 
 ---
 
@@ -88,13 +95,23 @@ trustsoc/
    **source-balanced**: half the results are guaranteed to come from
    MITRE ATT&CK and half from NVD/KEV, so a query about a technique isn't
    drowned out by the much larger number of CVE records (32,779 CVEs vs
-   697 ATT&CK techniques in this knowledge base).
+   697 ATT&CK techniques in this knowledge base). Retrieval is also
+   **relevance-filtered**: chunks beyond a cosine-distance threshold
+   (`RELEVANCE_THRESHOLD`, currently 0.5, to be calibrated in Phase 4) are
+   discarded rather than handed to the model regardless of quality. If
+   nothing passes the threshold, the system returns the standard
+   insufficient-context message without calling the model at all.
 4. **Generation** (`pipeline/rag_pipeline.py`, function `trustsoc_answer()`) -
    the retrieved chunks are inserted into a citation-enforcing prompt and
    sent to the chosen model via Ollama at `temperature=0`. The prompt
    requires the model to cite its sources in `[MITRE ATT&CK Txxxx]` format
    and to explicitly say when it doesn't have enough information, rather
    than guess.
+5. **Citation validation** (`pipeline/rag_pipeline.py`, function
+   `validate_citations()`) - every technique ID and CVE ID the model cites
+   in its answer is checked against what was actually retrieved, flagging
+   any fabricated citations. This feeds into the Phase 4 faithfulness
+   scorer alongside CTIBench-ATE ground-truth matching.
 
 ---
 
@@ -171,11 +188,11 @@ only indexes anything new.
 
 **Quick sanity check that retrieval actually works:**
 ```powershell
-python demo\test_retrieval.py
+python check_retrieval.py
 ```
 Runs three representative queries and prints the top matches with their
 distances - useful after rebuilding the knowledge base, or after changing
-any of the data sources.
+`pipeline/rag_pipeline.py`.
 
 ---
 
@@ -201,6 +218,11 @@ how many sources are retrieved, and see a live trust-signals panel
 > backend (VRAM exhaustion). Keep `k=5` for reliable results, especially
 > with the larger model.
 
+> **Note on the "Sources to retrieve" slider:** this sets a maximum, not a
+> guaranteed count. If fewer chunks pass the relevance threshold than the
+> slider requests, fewer are shown — the system never pads results with
+> irrelevant chunks just to reach the selected number.
+
 ---
 
 ## Design notes
@@ -220,6 +242,23 @@ how many sources are retrieved, and see a live trust-signals panel
   because naive search let the much larger number of CVE chunks
   (32,779) drown out relevant ATT&CK techniques (697) for
   technique-style queries. See `pipeline/rag_pipeline.py`, `retrieve()`.
+- **Retrieval is relevance-filtered**, not just top-k. Earlier, `retrieve()`
+  always returned exactly `k` chunks regardless of how relevant they
+  actually were, so the model's own refusal instruction was the only
+  safeguard against being handed poor-quality context. A cosine-distance
+  threshold (`RELEVANCE_THRESHOLD = 0.5`) now makes retrieval itself
+  responsible for recognising when nothing useful was found. This value
+  is a starting point, not yet empirically validated — calibrating it
+  against hand-labelled examples is planned as part of Phase 4.
+- **Citations are validated, not just requested.** The prompt asks the
+  model to cite technique/CVE IDs, but nothing previously checked whether
+  those IDs were genuinely present in the retrieved context.
+  `validate_citations()` closes that gap, flagging fabricated citations
+  for use in the Phase 4 faithfulness scoring.
+- **Generation failures are non-fatal.** `generate()` catches connection
+  errors from Ollama (not just malformed responses) and retries, so a
+  single dropped connection during a long batch evaluation run degrades
+  to one logged failure rather than crashing the entire run.
 
 ---
 
@@ -230,7 +269,7 @@ how many sources are retrieved, and see a live trust-signals panel
 | 0 - Environment setup | Complete |
 | 1 - Literature review | In progress |
 | 2 - Knowledge base | Complete (35,111 chunks; retrieval tested and fixed) |
-| 3 - RAG pipeline & dashboard | Complete (both models tested, terminal + dashboard demos working) |
+| 3 - RAG pipeline & dashboard | Complete (both models tested, terminal + dashboard demos working; relevance filtering and citation validation added) |
 | 4 - Evaluation datasets | In progress |
 | 5 - Results & statistical analysis | Not started |
 
@@ -245,3 +284,4 @@ how many sources are retrieved, and see a live trust-signals panel
 | Ollama connection errors | Make sure the Ollama app is running (check the system tray), or run `ollama serve` |
 | `chromadb.errors.InternalError: too many SQL variables` | Fixed in `build_kb.py` - existing IDs are now fetched in paginated batches |
 | Dashboard crashes with a CUDA/stack-overrun error | VRAM exhausted - reduce "Sources to retrieve" to 5, especially when using `llama3` |
+| ChromaDB error requesting 0 results | Fixed in `rag_pipeline.py` - `retrieve()` now guards against zero-count queries at `k=1` |
