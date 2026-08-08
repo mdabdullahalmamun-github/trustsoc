@@ -1,0 +1,40 @@
+{
+    // Points VS Code at your existing virtual environment so it uses the
+    // right interpreter and packages automatically (no need to activate
+    // manually inside the integrated terminal every time you open a file)
+    "python.defaultInterpreterPath": "${workspaceFolder}\\trustsoc_env\\Scripts\\python.exe",
+
+    // Makes the project root importable, so `from pipeline.rag_pipeline import ...`
+    // resolves correctly no matter which file you're editing (demo/, ui/, pipeline/)
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+
+    // Integrated terminal opens already in the project root and auto-activates
+    // the venv, so `python demo\\Live_Demo.py` etc. work exactly as before
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "python.terminal.activateEnvironment": true,
+
+    // Keep notebook outputs readable, matches your build notebook workflow
+    "jupyter.askForKernelRestart": false,
+
+    // Don't let the editor try to index your venv or generated knowledge base
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    "search.exclude": {
+        "trustsoc_env": true,
+        "kb": true,
+        "data/*.json": true,
+        "data/*.csv": true
+    },
+
+    // Format-on-save with the standard Python formatter (optional, but keeps
+    // code consistent for your Chapter 4 code listings/appendix)
+    "editor.formatOnSave": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
+}

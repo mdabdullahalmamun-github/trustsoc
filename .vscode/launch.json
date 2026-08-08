@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build knowledge base",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/pipeline/build_kb.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Live demo (terminal)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/demo/Live_Demo.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Test retrieval",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/demo/test_retrieval.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Check setup",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/check_setup.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
