@@ -1,0 +1,7 @@
+trustsoc_env/
+__pycache__/
+kb/
+data/*.json
+data/*.csv
+*.pyc
+.ipynb_checkpoints/
