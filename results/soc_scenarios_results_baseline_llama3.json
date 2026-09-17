@@ -1,0 +1,356 @@
+[
+  {
+    "id": "SOC-001",
+    "category": "alert_triage",
+    "ground_truth": "T1059.001",
+    "cited": [
+      "T1190"
+    ],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-002",
+    "category": "alert_triage",
+    "ground_truth": "T1053.005",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-003",
+    "category": "alert_triage",
+    "ground_truth": "T1003.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-004",
+    "category": "alert_triage",
+    "ground_truth": "T1071.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-005",
+    "category": "alert_triage",
+    "ground_truth": "T1098",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-006",
+    "category": "alert_triage",
+    "ground_truth": "T1110.003",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-007",
+    "category": "alert_triage",
+    "ground_truth": "T1204.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-008",
+    "category": "alert_triage",
+    "ground_truth": "T1560.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-009",
+    "category": "alert_triage",
+    "ground_truth": "T1547.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-010",
+    "category": "alert_triage",
+    "ground_truth": "T1021.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-011",
+    "category": "alert_triage",
+    "ground_truth": "T1218.011",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-012",
+    "category": "alert_triage",
+    "ground_truth": "T1490",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-013",
+    "category": "alert_triage",
+    "ground_truth": "T1570",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-014",
+    "category": "alert_triage",
+    "ground_truth": "T1071.004",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-015",
+    "category": "alert_triage",
+    "ground_truth": "T1136.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-016",
+    "category": "alert_triage",
+    "ground_truth": "T1055",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-017",
+    "category": "alert_triage",
+    "ground_truth": "T1528",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-018",
+    "category": "threat_classification",
+    "ground_truth": "T1190",
+    "cited": [
+      "T1190"
+    ],
+    "score": 1.0
+  },
+  {
+    "id": "SOC-019",
+    "category": "threat_classification",
+    "ground_truth": "T1203",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-020",
+    "category": "threat_classification",
+    "ground_truth": "T1036.005",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-021",
+    "category": "threat_classification",
+    "ground_truth": "T1219",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-022",
+    "category": "threat_classification",
+    "ground_truth": "T1195.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-023",
+    "category": "threat_classification",
+    "ground_truth": "T1069.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-024",
+    "category": "threat_classification",
+    "ground_truth": "T1132.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-025",
+    "category": "threat_classification",
+    "ground_truth": "T1559.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-026",
+    "category": "threat_classification",
+    "ground_truth": "T1497",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-027",
+    "category": "threat_classification",
+    "ground_truth": "T1133",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-028",
+    "category": "threat_classification",
+    "ground_truth": "T1583.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-029",
+    "category": "threat_classification",
+    "ground_truth": "T1105",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-030",
+    "category": "threat_classification",
+    "ground_truth": "T1070.006",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-031",
+    "category": "threat_classification",
+    "ground_truth": "T1567.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-032",
+    "category": "threat_classification",
+    "ground_truth": "T1557",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-033",
+    "category": "threat_classification",
+    "ground_truth": "T1098.003",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-034",
+    "category": "threat_classification",
+    "ground_truth": "T1562.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-035",
+    "category": "incident_summary",
+    "ground_truth": "T1486",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-036",
+    "category": "incident_summary",
+    "ground_truth": "T1070.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-037",
+    "category": "incident_summary",
+    "ground_truth": "T1568.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-038",
+    "category": "incident_summary",
+    "ground_truth": "T1656",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-039",
+    "category": "incident_summary",
+    "ground_truth": "T1030",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-040",
+    "category": "incident_summary",
+    "ground_truth": "T1210",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-041",
+    "category": "incident_summary",
+    "ground_truth": "T1195.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-042",
+    "category": "incident_summary",
+    "ground_truth": "T1053.005",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-043",
+    "category": "incident_summary",
+    "ground_truth": "T1555.003",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-044",
+    "category": "incident_summary",
+    "ground_truth": "T1222.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-045",
+    "category": "incident_summary",
+    "ground_truth": "T1528",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-046",
+    "category": "incident_summary",
+    "ground_truth": "T1484.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-047",
+    "category": "incident_summary",
+    "ground_truth": "T1518.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-048",
+    "category": "incident_summary",
+    "ground_truth": "T1074.001",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-049",
+    "category": "incident_summary",
+    "ground_truth": "T1553.002",
+    "cited": [],
+    "score": 0.0
+  },
+  {
+    "id": "SOC-050",
+    "category": "incident_summary",
+    "ground_truth": "T1078.003",
+    "cited": [],
+    "score": 0.0
+  }
+]

@@ -1,0 +1,352 @@
+[
+  {
+    "id": "PARA-001",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1059.001",
+    "phrasing_a": "An EDR alert fires for powershell.exe launched with a base64-encoded -EncodedCommand argument from an Office document's child process. What ATT&CK technique does this match?",
+    "phrasing_b": "PowerShell is running with an encoded command-line argument, spawned as a child process of an Office document, and EDR has flagged it. Which technique covers this?"
+  },
+  {
+    "id": "PARA-002",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1053.005",
+    "phrasing_a": "A host shows a new scheduled task created under SYSTEM context immediately after a suspicious binary ran, set to re-launch that binary every reboot. What technique is this?",
+    "phrasing_b": "Right after a suspicious executable ran, a new scheduled task appeared under the SYSTEM account, configured to relaunch that same binary on every reboot. What's the matching technique?"
+  },
+  {
+    "id": "PARA-003",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1003.001",
+    "phrasing_a": "Antivirus flags a process reading LSASS memory using MiniDumpWriteDump shortly before network beaconing begins. Which technique should this be triaged as?",
+    "phrasing_b": "Just before outbound network beaconing started, antivirus caught a process reading LSASS memory via MiniDumpWriteDump. How should this be triaged?"
+  },
+  {
+    "id": "PARA-004",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1071.001",
+    "phrasing_a": "A firewall alert shows an internal workstation making repeated outbound connections to the same external IP over port 443 at regular 60-second intervals, even when the user is idle.",
+    "phrasing_b": "Even while the user is away from their keyboard, an internal workstation keeps reaching out to the same external IP over HTTPS every 60 seconds like clockwork. What does a firewall alert like this indicate?"
+  },
+  {
+    "id": "PARA-005",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1098",
+    "phrasing_a": "A user's account shows a successful login from a country they have never travelled to, immediately followed by mailbox rule creation that forwards all mail to an external address.",
+    "phrasing_b": "An account that's never logged in from abroad before just did, and immediately after, a mail-forwarding rule to an external address was created. What technique applies here?"
+  },
+  {
+    "id": "PARA-006",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1110.003",
+    "phrasing_a": "A SIEM correlation rule fires because a domain controller received an unusually large number of failed Kerberos authentication attempts against many different usernames within a short window.",
+    "phrasing_b": "A domain controller logged an unusually high volume of failed Kerberos logons spread across many distinct usernames, all within a short window. Which technique does this correlation rule suggest?"
+  },
+  {
+    "id": "PARA-007",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1204.002",
+    "phrasing_a": "An endpoint alert shows a Microsoft Office process spawning cmd.exe, which then spawns powershell.exe with no visible window. What technique covers the initial spawn chain from Office to a command interpreter?",
+    "phrasing_b": "cmd.exe was spawned by a Microsoft Office process, and it in turn launched a hidden powershell.exe window. What covers the initial link in that chain, from Office to the command interpreter?"
+  },
+  {
+    "id": "PARA-008",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1560.001",
+    "phrasing_a": "A DLP alert triggers because a large ZIP archive was created in a temp directory just before a large outbound transfer to a cloud storage domain not used by the organisation.",
+    "phrasing_b": "Just before a large upload to a cloud storage domain the organisation doesn't normally use, a sizeable ZIP file appeared in a temp folder. What triggered this DLP alert, technique-wise?"
+  },
+  {
+    "id": "PARA-009",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1547.001",
+    "phrasing_a": "A workstation's registry Run key gains a new value pointing to an executable in the user's AppData folder, and the change coincides with a phishing email being opened.",
+    "phrasing_b": "A phishing email was opened around the same time a brand-new value showed up in a workstation's Run registry key, pointing to an AppData executable. Which technique matches?"
+  },
+  {
+    "id": "PARA-010",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1021.001",
+    "phrasing_a": "An alert shows a service account, which normally only runs scheduled backups, being used interactively to RDP into three other servers within the same hour.",
+    "phrasing_b": "A backup service account, of all things, was just used to interactively RDP into three separate servers inside of an hour. What's the right technique classification?"
+  },
+  {
+    "id": "PARA-011",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1218.011",
+    "phrasing_a": "A host's process tree shows rundll32.exe being invoked with an unusual, obfuscated argument string and no legitimate parent application context.",
+    "phrasing_b": "rundll32.exe fired with a strange, obfuscated set of arguments, and there's no legitimate parent application in sight. What technique should this be flagged as?"
+  },
+  {
+    "id": "PARA-012",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1490",
+    "phrasing_a": "Backup software logs show shadow copies being deleted on a file server minutes before files on that server are found renamed with a new, unfamiliar extension.",
+    "phrasing_b": "Right before files on a file server turned up renamed with an unfamiliar extension, the backup logs showed shadow copies being deleted. What does that sequence point to?"
+  },
+  {
+    "id": "PARA-013",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1570",
+    "phrasing_a": "A network alert flags SMB traffic from a compromised host attempting to write an executable to the ADMIN$ share of several other machines on the same subnet.",
+    "phrasing_b": "SMB traffic from an already-compromised host is trying to drop an executable into the ADMIN$ share of other machines on the same subnet. Which technique is this?"
+  },
+  {
+    "id": "PARA-014",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1071.004",
+    "phrasing_a": "A proxy log shows a workstation querying an unusual number of DNS TXT records for a single external domain over a short period, with no corresponding web browsing activity.",
+    "phrasing_b": "A workstation is issuing an unusually high number of DNS TXT record lookups for one external domain, with no matching web browsing activity to explain it. What's the likely technique?"
+  },
+  {
+    "id": "PARA-015",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1136.001",
+    "phrasing_a": "EDR flags a new local administrator account being created on a workstation outside of the organisation's change window, shortly after a suspicious executable ran.",
+    "phrasing_b": "Outside the change window, EDR caught a new local admin account being created on a workstation, right after a suspicious executable had run. What technique fits?"
+  },
+  {
+    "id": "PARA-016",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1055",
+    "phrasing_a": "An alert fires because a process was observed injecting code into the memory space of explorer.exe on a workstation that was recently reimaged.",
+    "phrasing_b": "A recently reimaged workstation shows a process injecting code straight into explorer.exe's memory space. What's the matching technique?"
+  },
+  {
+    "id": "PARA-017",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1528",
+    "phrasing_a": "A cloud audit log shows a user's access token being used from two geographically distant IP addresses within minutes of each other, without an intervening logout.",
+    "phrasing_b": "The same user's cloud access token was used from two IP addresses on opposite sides of the world, minutes apart, with no logout in between. What does this suggest?"
+  },
+  {
+    "id": "PARA-018",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1190",
+    "phrasing_a": "Which ATT&CK technique best classifies an attacker exploiting a known, unpatched vulnerability in a public-facing web application to gain their initial foothold?",
+    "phrasing_b": "An attacker's initial foothold came from exploiting a known, unpatched flaw in a web application exposed to the internet. Which technique best describes this?"
+  },
+  {
+    "id": "PARA-019",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1203",
+    "phrasing_a": "An attacker gains a foothold after an employee opens an attachment in a spearphishing email that exploits a vulnerability in the document viewer itself, rather than relying on the user running a macro. Classify the technique.",
+    "phrasing_b": "Rather than getting the user to enable a macro, the attacker's spearphishing attachment exploited a vulnerability in the document viewer itself. What's the correct technique here?"
+  },
+  {
+    "id": "PARA-020",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1036.005",
+    "phrasing_a": "Which technique describes an attacker renaming a malicious executable to match a legitimate Windows system process name (e.g. svchost.exe) to blend in with normal system activity?",
+    "phrasing_b": "To blend into normal system activity, the attacker renamed their malicious binary to something like svchost.exe. Which technique covers this?"
+  },
+  {
+    "id": "PARA-021",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1219",
+    "phrasing_a": "An adversary is observed using a legitimate, signed remote-support tool already present on the network to move between hosts instead of deploying their own malware. What technique covers this?",
+    "phrasing_b": "Instead of deploying custom malware, the adversary moved between hosts using a legitimate, already-installed remote-support tool. What technique is that?"
+  },
+  {
+    "id": "PARA-022",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1195.002",
+    "phrasing_a": "Classify an attack where the adversary compromises a trusted software vendor's update mechanism to distribute malware to that vendor's downstream customers.",
+    "phrasing_b": "A trusted software vendor's own update mechanism was compromised and used to push malware out to that vendor's customers. How should this be classified?"
+  },
+  {
+    "id": "PARA-023",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1069.002",
+    "phrasing_a": "An adversary is found querying Active Directory for all accounts belonging to the Domain Admins group before attempting any privilege escalation. What technique is this reconnaissance step?",
+    "phrasing_b": "Before making any move toward privilege escalation, the attacker was seen enumerating every account in the Domain Admins group. What's this reconnaissance step called?"
+  },
+  {
+    "id": "PARA-024",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1132.001",
+    "phrasing_a": "Which technique classifies an attacker encoding stolen data before sending it out over normal-looking outbound HTTPS traffic, so it is not obviously distinguishable from legitimate encrypted web traffic?",
+    "phrasing_b": "Stolen data was encoded with a custom scheme and folded into what otherwise looked like normal outbound HTTPS traffic. Which technique matches?"
+  },
+  {
+    "id": "PARA-025",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1559.001",
+    "phrasing_a": "An attacker is observed abusing a Windows COM object to achieve code execution without writing a new file to disk. Which technique fits?",
+    "phrasing_b": "Code execution was achieved by abusing a Windows COM object, with no new file ever written to disk. What technique covers that?"
+  },
+  {
+    "id": "PARA-026",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1497",
+    "phrasing_a": "Classify a technique where malware checks for the presence of known analyst tools, VM artefacts, or a debugger before deciding whether to execute its payload.",
+    "phrasing_b": "Before running its payload, a piece of malware checked for known analyst tools, VM artefacts, and an attached debugger. What's this technique called?"
+  },
+  {
+    "id": "PARA-027",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1133",
+    "phrasing_a": "An adversary uses valid, stolen VPN credentials belonging to a contractor to access the internal network directly, without exploiting any vulnerability. Which technique?",
+    "phrasing_b": "Rather than exploiting anything, the attacker just used a contractor's stolen but entirely valid VPN credentials to get straight onto the internal network. Which technique is this?"
+  },
+  {
+    "id": "PARA-028",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1583.001",
+    "phrasing_a": "Which technique covers an attacker registering a domain that closely resembles the target organisation's real domain, for use in a later phishing campaign?",
+    "phrasing_b": "As groundwork for an upcoming phishing campaign, the attacker registered a domain that closely mimics the target organisation's real one. What covers this preparatory step?"
+  },
+  {
+    "id": "PARA-029",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1105",
+    "phrasing_a": "An attacker uses living-off-the-land binary certutil.exe to download a second-stage payload from an external server. Classify this technique.",
+    "phrasing_b": "certutil.exe, a built-in Windows binary, was used to pull down a second-stage payload from an external server. What's the matching technique?"
+  },
+  {
+    "id": "PARA-030",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1070.006",
+    "phrasing_a": "Which technique describes an adversary modifying timestamps on a dropped malicious file to match the timestamps of legitimate nearby system files, to evade timeline-based forensic review?",
+    "phrasing_b": "To throw off a timeline-based forensic review, the attacker altered the timestamps on a dropped malicious file to match nearby legitimate system files. Which technique is this?"
+  },
+  {
+    "id": "PARA-031",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1567.002",
+    "phrasing_a": "An attacker exfiltrates a small number of highly sensitive documents by uploading them to a personal cloud storage account, using the same protocol and port as normal corporate cloud backups. Classify the exfiltration technique.",
+    "phrasing_b": "A handful of highly sensitive documents were uploaded to a personal cloud storage account, using the same port and protocol as the organisation's normal cloud backups. What's the exfiltration technique here?"
+  },
+  {
+    "id": "PARA-032",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1557",
+    "phrasing_a": "Which technique covers an adversary intercepting and manipulating traffic between two parties on a local network in order to steal credentials passed between them?",
+    "phrasing_b": "Traffic between two parties on the local network was intercepted and modified so a trojanised software update could be delivered. Which technique applies?"
+  },
+  {
+    "id": "PARA-033",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1098.003",
+    "phrasing_a": "An adversary abuses a misconfigured cloud IAM role to grant themselves broader permissions than they were originally issued. Classify this.",
+    "phrasing_b": "A misconfigured cloud IAM role was abused by the attacker to grant themselves more permissions than they originally had. What technique fits this?"
+  },
+  {
+    "id": "PARA-034",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1562.002",
+    "phrasing_a": "Which technique describes an attacker disabling a host's security event logging service before carrying out further malicious activity on that host?",
+    "phrasing_b": "Before doing anything else malicious on the host, the attacker disabled its security event logging service. What's the matching technique?"
+  },
+  {
+    "id": "PARA-035",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1486",
+    "phrasing_a": "Summarise the technique: an incident report states the attacker's final action was encrypting files across multiple file servers and dropping a ransom note demanding payment for the decryption key.",
+    "phrasing_b": "The final step of the incident was encrypting files across several file servers and leaving a ransom note demanding payment for decryption. What technique describes this?"
+  },
+  {
+    "id": "PARA-036",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1070.001",
+    "phrasing_a": "An incident write-up describes the attacker methodically deleting event logs and clearing PowerShell history on every host they touched, right before disconnecting. What technique covers this closing behaviour?",
+    "phrasing_b": "Right before disconnecting, the attacker methodically wiped event logs and cleared PowerShell history on every host they'd touched. What covers this closing move?"
+  },
+  {
+    "id": "PARA-037",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1568.002",
+    "phrasing_a": "The post-incident report notes the compromised host repeatedly resolved the same handful of internal-looking domain names that turned out to be attacker-controlled, used to relay commands to the malware in short bursts.",
+    "phrasing_b": "The compromised host kept resolving the same small set of internal-looking domains, which turned out to be attacker-controlled and used to relay commands in short bursts. Which technique is this?"
+  },
+  {
+    "id": "PARA-038",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1656",
+    "phrasing_a": "Summarise the initial-access technique in an incident where the attacker called the IT helpdesk, impersonating an employee, and convinced staff to reset that employee's password over the phone.",
+    "phrasing_b": "The attacker called the helpdesk pretending to be an employee and talked staff into resetting that employee's password over the phone. What's the initial-access technique here?"
+  },
+  {
+    "id": "PARA-039",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1030",
+    "phrasing_a": "The incident report describes attackers compressing an entire database export, splitting it into small chunks, and uploading each chunk slowly over several days to avoid triggering data-volume alerts.",
+    "phrasing_b": "A full database export was compressed, split into small pieces, and trickled out over several days specifically to dodge data-volume alerts. What technique covers that?"
+  },
+  {
+    "id": "PARA-040",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1210",
+    "phrasing_a": "An incident timeline shows the attacker pivoting from a compromised low-privilege workstation to a domain controller by exploiting a known unpatched vulnerability in an internal server that had not been exposed to the internet.",
+    "phrasing_b": "The attacker pivoted from a low-privilege workstation to a domain controller by exploiting an unpatched flaw in an internal-only server. Which technique applies here?"
+  },
+  {
+    "id": "PARA-041",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1195.001",
+    "phrasing_a": "The report notes the attacker used a compromised build server to insert malicious code directly into the organisation's own software before it was compiled and shipped to customers.",
+    "phrasing_b": "Malicious code was inserted directly into the organisation's own software via a compromised build server, before it was even compiled and shipped. What's the matching technique?"
+  },
+  {
+    "id": "PARA-042",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1053.005",
+    "phrasing_a": "Summarise the technique: the attacker was found to have created a hidden scheduled task disguised with a name resembling a legitimate Windows maintenance task, which re-established their access after every reboot for three weeks before detection.",
+    "phrasing_b": "Disguised under a name resembling a routine Windows maintenance job, a hidden scheduled task kept restoring the attacker's access after every reboot for three weeks. What technique is this?"
+  },
+  {
+    "id": "PARA-043",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1555.003",
+    "phrasing_a": "The incident report states the attacker harvested browser-saved passwords from several employees' machines during the early stages of the compromise, well before any lateral movement occurred.",
+    "phrasing_b": "Early in the compromise, well before any lateral movement, the attacker harvested passwords saved in employees' browsers. Which technique covers this?"
+  },
+  {
+    "id": "PARA-044",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1222.001",
+    "phrasing_a": "Summarise the technique: forensic analysis found the attacker had modified a legitimate scheduled Windows binary's discretionary access control list so that a low-privileged account they controlled could also execute it with SYSTEM privileges.",
+    "phrasing_b": "Forensics found the attacker had altered a legitimate scheduled binary's DACL so a low-privileged account they controlled could run it with SYSTEM rights. What's the matching technique?"
+  },
+  {
+    "id": "PARA-045",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1528",
+    "phrasing_a": "The write-up describes the attacker registering a malicious OAuth application and tricking a user into granting it broad access to their mailbox and files, without ever needing the user's actual password.",
+    "phrasing_b": "A malicious OAuth application was registered, and a user was tricked into granting it broad mailbox and file access -- no password ever needed. Which technique fits?"
+  },
+  {
+    "id": "PARA-046",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1484.001",
+    "phrasing_a": "Summarise the persistence technique: the attacker modified a Group Policy Object applied to an entire business unit so that their malicious script would run automatically for every user in that unit at next logon.",
+    "phrasing_b": "The attacker modified a Group Policy Object covering an entire business unit so their malicious script would run automatically at every user's next logon. What technique is this?"
+  },
+  {
+    "id": "PARA-047",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1518.001",
+    "phrasing_a": "The incident report notes the attacker's malware queried the host's installed antivirus product and available system memory before deciding whether to proceed, aborting silently on machines with certain endpoint protection installed.",
+    "phrasing_b": "Before proceeding, the malware quietly checked what antivirus product and how much memory the host had, silently aborting on machines with certain endpoint protection. What covers this?"
+  },
+  {
+    "id": "PARA-048",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1074.001",
+    "phrasing_a": "Summarise the technique: after gaining access, the attacker created a scheduled export of the victim's entire customer database to a staging file every night for a week before the final exfiltration occurred.",
+    "phrasing_b": "Every night for a week, the attacker exported the victim's entire customer database to a staging file, ahead of a single final exfiltration event. Which technique describes the repeated staging step?"
+  },
+  {
+    "id": "PARA-049",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1553.002",
+    "phrasing_a": "The incident report describes the attacker abusing a trusted internal certificate authority to issue themselves a valid code-signing certificate, which they then used to sign their malware so it would bypass application allow-listing.",
+    "phrasing_b": "A trusted internal certificate authority was abused to issue the attacker a valid code-signing certificate, used to get their malware past application allow-listing. What technique is this?"
+  },
+  {
+    "id": "PARA-050",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1078.003",
+    "phrasing_a": "Summarise the technique: three months after the original breach was believed contained, investigators found a small, dormant implant on a single low-priority print server that had never been remediated, which the attacker used to regain full access.",
+    "phrasing_b": "Three months after the breach was thought contained, investigators found a small dormant implant on an overlooked print server, which the attacker used to regain full access. What's the matching technique?"
+  }
+]

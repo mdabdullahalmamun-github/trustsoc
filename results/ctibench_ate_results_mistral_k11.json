@@ -1,0 +1,2533 @@
+[
+  {
+    "id": "ATE-001",
+    "mitre_software_id": "S0066",
+    "ground_truth_techniques": [
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1573"
+    ],
+    "cited": [
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1081",
+      "T1219"
+    ],
+    "fabricated": [
+      "T1027",
+      "T1059",
+      "T1071",
+      "T1081"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.2,
+    "recall": 0.25,
+    "f1": 0.222,
+    "true_positives": [
+      "T1071"
+    ],
+    "false_positives": [
+      "T1027",
+      "T1059",
+      "T1081",
+      "T1219"
+    ],
+    "false_negatives": [
+      "T1070",
+      "T1083",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-002",
+    "mitre_software_id": "S0065",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1071",
+      "T1082",
+      "T1083",
+      "T1573"
+    ],
+    "cited": [
+      "T1059",
+      "T1059.001",
+      "T1081",
+      "T1083",
+      "T1087",
+      "T1200"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1059.001",
+      "T1081",
+      "T1083",
+      "T1087",
+      "T1200"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.4,
+    "recall": 0.333,
+    "f1": 0.364,
+    "true_positives": [
+      "T1059",
+      "T1083"
+    ],
+    "false_positives": [
+      "T1081",
+      "T1087",
+      "T1200"
+    ],
+    "false_negatives": [
+      "T1057",
+      "T1071",
+      "T1082",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-003",
+    "mitre_software_id": "S0469",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1055",
+      "T1059",
+      "T1071",
+      "T1105",
+      "T1140",
+      "T1518"
+    ],
+    "cited": [
+      "T1021",
+      "T1027",
+      "T1059",
+      "T1087",
+      "T1567"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1059",
+      "T1087"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.4,
+    "recall": 0.286,
+    "f1": 0.333,
+    "true_positives": [
+      "T1027",
+      "T1059"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1087",
+      "T1567"
+    ],
+    "false_negatives": [
+      "T1055",
+      "T1071",
+      "T1105",
+      "T1140",
+      "T1518"
+    ]
+  },
+  {
+    "id": "ATE-004",
+    "mitre_software_id": "S1028",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1140"
+    ],
+    "cited": [
+      "T1059.010",
+      "T1080",
+      "T1081",
+      "T1086",
+      "T1104",
+      "T1114"
+    ],
+    "fabricated": [
+      "T1080",
+      "T1081",
+      "T1086",
+      "T1114"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.167,
+    "recall": 0.167,
+    "f1": 0.167,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1080",
+      "T1081",
+      "T1086",
+      "T1104",
+      "T1114"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1140"
+    ]
+  },
+  {
+    "id": "ATE-005",
+    "mitre_software_id": "S0202",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1546",
+      "T1573"
+    ],
+    "cited": [
+      "T1059.001",
+      "T1071.001",
+      "T1086"
+    ],
+    "fabricated": [
+      "T1059.001",
+      "T1071.001",
+      "T1086"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.333,
+    "recall": 0.333,
+    "f1": 0.333,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1071",
+      "T1086"
+    ],
+    "false_negatives": [
+      "T1546",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-006",
+    "mitre_software_id": "S0552",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1018",
+      "T1069",
+      "T1087",
+      "T1482"
+    ],
+    "cited": [
+      "T1003.003",
+      "T1078.002",
+      "T1083",
+      "T1087",
+      "T1087.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [
+      "Context provided",
+      "Context provided",
+      "Context provided",
+      "Context provided",
+      "Context provided"
+    ],
+    "precision": 0.25,
+    "recall": 0.2,
+    "f1": 0.222,
+    "true_positives": [
+      "T1087"
+    ],
+    "false_positives": [
+      "T1003",
+      "T1078",
+      "T1083"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1018",
+      "T1069",
+      "T1482"
+    ]
+  },
+  {
+    "id": "ATE-007",
+    "mitre_software_id": "S0045",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1547",
+      "T1560",
+      "T1573"
+    ],
+    "cited": [
+      "T1021",
+      "T1055",
+      "T1059",
+      "T1071",
+      "T1080",
+      "T1086",
+      "T1102",
+      "T1505",
+      "T1547"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1055",
+      "T1059",
+      "T1071",
+      "T1080",
+      "T1086",
+      "T1505",
+      "T1547"
+    ],
+    "unrecognised_citations": [
+      "Encrypts data using the 3DES algorithm with a hardcoded key",
+      "Communicates with its C2 server via port 80 using the Wininet API",
+      "Uses HTTP POST requests",
+      "Encodes C2 traffic with Base64",
+      "Uses a known vulnerability to gain initial access, but no specific vulnerability is mentioned in the context",
+      "Achieves persistence by adding itself to the HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run Registry key",
+      "Creates a remote shell and executes specified commands",
+      "Since it uses the Wininet API, it might use PowerShell for some of its operations, but the context does not explicitly mention it",
+      "Some variants of ADVSTORESHELL also use 3DES encryption for C2 communications, which might be done over a web service, but the context does not explicitly mention it"
+    ],
+    "precision": 0.333,
+    "recall": 0.429,
+    "f1": 0.375,
+    "true_positives": [
+      "T1059",
+      "T1071",
+      "T1547"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1055",
+      "T1080",
+      "T1086",
+      "T1102",
+      "T1505"
+    ],
+    "false_negatives": [
+      "T1074",
+      "T1132",
+      "T1560",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-008",
+    "mitre_software_id": "S0440",
+    "ground_truth_techniques": [
+      "T1404",
+      "T1406",
+      "T1577",
+      "T1628",
+      "T1630",
+      "T1643",
+      "T1655"
+    ],
+    "cited": [
+      "T1027",
+      "T1087",
+      "T1098",
+      "T1184",
+      "T1189",
+      "T1583",
+      "T1583.008"
+    ],
+    "fabricated": [
+      "T1027",
+      "T1087",
+      "T1098",
+      "T1184",
+      "T1189",
+      "T1583"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1087",
+      "T1098",
+      "T1184",
+      "T1189",
+      "T1583"
+    ],
+    "false_negatives": [
+      "T1404",
+      "T1406",
+      "T1577",
+      "T1628",
+      "T1630",
+      "T1643",
+      "T1655"
+    ]
+  },
+  {
+    "id": "ATE-009",
+    "mitre_software_id": "S0331",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1087",
+      "T1115",
+      "T1140",
+      "T1185",
+      "T1547",
+      "T1555",
+      "T1560"
+    ],
+    "cited": [
+      "T1003",
+      "T1024",
+      "T1027",
+      "T1055",
+      "T1071",
+      "T1078",
+      "T1101"
+    ],
+    "fabricated": [
+      "T1003",
+      "T1024",
+      "T1027",
+      "T1055",
+      "T1071",
+      "T1078",
+      "T1101"
+    ],
+    "unrecognised_citations": [
+      "Source: MITRE ATT&CK"
+    ],
+    "precision": 0.143,
+    "recall": 0.125,
+    "f1": 0.133,
+    "true_positives": [
+      "T1071"
+    ],
+    "false_positives": [
+      "T1003",
+      "T1024",
+      "T1027",
+      "T1055",
+      "T1078",
+      "T1101"
+    ],
+    "false_negatives": [
+      "T1087",
+      "T1115",
+      "T1140",
+      "T1185",
+      "T1547",
+      "T1555",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-010",
+    "mitre_software_id": "S0092",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1052",
+      "T1091",
+      "T1105",
+      "T1560"
+    ],
+    "cited": [
+      "T1003",
+      "T1027",
+      "T1077",
+      "T1080",
+      "T1083"
+    ],
+    "fabricated": [
+      "T1003",
+      "T1077"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1003",
+      "T1027",
+      "T1077",
+      "T1080",
+      "T1083"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1033",
+      "T1052",
+      "T1091",
+      "T1105",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-011",
+    "mitre_software_id": "S1025",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1041",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1140",
+      "T1547",
+      "T1568"
+    ],
+    "cited": [],
+    "fabricated": [],
+    "unrecognised_citations": [
+      "GENERATION FAILED after 3 attempts: ReadTimeout: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=180)"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [],
+    "false_negatives": [
+      "T1005",
+      "T1027",
+      "T1041",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1140",
+      "T1547",
+      "T1568"
+    ]
+  },
+  {
+    "id": "ATE-012",
+    "mitre_software_id": "S0504",
+    "ground_truth_techniques": [
+      "T1008",
+      "T1059",
+      "T1070",
+      "T1071",
+      "T1105",
+      "T1480",
+      "T1543",
+      "T1564"
+    ],
+    "cited": [],
+    "fabricated": [],
+    "unrecognised_citations": [
+      "Command and Control (C2) Communication",
+      "Persistence",
+      "Self-Deletion",
+      "Data Obfuscation",
+      "Lateral Movement",
+      "Source: Context provided"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [],
+    "false_negatives": [
+      "T1008",
+      "T1059",
+      "T1070",
+      "T1071",
+      "T1105",
+      "T1480",
+      "T1543",
+      "T1564"
+    ]
+  },
+  {
+    "id": "ATE-013",
+    "mitre_software_id": "S1074",
+    "ground_truth_techniques": [
+      "T1036",
+      "T1055",
+      "T1071",
+      "T1091",
+      "T1105",
+      "T1547"
+    ],
+    "cited": [
+      "T1027",
+      "T1036",
+      "T1055",
+      "T1059",
+      "T1070",
+      "T1086",
+      "T1088",
+      "T1102.001",
+      "T1102.002",
+      "T1102.003",
+      "T1547",
+      "T1562"
+    ],
+    "fabricated": [
+      "T1027",
+      "T1036",
+      "T1055",
+      "T1059",
+      "T1070",
+      "T1086",
+      "T1088",
+      "T1547",
+      "T1562"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.3,
+    "recall": 0.5,
+    "f1": 0.375,
+    "true_positives": [
+      "T1036",
+      "T1055",
+      "T1547"
+    ],
+    "false_positives": [
+      "T1027",
+      "T1059",
+      "T1070",
+      "T1086",
+      "T1088",
+      "T1102",
+      "T1562"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1091",
+      "T1105"
+    ]
+  },
+  {
+    "id": "ATE-014",
+    "mitre_software_id": "S0584",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1543",
+      "T1546",
+      "T1548"
+    ],
+    "cited": [
+      "T1020",
+      "T1036",
+      "T1041",
+      "T1053",
+      "T1059",
+      "T1071",
+      "T1078",
+      "T1203"
+    ],
+    "fabricated": [
+      "T1020",
+      "T1036",
+      "T1041",
+      "T1053",
+      "T1059",
+      "T1071",
+      "T1078",
+      "T1203"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.375,
+    "recall": 0.429,
+    "f1": 0.4,
+    "true_positives": [
+      "T1041",
+      "T1059",
+      "T1071"
+    ],
+    "false_positives": [
+      "T1020",
+      "T1036",
+      "T1053",
+      "T1078",
+      "T1203"
+    ],
+    "false_negatives": [
+      "T1140",
+      "T1543",
+      "T1546",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-015",
+    "mitre_software_id": "S0622",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1025",
+      "T1059",
+      "T1071",
+      "T1119",
+      "T1134",
+      "T1547",
+      "T1560"
+    ],
+    "cited": [
+      "T1056",
+      "T1056.001",
+      "T1070",
+      "T1078",
+      "T1080",
+      "T1083",
+      "T1086",
+      "T1087",
+      "T1114",
+      "T1565"
+    ],
+    "fabricated": [
+      "T1056",
+      "T1056.001",
+      "T1070",
+      "T1078",
+      "T1080",
+      "T1083",
+      "T1086",
+      "T1087",
+      "T1114",
+      "T1565"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1056",
+      "T1070",
+      "T1078",
+      "T1080",
+      "T1083",
+      "T1086",
+      "T1087",
+      "T1114",
+      "T1565"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1025",
+      "T1059",
+      "T1071",
+      "T1119",
+      "T1134",
+      "T1547",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-016",
+    "mitre_software_id": "S0073",
+    "ground_truth_techniques": [
+      "T1505"
+    ],
+    "cited": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1056",
+      "T1059",
+      "T1068",
+      "T1070",
+      "T1071",
+      "T1078",
+      "T1087"
+    ],
+    "fabricated": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1056",
+      "T1059",
+      "T1068",
+      "T1070",
+      "T1071",
+      "T1078",
+      "T1087"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1056",
+      "T1059",
+      "T1068",
+      "T1070",
+      "T1071",
+      "T1078",
+      "T1087"
+    ],
+    "false_negatives": [
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-017",
+    "mitre_software_id": "S0110",
+    "ground_truth_techniques": [
+      "T1053"
+    ],
+    "cited": [
+      "T1053",
+      "T1053.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "true_positives": [
+      "T1053"
+    ],
+    "false_positives": [],
+    "false_negatives": []
+  },
+  {
+    "id": "ATE-018",
+    "mitre_software_id": "S1029",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1095",
+      "T1518",
+      "T1547"
+    ],
+    "cited": [
+      "T1005",
+      "T1020",
+      "T1041",
+      "T1059.010",
+      "T1087"
+    ],
+    "fabricated": [
+      "T1005",
+      "T1087"
+    ],
+    "unrecognised_citations": [
+      "Execution",
+      "Persistence",
+      "Exfiltration",
+      "Collection",
+      "Discovery"
+    ],
+    "precision": 0.6,
+    "recall": 0.375,
+    "f1": 0.462,
+    "true_positives": [
+      "T1005",
+      "T1041",
+      "T1059"
+    ],
+    "false_positives": [
+      "T1020",
+      "T1087"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1074",
+      "T1095",
+      "T1518",
+      "T1547"
+    ]
+  },
+  {
+    "id": "ATE-019",
+    "mitre_software_id": "S0129",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1083",
+      "T1132",
+      "T1548"
+    ],
+    "cited": [
+      "CVE-2014-6352",
+      "T1021",
+      "T1027",
+      "T1059.010",
+      "T1071",
+      "T1077",
+      "T1190"
+    ],
+    "fabricated": [
+      "CVE-2014-6352",
+      "T1021",
+      "T1027",
+      "T1071",
+      "T1077",
+      "T1190"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.167,
+    "recall": 0.25,
+    "f1": 0.2,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1027",
+      "T1071",
+      "T1077",
+      "T1190"
+    ],
+    "false_negatives": [
+      "T1083",
+      "T1132",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-020",
+    "mitre_software_id": "S0515",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1016",
+      "T1033",
+      "T1095",
+      "T1105",
+      "T1140",
+      "T1560",
+      "T1571",
+      "T1573"
+    ],
+    "cited": [
+      "T1021",
+      "T1048",
+      "T1071",
+      "T1136",
+      "T1564"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1048",
+      "T1071",
+      "T1136",
+      "T1564"
+    ],
+    "unrecognised_citations": [
+      "1"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1021",
+      "T1048",
+      "T1071",
+      "T1136",
+      "T1564"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1016",
+      "T1033",
+      "T1095",
+      "T1105",
+      "T1140",
+      "T1560",
+      "T1571",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-021",
+    "mitre_software_id": "S1123",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1140",
+      "T1205",
+      "T1559",
+      "T1573"
+    ],
+    "cited": [
+      "T1059",
+      "T1559",
+      "T1559.004",
+      "T1572"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1559.004",
+      "T1572"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.667,
+    "recall": 0.4,
+    "f1": 0.5,
+    "true_positives": [
+      "T1059",
+      "T1559"
+    ],
+    "false_positives": [
+      "T1572"
+    ],
+    "false_negatives": [
+      "T1140",
+      "T1205",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-022",
+    "mitre_software_id": "S1111",
+    "ground_truth_techniques": [
+      "T1010",
+      "T1071",
+      "T1098",
+      "T1119",
+      "T1134",
+      "T1548",
+      "T1583"
+    ],
+    "cited": [
+      "T1005",
+      "T1021",
+      "T1055",
+      "T1055.002",
+      "T1071",
+      "T1077",
+      "T1078",
+      "T1078.001",
+      "T1086"
+    ],
+    "fabricated": [
+      "T1005",
+      "T1021",
+      "T1055",
+      "T1055.002",
+      "T1071",
+      "T1077",
+      "T1078",
+      "T1078.001",
+      "T1086"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.143,
+    "recall": 0.143,
+    "f1": 0.143,
+    "true_positives": [
+      "T1071"
+    ],
+    "false_positives": [
+      "T1005",
+      "T1021",
+      "T1055",
+      "T1077",
+      "T1078",
+      "T1086"
+    ],
+    "false_negatives": [
+      "T1010",
+      "T1098",
+      "T1119",
+      "T1134",
+      "T1548",
+      "T1583"
+    ]
+  },
+  {
+    "id": "ATE-023",
+    "mitre_software_id": "S1106",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1071",
+      "T1090",
+      "T1573"
+    ],
+    "cited": [
+      "T1027",
+      "T1041",
+      "T1059",
+      "T1086",
+      "T1102.002",
+      "T1102.003",
+      "T1677"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1086"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1041",
+      "T1059",
+      "T1086",
+      "T1102",
+      "T1677"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1033",
+      "T1071",
+      "T1090",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-024",
+    "mitre_software_id": "S1124",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1036",
+      "T1048",
+      "T1059",
+      "T1074",
+      "T1105",
+      "T1189",
+      "T1482",
+      "T1566"
+    ],
+    "cited": [
+      "T1059",
+      "T1059.001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1105",
+      "T1189",
+      "T1567.002"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1059.001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1105",
+      "T1567.002"
+    ],
+    "unrecognised_citations": [
+      "Initial Access",
+      "Defense Evasion",
+      "Persistence",
+      "Initial Access, Defense Evasion",
+      "Reconnaissance",
+      "Command and Control",
+      "Initial Access"
+    ],
+    "precision": 0.3,
+    "recall": 0.333,
+    "f1": 0.316,
+    "true_positives": [
+      "T1059",
+      "T1105",
+      "T1189"
+    ],
+    "false_positives": [
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1567"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1036",
+      "T1048",
+      "T1074",
+      "T1482",
+      "T1566"
+    ]
+  },
+  {
+    "id": "ATE-025",
+    "mitre_software_id": "S1102",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1083",
+      "T1567",
+      "T1574"
+    ],
+    "cited": [
+      "T1027",
+      "T1074",
+      "T1560"
+    ],
+    "fabricated": [
+      "T1074",
+      "T1560"
+    ],
+    "unrecognised_citations": [
+      "Fileless Storage",
+      "Remote Data Staging",
+      "Archive via Utility"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1074",
+      "T1560"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1083",
+      "T1567",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-026",
+    "mitre_software_id": "S1110",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1140",
+      "T1573"
+    ],
+    "cited": [
+      "T1026",
+      "T1041",
+      "T1059",
+      "T1077",
+      "T1080",
+      "T1086",
+      "T1102.002",
+      "T1189"
+    ],
+    "fabricated": [
+      "T1026",
+      "T1041",
+      "T1059",
+      "T1077",
+      "T1080",
+      "T1086"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.125,
+    "recall": 0.143,
+    "f1": 0.133,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1026",
+      "T1041",
+      "T1077",
+      "T1080",
+      "T1086",
+      "T1102",
+      "T1189"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1140",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-027",
+    "mitre_software_id": "S1112",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1041",
+      "T1059",
+      "T1077",
+      "T1081",
+      "T1505",
+      "T1505.003"
+    ],
+    "fabricated": [
+      "T1041",
+      "T1059",
+      "T1077",
+      "T1081",
+      "T1505"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.2,
+    "recall": 0.2,
+    "f1": 0.2,
+    "true_positives": [
+      "T1505"
+    ],
+    "false_positives": [
+      "T1041",
+      "T1059",
+      "T1077",
+      "T1081"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140"
+    ]
+  },
+  {
+    "id": "ATE-028",
+    "mitre_software_id": "S1120",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554"
+    ],
+    "cited": [
+      "T1027",
+      "T1059",
+      "T1185",
+      "T1573",
+      "T1620"
+    ],
+    "fabricated": [
+      "T1059"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.2,
+    "recall": 0.167,
+    "f1": 0.182,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1027",
+      "T1185",
+      "T1573",
+      "T1620"
+    ],
+    "false_negatives": [
+      "T1001",
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-029",
+    "mitre_software_id": "S1105",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1140",
+      "T1190",
+      "T1222",
+      "T1543",
+      "T1564",
+      "T1573",
+      "T1574"
+    ],
+    "cited": [
+      "T1055",
+      "T1071",
+      "T1086",
+      "T1088",
+      "T1112",
+      "T1486",
+      "T1547"
+    ],
+    "fabricated": [
+      "T1055",
+      "T1071",
+      "T1086",
+      "T1088",
+      "T1112",
+      "T1486",
+      "T1547"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.143,
+    "recall": 0.1,
+    "f1": 0.118,
+    "true_positives": [
+      "T1071"
+    ],
+    "false_positives": [
+      "T1055",
+      "T1086",
+      "T1088",
+      "T1112",
+      "T1486",
+      "T1547"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1083",
+      "T1140",
+      "T1190",
+      "T1222",
+      "T1543",
+      "T1564",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-030",
+    "mitre_software_id": "S1116",
+    "ground_truth_techniques": [
+      "T1048",
+      "T1056",
+      "T1059",
+      "T1132",
+      "T1554"
+    ],
+    "cited": [
+      "T1021",
+      "T1056",
+      "T1056.003",
+      "T1068",
+      "T1539",
+      "T1606"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1056",
+      "T1068",
+      "T1539"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.2,
+    "recall": 0.2,
+    "f1": 0.2,
+    "true_positives": [
+      "T1056"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1068",
+      "T1539",
+      "T1606"
+    ],
+    "false_negatives": [
+      "T1048",
+      "T1059",
+      "T1132",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-031",
+    "mitre_software_id": "S1125",
+    "ground_truth_techniques": [
+      "T1083",
+      "T1485",
+      "T1529",
+      "T1561"
+    ],
+    "cited": [],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [],
+    "false_negatives": [
+      "T1083",
+      "T1485",
+      "T1529",
+      "T1561"
+    ]
+  },
+  {
+    "id": "ATE-032",
+    "mitre_software_id": "S1101",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1074",
+      "T1083",
+      "T1119",
+      "T1560",
+      "T1574"
+    ],
+    "cited": [
+      "T1027.013",
+      "T1027.015",
+      "T1055",
+      "T1086",
+      "T1567.003"
+    ],
+    "fabricated": [
+      "T1055",
+      "T1086"
+    ],
+    "unrecognised_citations": [
+      "Context does not contain enough information to answer this reliably."
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1055",
+      "T1086",
+      "T1567"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1074",
+      "T1083",
+      "T1119",
+      "T1560",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-033",
+    "mitre_software_id": "S1119",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1027.001",
+      "T1041",
+      "T1059",
+      "T1086",
+      "T1088",
+      "T1118"
+    ],
+    "fabricated": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1027.001",
+      "T1059",
+      "T1086",
+      "T1088",
+      "T1118"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1016",
+      "T1021",
+      "T1027",
+      "T1041",
+      "T1059",
+      "T1086",
+      "T1088",
+      "T1118"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-034",
+    "mitre_software_id": "S1122",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1115",
+      "T1140",
+      "T1176",
+      "T1217",
+      "T1547",
+      "T1555",
+      "T1573"
+    ],
+    "cited": [
+      "T1027",
+      "T1204",
+      "T1486",
+      "T1570",
+      "T1586",
+      "T1684"
+    ],
+    "fabricated": [
+      "T1486",
+      "T1570",
+      "T1586",
+      "T1684"
+    ],
+    "unrecognised_citations": [
+      "Compromise Accounts",
+      "Impersonation",
+      "Data Encrypted for Impact",
+      "Exfiltration",
+      "User Execution",
+      "Lateral Tool Transfer",
+      "Obfuscated Files or Information"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1204",
+      "T1486",
+      "T1570",
+      "T1586",
+      "T1684"
+    ],
+    "false_negatives": [
+      "T1041",
+      "T1059",
+      "T1115",
+      "T1140",
+      "T1176",
+      "T1217",
+      "T1547",
+      "T1555",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-035",
+    "mitre_software_id": "S1115",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [
+      "T1055",
+      "T1078.001",
+      "T1086",
+      "T1086.001",
+      "T1086.002",
+      "T1088",
+      "T1102.003",
+      "T1105",
+      "T1499.001"
+    ],
+    "fabricated": [
+      "T1055",
+      "T1078.001",
+      "T1086",
+      "T1086.001",
+      "T1086.002",
+      "T1088",
+      "T1105"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.143,
+    "recall": 0.143,
+    "f1": 0.143,
+    "true_positives": [
+      "T1105"
+    ],
+    "false_positives": [
+      "T1055",
+      "T1078",
+      "T1086",
+      "T1088",
+      "T1102",
+      "T1499"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1132",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-036",
+    "mitre_software_id": "S1121",
+    "ground_truth_techniques": [
+      "T1082",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1543",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [
+      "T1021",
+      "T1036",
+      "T1041",
+      "T1053",
+      "T1071",
+      "T1078",
+      "T1546",
+      "T1550"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1036",
+      "T1041",
+      "T1053",
+      "T1071",
+      "T1078",
+      "T1546",
+      "T1550"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1021",
+      "T1036",
+      "T1041",
+      "T1053",
+      "T1071",
+      "T1078",
+      "T1546",
+      "T1550"
+    ],
+    "false_negatives": [
+      "T1082",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1543",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-037",
+    "mitre_software_id": "S1109",
+    "ground_truth_techniques": [
+      "T1003",
+      "T1055",
+      "T1059",
+      "T1074",
+      "T1083",
+      "T1119"
+    ],
+    "cited": [
+      "T1003",
+      "T1055",
+      "T1059",
+      "T1077",
+      "T1082",
+      "T1087"
+    ],
+    "fabricated": [
+      "T1055",
+      "T1059",
+      "T1077",
+      "T1082",
+      "T1087"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1": 0.5,
+    "true_positives": [
+      "T1003",
+      "T1055",
+      "T1059"
+    ],
+    "false_positives": [
+      "T1077",
+      "T1082",
+      "T1087"
+    ],
+    "false_negatives": [
+      "T1074",
+      "T1083",
+      "T1119"
+    ]
+  },
+  {
+    "id": "ATE-038",
+    "mitre_software_id": "S1114",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1105",
+      "T1205",
+      "T1562",
+      "T1573"
+    ],
+    "cited": [
+      "T1021",
+      "T1027",
+      "T1027.015",
+      "T1059",
+      "T1074",
+      "T1074.002",
+      "T1087",
+      "T1090",
+      "T1203",
+      "T1560",
+      "T1560.001",
+      "T1564",
+      "T1564.012"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1059",
+      "T1074",
+      "T1074.002",
+      "T1087",
+      "T1090",
+      "T1203",
+      "T1560",
+      "T1564"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.222,
+    "recall": 0.222,
+    "f1": 0.222,
+    "true_positives": [
+      "T1059",
+      "T1090"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1027",
+      "T1074",
+      "T1087",
+      "T1203",
+      "T1560",
+      "T1564"
+    ],
+    "false_negatives": [
+      "T1057",
+      "T1083",
+      "T1095",
+      "T1105",
+      "T1205",
+      "T1562",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-039",
+    "mitre_software_id": "S1100",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1132",
+      "T1140",
+      "T1480",
+      "T1543",
+      "T1573",
+      "T1574"
+    ],
+    "cited": [
+      "T1007",
+      "T1018",
+      "T1027",
+      "T1028",
+      "T1030",
+      "T1033",
+      "T1034",
+      "T1036",
+      "T1041",
+      "T1055",
+      "T1070",
+      "T1071",
+      "T1072",
+      "T1078",
+      "T1080",
+      "T1082",
+      "T1084",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1089",
+      "T1105",
+      "T1114",
+      "T1115",
+      "T1562",
+      "T1567"
+    ],
+    "fabricated": [
+      "T1007",
+      "T1018",
+      "T1027",
+      "T1028",
+      "T1030",
+      "T1033",
+      "T1034",
+      "T1036",
+      "T1041",
+      "T1055",
+      "T1070",
+      "T1071",
+      "T1072",
+      "T1078",
+      "T1082",
+      "T1084",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1089",
+      "T1105",
+      "T1114",
+      "T1115",
+      "T1562",
+      "T1567"
+    ],
+    "unrecognised_citations": [
+      "Lateral-movement",
+      "Execution",
+      "Initial Access",
+      "Defense Evasion",
+      "Command and Scripting Interpreter",
+      "Defense Evasion",
+      "Initial Access",
+      "Initial Access",
+      "Persistence",
+      "Reconnaissance",
+      "Persistence",
+      "Defense Evasion",
+      "Lateral-movement",
+      "Persistence",
+      "Persistence",
+      "C2",
+      "Defense Evasion",
+      "Privilege Escalation",
+      "Command and Scripting Interpreter",
+      "Defense Evasion",
+      "Initial Access",
+      "Defense Evasion",
+      "Command and Scripting Interpreter",
+      "Command and Scripting Interpreter",
+      "Command and Control",
+      "Command and Control",
+      "Defense Evasion"
+    ],
+    "precision": 0.077,
+    "recall": 0.2,
+    "f1": 0.111,
+    "true_positives": [
+      "T1070",
+      "T1071"
+    ],
+    "false_positives": [
+      "T1007",
+      "T1018",
+      "T1027",
+      "T1028",
+      "T1030",
+      "T1033",
+      "T1034",
+      "T1036",
+      "T1041",
+      "T1055",
+      "T1072",
+      "T1078",
+      "T1080",
+      "T1082",
+      "T1084",
+      "T1085",
+      "T1086",
+      "T1088",
+      "T1089",
+      "T1105",
+      "T1114",
+      "T1115",
+      "T1562",
+      "T1567"
+    ],
+    "false_negatives": [
+      "T1001",
+      "T1083",
+      "T1132",
+      "T1140",
+      "T1480",
+      "T1543",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-040",
+    "mitre_software_id": "S1099",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1036",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1132",
+      "T1543",
+      "T1573"
+    ],
+    "cited": [
+      "T1016",
+      "T1055",
+      "T1057",
+      "T1068",
+      "T1083",
+      "T1086",
+      "T1105",
+      "T1115",
+      "T1505",
+      "T1505.003",
+      "T1547"
+    ],
+    "fabricated": [
+      "T1016",
+      "T1055",
+      "T1057",
+      "T1068",
+      "T1083",
+      "T1086",
+      "T1105",
+      "T1115",
+      "T1505",
+      "T1547"
+    ],
+    "unrecognised_citations": [
+      "Command and Scripting Interpreter",
+      "PowerShell",
+      "Command and Scripting Interpreter",
+      "Windows Management Instrumentation (WMI)",
+      "Exfiltration Over Command and Control",
+      "Encrypted Channel",
+      "File and Directory Discovery",
+      "Web Shell",
+      "Port Scanning",
+      "Network Service Discovery"
+    ],
+    "precision": 0.2,
+    "recall": 0.182,
+    "f1": 0.19,
+    "true_positives": [
+      "T1083",
+      "T1105"
+    ],
+    "false_positives": [
+      "T1016",
+      "T1055",
+      "T1057",
+      "T1068",
+      "T1086",
+      "T1115",
+      "T1505",
+      "T1547"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1036",
+      "T1059",
+      "T1071",
+      "T1106",
+      "T1112",
+      "T1132",
+      "T1543",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-041",
+    "mitre_software_id": "S1118",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1105",
+      "T1140",
+      "T1205",
+      "T1505",
+      "T1554"
+    ],
+    "cited": [
+      "T1071",
+      "T1071.001",
+      "T1086",
+      "T1087",
+      "T1088"
+    ],
+    "fabricated": [
+      "T1071",
+      "T1071.001",
+      "T1086",
+      "T1087",
+      "T1088"
+    ],
+    "unrecognised_citations": [
+      "1",
+      "1",
+      "2",
+      "3",
+      "1",
+      "2",
+      "3"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1071",
+      "T1086",
+      "T1087",
+      "T1088"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1105",
+      "T1140",
+      "T1205",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-042",
+    "mitre_software_id": "S1129",
+    "ground_truth_techniques": [
+      "T1047",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1083",
+      "T1106",
+      "T1135",
+      "T1486",
+      "T1490"
+    ],
+    "cited": [
+      "T1045",
+      "T1055",
+      "T1419",
+      "T1486",
+      "T1546.015"
+    ],
+    "fabricated": [
+      "T1045",
+      "T1055",
+      "T1419"
+    ],
+    "unrecognised_citations": [
+      "Data Encrypted for Impact",
+      "Component Object Model Hijacking",
+      "PowerShell",
+      "System Volume Shadow Copy Deletion",
+      "WMI",
+      "Process Injection"
+    ],
+    "precision": 0.2,
+    "recall": 0.111,
+    "f1": 0.143,
+    "true_positives": [
+      "T1486"
+    ],
+    "false_positives": [
+      "T1045",
+      "T1055",
+      "T1419",
+      "T1546"
+    ],
+    "false_negatives": [
+      "T1047",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1083",
+      "T1106",
+      "T1135",
+      "T1490"
+    ]
+  },
+  {
+    "id": "ATE-043",
+    "mitre_software_id": "S1107",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1053",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1090",
+      "T1113",
+      "T1498"
+    ],
+    "cited": [
+      "T1021",
+      "T1027",
+      "T1053",
+      "T1059",
+      "T1071.001",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1445",
+      "T1499.001",
+      "T1499.002",
+      "T1499.003",
+      "T1499.004"
+    ],
+    "fabricated": [
+      "T1021",
+      "T1027",
+      "T1053",
+      "T1059",
+      "T1071.001",
+      "T1074",
+      "T1082",
+      "T1087",
+      "T1445",
+      "T1499.002",
+      "T1499.003",
+      "T1499.004"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.3,
+    "recall": 0.375,
+    "f1": 0.333,
+    "true_positives": [
+      "T1053",
+      "T1059",
+      "T1082"
+    ],
+    "false_positives": [
+      "T1021",
+      "T1027",
+      "T1071",
+      "T1074",
+      "T1087",
+      "T1445",
+      "T1499"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1057",
+      "T1090",
+      "T1113",
+      "T1498"
+    ]
+  },
+  {
+    "id": "ATE-044",
+    "mitre_software_id": "S1104",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1074",
+      "T1111",
+      "T1554",
+      "T1556"
+    ],
+    "cited": [
+      "T1036",
+      "T1053",
+      "T1055",
+      "T1059",
+      "T1078",
+      "T1086",
+      "T1087",
+      "T1088",
+      "T1110",
+      "T1176",
+      "T1185",
+      "T1190",
+      "T1204",
+      "T1546.009",
+      "T1547.001",
+      "T1547.009",
+      "T1556",
+      "T1566.001",
+      "T1583",
+      "T1608"
+    ],
+    "fabricated": [
+      "T1036",
+      "T1053",
+      "T1055",
+      "T1059",
+      "T1078",
+      "T1086",
+      "T1087",
+      "T1088",
+      "T1110",
+      "T1176",
+      "T1185",
+      "T1190",
+      "T1204",
+      "T1547.001",
+      "T1566.001",
+      "T1583",
+      "T1608"
+    ],
+    "unrecognised_citations": [
+      "Used to authenticate to a service or system without using valid accounts",
+      "Logging credentials and writing them to /home/perl/PAUS.pm",
+      "Forcing successful authentication if the provided password matches a chosen backdoor password",
+      "Possibly used to access the file system and write logged ACE credentials to /home/perl/PAUS.pm",
+      "Possibly used to access the file system and write logged ACE credentials to /home/perl/PAUS.pm",
+      "Modifying LDAP and two factor authentication flows",
+      "Possibly used as a means of delivering the malware to the compromised environment",
+      "Making the malicious code appear as legitimate code hidden in the padding regions between legitimate functions in the Pulse Secure libdsplibs.so file",
+      "Possibly used to log credentials during the DSAuth::AceAuthServer::checkUsernamePasswordACE-2FA authentication procedure",
+      "Possibly used to establish persistence by modifying legitimate Pulse Secure files",
+      "Possibly used to inject malicious code into processes",
+      "Possibly used to delay malware execution or ensure prior commands have had time to execute properly",
+      "Possibly used to execute commands and write logged ACE credentials to /home/perl/PAUS.pm",
+      "Possibly used to delay malware execution and potentially exceed time thresholds of automated analysis environments",
+      "Possibly used to establish persistence and/or elevate privileges by executing malicious content triggered by AppCert DLLs loaded into processes",
+      "Possibly used to persistently launch malware (indirectly mentioned)",
+      "Possibly used as a method of delivering exploit code to a browser, although the context does not explicitly mention this",
+      "Possibly used by abusing browser push notifications for malicious code injection",
+      "Possibly used as a method of delivering exploit code to a browser, although the context does not explicitly mention this",
+      "Possibly used to exploit software on a client endpoint upon visiting a website, although the focus of SLOWPULSE is on compromised environments through modifications to legitimate Pulse Secure files"
+    ],
+    "precision": 0.053,
+    "recall": 0.2,
+    "f1": 0.083,
+    "true_positives": [
+      "T1556"
+    ],
+    "false_positives": [
+      "T1036",
+      "T1053",
+      "T1055",
+      "T1059",
+      "T1078",
+      "T1086",
+      "T1087",
+      "T1088",
+      "T1110",
+      "T1176",
+      "T1185",
+      "T1190",
+      "T1204",
+      "T1546",
+      "T1547",
+      "T1566",
+      "T1583",
+      "T1608"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1074",
+      "T1111",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-045",
+    "mitre_software_id": "S1113",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1001",
+      "T1027.004",
+      "T1027.013",
+      "T1041",
+      "T1059",
+      "T1086"
+    ],
+    "fabricated": [
+      "T1001",
+      "T1041",
+      "T1059",
+      "T1086"
+    ],
+    "unrecognised_citations": [
+      "MITRE ATT&CK Technique description",
+      "MITRE ATT&CK Technique description",
+      "MITRE ATT&CK Technique description",
+      "Implied by the ability of RAPIDPULSE to retrieve files from the victim system",
+      "MITRE ATT&CK Technique description",
+      "Implied by the encryption and base64-encoding of files",
+      "MITRE ATT&CK Technique description",
+      "Since RAPIDPULSE is a modification to a legitimate Pulse Secure file, it could be argued that this technique is used, but it is not explicitly stated that the file is compiled after delivery",
+      "MITRE ATT&CK Technique description"
+    ],
+    "precision": 0.2,
+    "recall": 0.25,
+    "f1": 0.222,
+    "true_positives": [
+      "T1027"
+    ],
+    "false_positives": [
+      "T1001",
+      "T1041",
+      "T1059",
+      "T1086"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1140",
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-046",
+    "mitre_software_id": "S1108",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1132",
+      "T1505"
+    ],
+    "cited": [
+      "T1132",
+      "T1216",
+      "T1497",
+      "T1505.003",
+      "T1595",
+      "T1595.002"
+    ],
+    "fabricated": [
+      "T1132",
+      "T1497",
+      "T1595"
+    ],
+    "unrecognised_citations": [
+      "Web Shell",
+      "System Script Proxy Execution",
+      "Base64 Encoding",
+      "Command and Scripting Interpreter",
+      "Scanning IP Blocks",
+      "Vulnerability Scanning",
+      "System Checks"
+    ],
+    "precision": 0.4,
+    "recall": 0.5,
+    "f1": 0.444,
+    "true_positives": [
+      "T1132",
+      "T1505"
+    ],
+    "false_positives": [
+      "T1216",
+      "T1497",
+      "T1595"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1071"
+    ]
+  },
+  {
+    "id": "ATE-047",
+    "mitre_software_id": "S1117",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1132",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1027",
+      "T1041",
+      "T1053",
+      "T1078",
+      "T1081",
+      "T1102",
+      "T1130"
+    ],
+    "fabricated": [
+      "T1027",
+      "T1041",
+      "T1053",
+      "T1078",
+      "T1081",
+      "T1102",
+      "T1130"
+    ],
+    "unrecognised_citations": [
+      "Command and Control (C2) Beacon",
+      "PowerShell",
+      "Base64 Encoding",
+      "Hexadecimal Encoding",
+      "OLE DLL Injection",
+      "PowerShell",
+      "Remote Services"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1041",
+      "T1053",
+      "T1078",
+      "T1081",
+      "T1102",
+      "T1130"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1132",
+      "T1140",
+      "T1505"
+    ]
+  }
+]

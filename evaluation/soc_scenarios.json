@@ -1,0 +1,452 @@
+[
+  {
+    "id": "SOC-001",
+    "category": "alert_triage",
+    "tactic": "Execution",
+    "question": "An EDR alert fires for powershell.exe launched with a base64-encoded -EncodedCommand argument from an Office document's child process. What ATT&CK technique does this match?",
+    "ground_truth_technique": "T1059.001",
+    "ground_truth_technique_name": "PowerShell",
+    "notes": "Encoded PowerShell execution is the canonical example for T1059.001."
+  },
+  {
+    "id": "SOC-002",
+    "category": "alert_triage",
+    "tactic": "Persistence",
+    "question": "A host shows a new scheduled task created under SYSTEM context immediately after a suspicious binary ran, set to re-launch that binary every reboot. What technique is this?",
+    "ground_truth_technique": "T1053.005",
+    "ground_truth_technique_name": "Scheduled Task",
+    "notes": "Windows Task Scheduler abuse for persistence."
+  },
+  {
+    "id": "SOC-003",
+    "category": "alert_triage",
+    "tactic": "Credential Access",
+    "question": "Antivirus flags a process reading LSASS memory using MiniDumpWriteDump shortly before network beaconing begins. Which technique should this be triaged as?",
+    "ground_truth_technique": "T1003.001",
+    "ground_truth_technique_name": "LSASS Memory",
+    "notes": "MiniDumpWriteDump against lsass.exe is a textbook OS credential dumping indicator."
+  },
+  {
+    "id": "SOC-004",
+    "category": "alert_triage",
+    "tactic": "Command and Control",
+    "question": "A firewall alert shows an internal workstation making repeated outbound connections to the same external IP over port 443 at regular 60-second intervals, even when the user is idle.",
+    "ground_truth_technique": "T1071.001",
+    "ground_truth_technique_name": "Web Protocols",
+    "notes": "Regular-interval HTTPS beaconing is classic C2 over web protocols."
+  },
+  {
+    "id": "SOC-005",
+    "category": "alert_triage",
+    "tactic": "Persistence",
+    "question": "A user's account shows a successful login from a country they have never travelled to, immediately followed by mailbox rule creation that forwards all mail to an external address.",
+    "ground_truth_technique": "T1098",
+    "ground_truth_technique_name": "Account Manipulation",
+    "notes": "Mailbox forwarding rule added by the compromised account is account manipulation for persistence."
+  },
+  {
+    "id": "SOC-006",
+    "category": "alert_triage",
+    "tactic": "Credential Access",
+    "question": "A SIEM correlation rule fires because a domain controller received an unusually large number of failed Kerberos authentication attempts against many different usernames within a short window.",
+    "ground_truth_technique": "T1110.003",
+    "ground_truth_technique_name": "Password Spraying",
+    "notes": "Many usernames, few attempts each, is the signature of password spraying rather than classic brute force."
+  },
+  {
+    "id": "SOC-007",
+    "category": "alert_triage",
+    "tactic": "Execution",
+    "question": "An endpoint alert shows a Microsoft Office process spawning cmd.exe, which then spawns powershell.exe with no visible window. What technique covers the initial spawn chain from Office to a command interpreter?",
+    "ground_truth_technique": "T1204.002",
+    "ground_truth_technique_name": "Malicious File",
+    "notes": "The Office document itself being opened and triggering execution is user execution of a malicious file."
+  },
+  {
+    "id": "SOC-008",
+    "category": "alert_triage",
+    "tactic": "Collection",
+    "question": "A DLP alert triggers because a large ZIP archive was created in a temp directory just before a large outbound transfer to a cloud storage domain not used by the organisation.",
+    "ground_truth_technique": "T1560.001",
+    "ground_truth_technique_name": "Archive via Utility",
+    "notes": "Archiving data into a ZIP before exfiltration is collection via archiving utility."
+  },
+  {
+    "id": "SOC-009",
+    "category": "alert_triage",
+    "tactic": "Persistence",
+    "question": "A workstation's registry Run key gains a new value pointing to an executable in the user's AppData folder, and the change coincides with a phishing email being opened.",
+    "ground_truth_technique": "T1547.001",
+    "ground_truth_technique_name": "Registry Run Keys / Startup Folder",
+    "notes": "Registry Run key modification for auto-start is the standard technique for this behaviour."
+  },
+  {
+    "id": "SOC-010",
+    "category": "alert_triage",
+    "tactic": "Lateral Movement",
+    "question": "An alert shows a service account, which normally only runs scheduled backups, being used interactively to RDP into three other servers within the same hour.",
+    "ground_truth_technique": "T1021.001",
+    "ground_truth_technique_name": "Remote Desktop Protocol",
+    "notes": "RDP used for lateral movement between hosts."
+  },
+  {
+    "id": "SOC-011",
+    "category": "alert_triage",
+    "tactic": "Defense Evasion",
+    "question": "A host's process tree shows rundll32.exe being invoked with an unusual, obfuscated argument string and no legitimate parent application context.",
+    "ground_truth_technique": "T1218.011",
+    "ground_truth_technique_name": "Rundll32",
+    "notes": "Rundll32 abuse to proxy execution of malicious code and evade detection."
+  },
+  {
+    "id": "SOC-012",
+    "category": "alert_triage",
+    "tactic": "Impact",
+    "question": "Backup software logs show shadow copies being deleted on a file server minutes before files on that server are found renamed with a new, unfamiliar extension.",
+    "ground_truth_technique": "T1490",
+    "ground_truth_technique_name": "Inhibit System Recovery",
+    "notes": "Deleting shadow copies immediately before encryption is a standard pre-ransomware step."
+  },
+  {
+    "id": "SOC-013",
+    "category": "alert_triage",
+    "tactic": "Lateral Movement",
+    "question": "A network alert flags SMB traffic from a compromised host attempting to write an executable to the ADMIN$ share of several other machines on the same subnet.",
+    "ground_truth_technique": "T1570",
+    "ground_truth_technique_name": "Lateral Tool Transfer",
+    "notes": "Copying tools to other hosts over SMB shares for later execution."
+  },
+  {
+    "id": "SOC-014",
+    "category": "alert_triage",
+    "tactic": "Command and Control",
+    "question": "A proxy log shows a workstation querying an unusual number of DNS TXT records for a single external domain over a short period, with no corresponding web browsing activity.",
+    "ground_truth_technique": "T1071.004",
+    "ground_truth_technique_name": "DNS",
+    "notes": "DNS TXT record abuse is a known covert channel for C2 over DNS."
+  },
+  {
+    "id": "SOC-015",
+    "category": "alert_triage",
+    "tactic": "Persistence",
+    "question": "EDR flags a new local administrator account being created on a workstation outside of the organisation's change window, shortly after a suspicious executable ran.",
+    "ground_truth_technique": "T1136.001",
+    "ground_truth_technique_name": "Local Account",
+    "notes": "Creating a new local account is a common persistence mechanism after initial compromise."
+  },
+  {
+    "id": "SOC-016",
+    "category": "alert_triage",
+    "tactic": "Defense Evasion",
+    "question": "An alert fires because a process was observed injecting code into the memory space of explorer.exe on a workstation that was recently reimaged.",
+    "ground_truth_technique": "T1055",
+    "ground_truth_technique_name": "Process Injection",
+    "notes": "Injecting into a legitimate long-running process like explorer.exe is a classic evasion technique."
+  },
+  {
+    "id": "SOC-017",
+    "category": "alert_triage",
+    "tactic": "Credential Access",
+    "question": "A cloud audit log shows a user's access token being used from two geographically distant IP addresses within minutes of each other, without an intervening logout.",
+    "ground_truth_technique": "T1528",
+    "ground_truth_technique_name": "Steal Application Access Token",
+    "notes": "Impossible-travel token reuse suggests a stolen application access token being replayed."
+  },
+  {
+    "id": "SOC-018",
+    "category": "threat_classification",
+    "tactic": "Initial Access",
+    "question": "Which ATT&CK technique best classifies an attacker exploiting a known, unpatched vulnerability in a public-facing web application to gain their initial foothold?",
+    "ground_truth_technique": "T1190",
+    "ground_truth_technique_name": "Exploit Public-Facing Application",
+    "notes": "Direct exploitation of an internet-facing app vulnerability."
+  },
+  {
+    "id": "SOC-019",
+    "category": "threat_classification",
+    "tactic": "Execution",
+    "question": "An attacker gains a foothold after an employee opens an attachment in a spearphishing email that exploits a vulnerability in the document viewer itself, rather than relying on the user running a macro. Classify the technique.",
+    "ground_truth_technique": "T1203",
+    "ground_truth_technique_name": "Exploitation for Client Execution",
+    "notes": "Exploiting the viewer application itself, not user-enabled macro execution."
+  },
+  {
+    "id": "SOC-020",
+    "category": "threat_classification",
+    "tactic": "Defense Evasion",
+    "question": "Which technique describes an attacker renaming a malicious executable to match a legitimate Windows system process name (e.g. svchost.exe) to blend in with normal system activity?",
+    "ground_truth_technique": "T1036.005",
+    "ground_truth_technique_name": "Match Legitimate Name or Location",
+    "notes": "Renaming/placing malware to resemble a trusted system binary."
+  },
+  {
+    "id": "SOC-021",
+    "category": "threat_classification",
+    "tactic": "Command and Control",
+    "question": "An adversary is observed using a legitimate, signed remote-support tool already present on the network to move between hosts instead of deploying their own malware. What technique covers this?",
+    "ground_truth_technique": "T1219",
+    "ground_truth_technique_name": "Remote Access Software",
+    "notes": "Abuse of legitimate remote access/support tooling."
+  },
+  {
+    "id": "SOC-022",
+    "category": "threat_classification",
+    "tactic": "Initial Access",
+    "question": "Classify an attack where the adversary compromises a trusted software vendor's update mechanism to distribute malware to that vendor's downstream customers.",
+    "ground_truth_technique": "T1195.002",
+    "ground_truth_technique_name": "Compromise Software Supply Chain",
+    "notes": "Classic supply-chain compromise via a trusted vendor's update channel."
+  },
+  {
+    "id": "SOC-023",
+    "category": "threat_classification",
+    "tactic": "Discovery",
+    "question": "An adversary is found querying Active Directory for all accounts belonging to the Domain Admins group before attempting any privilege escalation. What technique is this reconnaissance step?",
+    "ground_truth_technique": "T1069.002",
+    "ground_truth_technique_name": "Domain Groups",
+    "notes": "Enumerating privileged domain groups is a discovery step, not privilege escalation itself."
+  },
+  {
+    "id": "SOC-024",
+    "category": "threat_classification",
+    "tactic": "Command and Control",
+    "question": "Which technique classifies an attacker encoding stolen data before sending it out over normal-looking outbound HTTPS traffic, so it is not obviously distinguishable from legitimate encrypted web traffic?",
+    "ground_truth_technique": "T1132.001",
+    "ground_truth_technique_name": "Standard Encoding",
+    "notes": "Encoding/obfuscating C2 or exfil data to blend with normal traffic, distinct from encryption for confidentiality alone."
+  },
+  {
+    "id": "SOC-025",
+    "category": "threat_classification",
+    "tactic": "Execution",
+    "question": "An attacker is observed abusing a Windows COM object to achieve code execution without writing a new file to disk. Which technique fits?",
+    "ground_truth_technique": "T1559.001",
+    "ground_truth_technique_name": "Component Object Model",
+    "notes": "COM-based execution is inter-process communication abuse."
+  },
+  {
+    "id": "SOC-026",
+    "category": "threat_classification",
+    "tactic": "Defense Evasion",
+    "question": "Classify a technique where malware checks for the presence of known analyst tools, VM artefacts, or a debugger before deciding whether to execute its payload.",
+    "ground_truth_technique": "T1497",
+    "ground_truth_technique_name": "Virtualization/Sandbox Evasion",
+    "notes": "Environment/sandbox checks to avoid analysis are the definition of this technique."
+  },
+  {
+    "id": "SOC-027",
+    "category": "threat_classification",
+    "tactic": "Initial Access",
+    "question": "An adversary uses valid, stolen VPN credentials belonging to a contractor to access the internal network directly, without exploiting any vulnerability. Which technique?",
+    "ground_truth_technique": "T1133",
+    "ground_truth_technique_name": "External Remote Services",
+    "notes": "Using legitimate external-facing remote access services with valid (stolen) credentials."
+  },
+  {
+    "id": "SOC-028",
+    "category": "threat_classification",
+    "tactic": "Resource Development",
+    "question": "Which technique covers an attacker registering a domain that closely resembles the target organisation's real domain, for use in a later phishing campaign?",
+    "ground_truth_technique": "T1583.001",
+    "ground_truth_technique_name": "Domains",
+    "notes": "Domain acquisition ahead of an operation is resource development, not initial access itself."
+  },
+  {
+    "id": "SOC-029",
+    "category": "threat_classification",
+    "tactic": "Command and Control",
+    "question": "An attacker uses living-off-the-land binary certutil.exe to download a second-stage payload from an external server. Classify this technique.",
+    "ground_truth_technique": "T1105",
+    "ground_truth_technique_name": "Ingress Tool Transfer",
+    "notes": "Bringing additional tools/payloads into the compromised environment."
+  },
+  {
+    "id": "SOC-030",
+    "category": "threat_classification",
+    "tactic": "Defense Evasion",
+    "question": "Which technique describes an adversary modifying timestamps on a dropped malicious file to match the timestamps of legitimate nearby system files, to evade timeline-based forensic review?",
+    "ground_truth_technique": "T1070.006",
+    "ground_truth_technique_name": "Timestomp",
+    "notes": "Timestomping is specifically about altering file time attributes to blend in or mislead forensics."
+  },
+  {
+    "id": "SOC-031",
+    "category": "threat_classification",
+    "tactic": "Exfiltration",
+    "question": "An attacker exfiltrates a small number of highly sensitive documents by uploading them to a personal cloud storage account, using the same protocol and port as normal corporate cloud backups. Classify the exfiltration technique.",
+    "ground_truth_technique": "T1567.002",
+    "ground_truth_technique_name": "Exfiltration to Cloud Storage",
+    "notes": "Exfiltration specifically via a cloud storage service rather than a general C2 channel."
+  },
+  {
+    "id": "SOC-032",
+    "category": "threat_classification",
+    "tactic": "Credential Access",
+    "question": "Which technique covers an adversary intercepting and manipulating traffic between two parties on a local network in order to steal credentials passed between them?",
+    "ground_truth_technique": "T1557",
+    "ground_truth_technique_name": "Adversary-in-the-Middle",
+    "notes": "Positioning between two parties to intercept/manipulate traffic, the AiTM technique family."
+  },
+  {
+    "id": "SOC-033",
+    "category": "threat_classification",
+    "tactic": "Persistence",
+    "question": "An adversary abuses a misconfigured cloud IAM role to grant themselves broader permissions than they were originally issued. Classify this.",
+    "ground_truth_technique": "T1098.003",
+    "ground_truth_technique_name": "Additional Cloud Roles",
+    "notes": "Adding cloud roles/permissions to an existing account for persistence and privilege."
+  },
+  {
+    "id": "SOC-034",
+    "category": "threat_classification",
+    "tactic": "Defense Evasion",
+    "question": "Which technique describes an attacker disabling a host's security event logging service before carrying out further malicious activity on that host?",
+    "ground_truth_technique": "T1562.002",
+    "ground_truth_technique_name": "Disable Windows Event Logging",
+    "notes": "Directly disabling logging is the specific impair-defenses sub-technique for this scenario."
+  },
+  {
+    "id": "SOC-035",
+    "category": "incident_summary",
+    "tactic": "Impact",
+    "question": "Summarise the technique: an incident report states the attacker's final action was encrypting files across multiple file servers and dropping a ransom note demanding payment for the decryption key.",
+    "ground_truth_technique": "T1486",
+    "ground_truth_technique_name": "Data Encrypted for Impact",
+    "notes": "Ransomware's defining final-stage technique."
+  },
+  {
+    "id": "SOC-036",
+    "category": "incident_summary",
+    "tactic": "Defense Evasion",
+    "question": "An incident write-up describes the attacker methodically deleting event logs and clearing PowerShell history on every host they touched, right before disconnecting. What technique covers this closing behaviour?",
+    "ground_truth_technique": "T1070.001",
+    "ground_truth_technique_name": "Clear Windows Event Logs",
+    "notes": "Log clearing as an anti-forensic closing step."
+  },
+  {
+    "id": "SOC-037",
+    "category": "incident_summary",
+    "tactic": "Command and Control",
+    "question": "The post-incident report notes the compromised host repeatedly resolved the same handful of internal-looking domain names that turned out to be attacker-controlled, used to relay commands to the malware in short bursts.",
+    "ground_truth_technique": "T1568.002",
+    "ground_truth_technique_name": "Domain Generation Algorithms",
+    "notes": "Rotating domains resolved by the malware suggests DGA-based C2 resilience."
+  },
+  {
+    "id": "SOC-038",
+    "category": "incident_summary",
+    "tactic": "Defense Evasion",
+    "question": "Summarise the initial-access technique in an incident where the attacker called the IT helpdesk, impersonating an employee, and convinced staff to reset that employee's password over the phone.",
+    "ground_truth_technique": "T1656",
+    "ground_truth_technique_name": "Impersonation",
+    "notes": "Social-engineering impersonation of a trusted party to manipulate staff into an action."
+  },
+  {
+    "id": "SOC-039",
+    "category": "incident_summary",
+    "tactic": "Exfiltration",
+    "question": "The incident report describes attackers compressing an entire database export, splitting it into small chunks, and uploading each chunk slowly over several days to avoid triggering data-volume alerts.",
+    "ground_truth_technique": "T1030",
+    "ground_truth_technique_name": "Data Transfer Size Limits",
+    "notes": "Deliberately limiting transfer size/rate to avoid detection thresholds."
+  },
+  {
+    "id": "SOC-040",
+    "category": "incident_summary",
+    "tactic": "Lateral Movement",
+    "question": "An incident timeline shows the attacker pivoting from a compromised low-privilege workstation to a domain controller by exploiting a known unpatched vulnerability in an internal server that had not been exposed to the internet.",
+    "ground_truth_technique": "T1210",
+    "ground_truth_technique_name": "Exploitation of Remote Services",
+    "notes": "Exploiting a vulnerable internal service to move laterally, distinct from initial internet-facing exploitation."
+  },
+  {
+    "id": "SOC-041",
+    "category": "incident_summary",
+    "tactic": "Initial Access",
+    "question": "The report notes the attacker used a compromised build server to insert malicious code directly into the organisation's own software before it was compiled and shipped to customers.",
+    "ground_truth_technique": "T1195.001",
+    "ground_truth_technique_name": "Compromise Software Dependencies and Development Tools",
+    "notes": "Compromise of the build/development pipeline itself, distinct from compromising a third-party vendor's update mechanism."
+  },
+  {
+    "id": "SOC-042",
+    "category": "incident_summary",
+    "tactic": "Persistence",
+    "question": "Summarise the technique: the attacker was found to have created a hidden scheduled task disguised with a name resembling a legitimate Windows maintenance task, which re-established their access after every reboot for three weeks before detection.",
+    "ground_truth_technique": "T1053.005",
+    "ground_truth_technique_name": "Scheduled Task",
+    "notes": "Same underlying technique as the alert-triage example, tested here from a summary/retrospective framing instead."
+  },
+  {
+    "id": "SOC-043",
+    "category": "incident_summary",
+    "tactic": "Credential Access",
+    "question": "The incident report states the attacker harvested browser-saved passwords from several employees' machines during the early stages of the compromise, well before any lateral movement occurred.",
+    "ground_truth_technique": "T1555.003",
+    "ground_truth_technique_name": "Credentials from Web Browsers",
+    "notes": "Harvesting stored browser credentials specifically."
+  },
+  {
+    "id": "SOC-044",
+    "category": "incident_summary",
+    "tactic": "Defense Evasion",
+    "question": "Summarise the technique: forensic analysis found the attacker had modified a legitimate scheduled Windows binary's discretionary access control list so that a low-privileged account they controlled could also execute it with SYSTEM privileges.",
+    "ground_truth_technique": "T1222.001",
+    "ground_truth_technique_name": "Windows File and Directory Permissions Modification",
+    "notes": "Modifying file/DACL permissions to enable otherwise-restricted access or execution."
+  },
+  {
+    "id": "SOC-045",
+    "category": "incident_summary",
+    "tactic": "Credential Access",
+    "question": "The write-up describes the attacker registering a malicious OAuth application and tricking a user into granting it broad access to their mailbox and files, without ever needing the user's actual password.",
+    "ground_truth_technique": "T1528",
+    "ground_truth_technique_name": "Steal Application Access Token",
+    "notes": "OAuth consent-phishing to obtain an application access token instead of credentials."
+  },
+  {
+    "id": "SOC-046",
+    "category": "incident_summary",
+    "tactic": "Defense Evasion",
+    "question": "Summarise the persistence technique: the attacker modified a Group Policy Object applied to an entire business unit so that their malicious script would run automatically for every user in that unit at next logon.",
+    "ground_truth_technique": "T1484.001",
+    "ground_truth_technique_name": "Group Policy Modification",
+    "notes": "Abusing GPO for broad, organisation-wide persistence and execution."
+  },
+  {
+    "id": "SOC-047",
+    "category": "incident_summary",
+    "tactic": "Discovery",
+    "question": "The incident report notes the attacker's malware queried the host's installed antivirus product and available system memory before deciding whether to proceed, aborting silently on machines with certain endpoint protection installed.",
+    "ground_truth_technique": "T1518.001",
+    "ground_truth_technique_name": "Security Software Discovery",
+    "notes": "Checking for installed security products before proceeding is security software discovery."
+  },
+  {
+    "id": "SOC-048",
+    "category": "incident_summary",
+    "tactic": "Collection",
+    "question": "Summarise the technique: after gaining access, the attacker created a scheduled export of the victim's entire customer database to a staging file every night for a week before the final exfiltration occurred.",
+    "ground_truth_technique": "T1074.001",
+    "ground_truth_technique_name": "Local Data Staging",
+    "notes": "Repeated local staging of data ahead of a later single exfiltration event."
+  },
+  {
+    "id": "SOC-049",
+    "category": "incident_summary",
+    "tactic": "Defense Evasion",
+    "question": "The incident report describes the attacker abusing a trusted internal certificate authority to issue themselves a valid code-signing certificate, which they then used to sign their malware so it would bypass application allow-listing.",
+    "ground_truth_technique": "T1553.002",
+    "ground_truth_technique_name": "Code Signing",
+    "notes": "Abusing/forging valid code signing to subvert trust controls like allow-listing."
+  },
+  {
+    "id": "SOC-050",
+    "category": "incident_summary",
+    "tactic": "Persistence",
+    "question": "Summarise the technique: three months after the original breach was believed contained, investigators found a small, dormant implant on a single low-priority print server that had never been remediated, which the attacker used to regain full access.",
+    "ground_truth_technique": "T1078.003",
+    "ground_truth_technique_name": "Local Accounts",
+    "notes": "A retained local account/implant on an overlooked host used to re-establish access after apparent containment."
+  }
+]

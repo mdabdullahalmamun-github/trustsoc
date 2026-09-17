@@ -1,0 +1,677 @@
+[
+  {
+    "id": "ATE-001",
+    "mitre_software_id": "S0066",
+    "source_url": "https://attack.mitre.org/software/S0066/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\n3PARA RAT is a remote access tool (RAT) developed in C++ and associated with the group Putter Panda. It communicates with its command and control (C2) servers via HTTP, with commands encrypted using the DES algorithm in CBC mode. The encryption key is derived from the MD5 hash of the string \"HYF54&%9&jkMCXuiS.\" If the DES decryption fails, 3PARA RAT will attempt to decode the commands using an 8-byte XOR key, also derived from the same string. The tool includes commands to retrieve file metadata, list the current working directory, and modify file attributes, such as creation and modification timestamps.",
+    "ground_truth_techniques": [
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-002",
+    "mitre_software_id": "S0065",
+    "source_url": "https://attack.mitre.org/software/S0065/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\n4H RAT is a piece of malware linked to Putter Panda, with evidence of its use dating back to at least 2007. It relies on HTTP for command and control (C2) communication and has the ability to create a remote shell. To obfuscate its C2 traffic, 4H RAT uses a 1-byte XOR encryption with the key 0xBE. The malware is capable of retrieving file and directory listings, as well as obtaining information about running processes and loaded modules. Additionally, 4H RAT includes an OS version identifier in its beacon messages.",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1071",
+      "T1082",
+      "T1083",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-003",
+    "mitre_software_id": "S0469",
+    "source_url": "https://attack.mitre.org/software/S0469/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nABK is a downloader associated with BRONZE BUTLER, active since at least 2019. It communicates with its command and control (C2) server via HTTP and can use the command line to execute Portable Executables (PEs) on compromised hosts. ABK is capable of decrypting AES-encrypted payloads and downloading files from the C2 server. Additionally, it can extract malicious PEs from images and inject shellcode into svchost.exe. ABK also has the ability to detect the installed anti-virus software on the compromised host.",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1055",
+      "T1059",
+      "T1071",
+      "T1105",
+      "T1140",
+      "T1518"
+    ]
+  },
+  {
+    "id": "ATE-004",
+    "mitre_software_id": "S1028",
+    "source_url": "https://attack.mitre.org/software/S1028/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAction RAT is a remote access tool developed in Delphi and has been employed by SideCopy since at least December 2021, targeting government personnel in India and Afghanistan. The malware communicates with command and control (C2) servers via HTTP and can execute commands on an infected host using cmd.exe. Action RAT is capable of collecting local data, as well as drive and file information from compromised machines. It also uses Base64 decoding to process communications from actor-controlled C2 servers and can download additional payloads onto infected systems.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1140"
+    ]
+  },
+  {
+    "id": "ATE-005",
+    "mitre_software_id": "S0202",
+    "source_url": "https://attack.mitre.org/software/S0202/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nadbupd is a backdoor utilized by PLATINUM, bearing similarities to Dipsind. It has the capability to execute a copy of cmd.exe and includes the OpenSSL library to encrypt its command and control (C2) traffic. Additionally, adbupd can achieve persistence by leveraging a WMI script.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1546",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-006",
+    "mitre_software_id": "S0552",
+    "source_url": "https://attack.mitre.org/software/S0552/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAdFind is a free command-line query tool designed for extracting information from Active Directory. It can enumerate domain users, domain groups, and organizational units (OUs), as well as gather details about domain trusts. AdFind is also capable of querying Active Directory for computer accounts and extracting subnet information.",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1018",
+      "T1069",
+      "T1087",
+      "T1482"
+    ]
+  },
+  {
+    "id": "ATE-007",
+    "mitre_software_id": "S0045",
+    "source_url": "https://attack.mitre.org/software/S0045/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nADVSTORESHELL is a spying backdoor associated with APT28, active from at least 2012 to 2016. It is typically used for long-term espionage on targets identified as valuable after an initial reconnaissance phase. ADVSTORESHELL communicates with its command and control (C2) server via port 80 using the Wininet API, exchanging data through HTTP POST requests. Before exfiltration, the backdoor encrypts data using the 3DES algorithm with a hardcoded key. Persistence is achieved by adding itself to the HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run Registry key. ADVSTORESHELL can create a remote shell and execute specified commands, with command execution output stored in a .dat file in the %TEMP% directory. Its C2 traffic is encrypted and then encoded with Base64. Some variants of ADVSTORESHELL also use 3DES encryption for C2 communications.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1547",
+      "T1560",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-008",
+    "mitre_software_id": "S0440",
+    "source_url": "https://attack.mitre.org/software/S0440/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAgent Smith is mobile malware that generates financial profit by replacing legitimate apps on infected devices with malicious versions that contain fraudulent ads. By July 2019, Agent Smith had infected approximately 25 million devices, primarily targeting users in India, but also impacting other Asian countries, Saudi Arabia, the United Kingdom, and the United States. Agent Smith can inject fraudulent ad modules into existing applications on a device and exploits known OS vulnerabilities, such as Janus, to replace legitimate apps with malicious versions. The malware is designed to display fraudulent ads to generate revenue. It can also hide its icon from the application launcher and delete update packages of infected apps to prevent them from being updated. The malware can impersonate any popular application on an infected device, with its core component disguising itself as a legitimate Google app. The dropper used to deliver Agent Smith is a weaponized version of a legitimate Feng Shui Bundle. Additionally, the core malware is disguised as a JPG file and encrypted with an XOR cipher.",
+    "ground_truth_techniques": [
+      "T1404",
+      "T1406",
+      "T1577",
+      "T1628",
+      "T1630",
+      "T1643",
+      "T1655"
+    ]
+  },
+  {
+    "id": "ATE-009",
+    "mitre_software_id": "S0331",
+    "source_url": "https://attack.mitre.org/software/S0331/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAgent Tesla is a spyware Trojan built on the .NET framework, active since at least 2014. It is capable of collecting account information from the victim’s machine and has been observed using HTTP for command and control (C2) communications. Agent Tesla can encrypt data using the 3DES algorithm before transmitting it to a C2 server. To establish persistence, it adds itself to the system Registry as a startup program. The Trojan can perform form-grabbing to capture data from web forms and is also capable of stealing data from the victim’s clipboard. Additionally, Agent Tesla can extract credentials from FTP clients and wireless profiles. It has the ability to decrypt strings that have been encrypted using the Rijndael symmetric encryption algorithm.",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1087",
+      "T1115",
+      "T1140",
+      "T1185",
+      "T1547",
+      "T1555",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-010",
+    "mitre_software_id": "S0092",
+    "source_url": "https://attack.mitre.org/software/S0092/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAgent.btz is a worm known for spreading primarily through removable devices like USB drives. It gained notoriety for infecting U.S. military networks in 2008. The worm gathers system information and saves it in an XML file, which is then XOR-encoded for obfuscation. On any connected USB flash drive, Agent.btz creates a file named \"thumb.dd\" that contains details about the infected system and activity logs. The worm also attempts to download an encrypted binary from a specified domain. To propagate itself, Agent.btz drops a copy of itself onto removable media and creates an autorun.inf file that instructs the system to execute the malware when the device is inserted into another computer. Additionally, Agent.btz collects network-related information, including the IP and MAC addresses of the network adapter, as well as IP addresses for the default gateway, WINS, DHCP, and DNS servers, and saves this data into a log file. The worm also records the victim's username and stores it in a separate file.",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1052",
+      "T1091",
+      "T1105",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-011",
+    "mitre_software_id": "S1025",
+    "source_url": "https://attack.mitre.org/software/S1025/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAmadey is a Trojan bot that has been active since at least October 2018. It communicates with its command and control (C2) servers via HTTP and uses fast flux DNS to evade detection. Amadey can collect information from compromised hosts and send the data to its C2 servers. To maintain persistence, it overwrites registry keys, changing the Startup folder to the one containing its executable. Amadey is capable of decoding antivirus name strings and searching for folders associated with antivirus software. Additionally, it can download and execute files to further infect the host machine with additional malware. The Trojan employs various Windows API calls, such as GetComputerNameA, GetUserNameA, and CreateProcessA, and obfuscates strings related to antivirus vendors, domains, and files to avoid detection.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1041",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1140",
+      "T1547",
+      "T1568"
+    ]
+  },
+  {
+    "id": "ATE-012",
+    "mitre_software_id": "S0504",
+    "source_url": "https://attack.mitre.org/software/S0504/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAnchor is a backdoor malware that has been deployed alongside TrickBot on select high-profile targets since at least 2018. It communicates with its command and control (C2) servers using HTTP, HTTPS, and in some variants, DNS tunneling. Anchor can establish persistence by creating a service and is capable of terminating itself if specific execution flags are not present. The malware uses cmd.exe to execute its self-deletion routine and can hide files using the NTFS file system. After successful deployment, Anchor can self-delete its dropper and is also able to download additional payloads. Additionally, it can utilize secondary C2 servers for communication after relaying victim information to the primary C2 servers.",
+    "ground_truth_techniques": [
+      "T1008",
+      "T1059",
+      "T1070",
+      "T1071",
+      "T1105",
+      "T1480",
+      "T1543",
+      "T1564"
+    ]
+  },
+  {
+    "id": "ATE-013",
+    "mitre_software_id": "S1074",
+    "source_url": "https://attack.mitre.org/software/S1074/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nANDROMEDA is a widely recognized commodity malware that was prevalent in the early 2010s and continues to be detected in various industries. During the 2022 C0026 campaign, threat actors re-registered expired ANDROMEDA command and control (C2) domains to deliver malware to targeted entities in Ukraine. ANDROMEDA possesses the capability to make GET requests to download files from its C2 server and can establish persistence by copying itself to `C:\\ProgramData\\Local Settings\\Temp\\mskmde.com` and creating a Registry run key to ensure it executes at each user logon. It can also download additional payloads from its C2 server. The malware has been observed installing itself to `C:\\Temp\\TrustedInstaller.exe`, masquerading as a legitimate Windows installer service, and has been delivered through LNK files disguised as folders. ANDROMEDA can inject itself into the `wuauclt.exe` process to execute C2 commands and has also been spread via infected USB drives.",
+    "ground_truth_techniques": [
+      "T1036",
+      "T1055",
+      "T1071",
+      "T1091",
+      "T1105",
+      "T1547"
+    ]
+  },
+  {
+    "id": "ATE-014",
+    "mitre_software_id": "S0584",
+    "source_url": "https://attack.mitre.org/software/S0584/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAppleJeus is a malware family of downloaders first discovered in 2018, embedded within trojanized cryptocurrency applications. This malware, attributed to the Lazarus Group, has targeted organizations in various sectors, including energy, finance, government, technology, and telecommunications, across multiple countries such as the United States, United Kingdom, South Korea, Australia, Brazil, New Zealand, and Russia. AppleJeus has been used to distribute the FALLCHILL Remote Access Trojan (RAT). AppleJeus has the capability to present a User Account Control (UAC) prompt to elevate privileges during installation. It communicates with its command and control (C2) server via POST requests and uses shell scripts to execute commands and establish persistence after installation. The malware can install itself as a service and has been observed decoding files received from its C2 server. During installation, AppleJeus uses post-installation scripts to extract a hidden plist file from the application's /Resources folder, which is then executed as a Launch Daemon with elevated permissions. Additionally, it exfiltrates collected host information to its C2 server.",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1543",
+      "T1546",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-015",
+    "mitre_software_id": "S0622",
+    "source_url": "https://attack.mitre.org/software/S0622/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAppleSeed is a backdoor used by the Kimsuky group to target South Korean government, academic, and commercial entities since at least 2021.  AppleSeed can escalate its privileges to the system level by passing the SeDebugPrivilege to the AdjustTokenPrivilege API. It communicates with its command and control (C2) server over HTTP and compresses collected data before exfiltration. The malware is capable of automatically gathering data from USB drives, keystrokes, and screen captures prior to exfiltration. For persistence, AppleSeed creates the Registry key `EstsoftAutoUpdate` at `HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce`. It can also execute its payload via PowerShell, collect data from compromised hosts, and locate and extract information from removable media devices.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1025",
+      "T1059",
+      "T1071",
+      "T1119",
+      "T1134",
+      "T1547",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-016",
+    "mitre_software_id": "S0073",
+    "source_url": "https://attack.mitre.org/software/S0073/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nASPXSpy is a web shell that has been modified by Threat Group-3390 to create a variant known as ASPXTool. This modified version has been deployed by the group on accessible servers running Internet Information Services (IIS).",
+    "ground_truth_techniques": [
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-017",
+    "mitre_software_id": "S0110",
+    "source_url": "https://attack.mitre.org/software/S0110/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nThe `at` command is used to schedule tasks on a system to run at a specified date and time.",
+    "ground_truth_techniques": [
+      "T1053"
+    ]
+  },
+  {
+    "id": "ATE-018",
+    "mitre_software_id": "S1029",
+    "source_url": "https://attack.mitre.org/software/S1029/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAuTo Stealer is malware written in C++ that has been used by SideCopy since at least December 2021 to target government agencies and personnel in India and Afghanistan. AuTo Stealer communicates with its command and control (C2) servers using HTTP or TCP. It maintains persistence by placing malicious executables in the AutoRun registry key or StartUp directory, depending on the installed antivirus (AV) product. The malware can execute a batch file using `cmd.exe`. AuTo Stealer is capable of collecting various types of data from an infected machine, including PowerPoint files, Word documents, Excel files, PDF files, text files, database files, and image files. This collected data is stored in a file named `Hostname_UserName.txt` before exfiltration. The malware then exfiltrates the data to actor-controlled C2 servers via HTTP or TCP. Additionally, AuTo Stealer can gather information about the installed AV products on an infected host.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1095",
+      "T1518",
+      "T1547"
+    ]
+  },
+  {
+    "id": "ATE-019",
+    "mitre_software_id": "S0129",
+    "source_url": "https://attack.mitre.org/software/S0129/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nThe AutoIt backdoor is malware used by the threat actors behind the MONSOON campaign. It was frequently deployed via weaponized .pps files exploiting CVE-2014-6352. This malware leverages the legitimate AutoIt scripting language, designed for Windows GUI automation, for malicious purposes. The AutoIt backdoor attempts to escalate privileges by bypassing User Account Control (UAC). It downloads a PowerShell script that decodes into a standard shellcode loader and communicates with its command and control (C2) server using base64-encoded responses. Additionally, the backdoor is capable of identifying and targeting documents on the victim's system with specific extensions, including .doc, .pdf, .csv, .ppt, .docx, .pst, .xls, .xlsx, .pptx, and .jpeg.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1083",
+      "T1132",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-020",
+    "mitre_software_id": "S0515",
+    "source_url": "https://attack.mitre.org/software/S0515/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nWellMail is a lightweight malware written in Golang used by APT29, similar in design and structure to WellMess. WellMail can archive files on the compromised host. WellMail can exfiltrate files from the victim machine. WellMail can decompress scripts received from C2. WellMail can use hard coded client and certificate authority certificates to communicate with C2 over mutual TLS. WellMail can receive data and executable scripts from C2. WellMail can use TCP for C2 communications. WellMail has been observed using TCP port 25, without using SMTP, to leverage an open port for secure command and control communications. WellMail can identify the IP address of the victim system. WellMail can identify the current username on the victim system.[1]",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1016",
+      "T1033",
+      "T1095",
+      "T1105",
+      "T1140",
+      "T1560",
+      "T1571",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-021",
+    "mitre_software_id": "S1123",
+    "source_url": "https://attack.mitre.org/software/S1123/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nPITSTOP is a backdoor deployed on compromised Ivanti Connect Secure VPNs during the Cutting Edge campaign, enabling command execution and file read/write operations. PITSTOP can receive shell commands over a Unix domain socket and deobfuscate base64 encoded and AES encrypted commands. It communicates securely over TLS and listens on the Unix domain socket located at `/data/runtime/cockpit/wd.fd`. Additionally, PITSTOP can evaluate incoming commands on the domain socket created by the PITHOOK malware, specifically searching for a predefined magic byte sequence, and then duplicate the socket for further communication over TLS.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1140",
+      "T1205",
+      "T1559",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-022",
+    "mitre_software_id": "S1111",
+    "source_url": "https://attack.mitre.org/software/S1111/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nDarkGate, first identified in 2018, has evolved into a versatile tool used in various criminal cyber operations, including initial access, data gathering, credential theft, cryptomining, cryptotheft, and pre-ransomware activities. Written in Delphi and named by its author, DarkGate has seen a significant increase in use since 2022 and is actively being developed as a Malware-as-a-Service (MaaS) offering. DarkGate employs two distinct User Account Control (UAC) bypass techniques to escalate privileges and utilizes parent PID spoofing as part of its \"rootkit-like\" features to evade detection by tools like Task Manager or Process Explorer. During execution, the malware elevates accounts it creates to the local administrator group. The command and control (C2) infrastructure of DarkGate includes hard-coded domains designed to mimic legitimate services like Akamai CDN or Amazon Web Services. It also disguises C2 traffic within DNS records associated with legitimate services to evade reputation-based detection. DarkGate is capable of searching for cryptocurrency wallets by scanning application window names for specific strings and uses the FindWindow API function to extract data collected via NirSoft tools from the hosting process's memory. When stored credentials linked to cryptocurrency wallets are identified, DarkGate alerts its C2 server.",
+    "ground_truth_techniques": [
+      "T1010",
+      "T1071",
+      "T1098",
+      "T1119",
+      "T1134",
+      "T1548",
+      "T1583"
+    ]
+  },
+  {
+    "id": "ATE-023",
+    "mitre_software_id": "S1106",
+    "source_url": "https://attack.mitre.org/software/S1106/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nNGLite is a backdoor Trojan designed to execute commands received through its command and control (C2) channel. While its capabilities are typical for a backdoor, NGLite stands out for using a novel C2 channel that leverages a decentralized network based on the legitimate NKN (New Kind of Network) protocol for communication between the backdoor and threat actors. NGLite initially beacons to the NKN network via an HTTP POST request over TCP port 30003. It uses an AES-encrypted channel for C2 communication, with one observed instance employing the encryption key \"WHATswrongwithUu.\" NGLite abuses NKN infrastructure to facilitate its C2 communication. It identifies the victim system's MAC and IPv4 addresses to establish a unique victim identifier. Additionally, NGLite executes the \"whoami\" command to collect system information and transmit it back to the C2 server.",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1071",
+      "T1090",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-024",
+    "mitre_software_id": "S1124",
+    "source_url": "https://attack.mitre.org/software/S1124/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nSocGholish is a JavaScript-based loader malware that has been active since at least 2017. It has been used in global attacks across various sectors, primarily gaining initial access through drive-by downloads disguised as software updates. Operated by Mustard Tempest, SocGholish’s access has been sold to groups like Indrik Spider for deploying secondary payloads, including remote access Trojans (RATs) and ransomware. SocGholish is executed as a JavaScript payload and can write the output of the `whoami` command to a local temp file using the naming convention `rad<5-hex-chars>.tmp`. It profiles compromised systems to identify domain trust relationships and is often distributed through compromised websites that present malicious content as browser updates.  The malware can exfiltrate data directly to its command and control (C2) server via HTTP and is capable of downloading additional malware onto infected hosts. SocGholish has been named `AutoUpdater.js` to mimic legitimate update files and is frequently delivered within compressed ZIP archives. It also employs single or double Base64 encoding for references to its second-stage server URLs. Additionally, SocGholish has been spread via emails containing malicious links.",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1036",
+      "T1048",
+      "T1059",
+      "T1074",
+      "T1105",
+      "T1189",
+      "T1482",
+      "T1566"
+    ]
+  },
+  {
+    "id": "ATE-025",
+    "mitre_software_id": "S1102",
+    "source_url": "https://attack.mitre.org/software/S1102/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nPcexter is an uploader used by ToddyCat since at least 2023 to exfiltrate stolen files.  Pcexter can upload files from compromised systems and exfiltrate them to OneDrive storage accounts via HTTP POST. It is capable of searching for files within specified directories and has been distributed and executed as a DLL file named `Vspmsg.dll` through DLL side-loading.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1083",
+      "T1567",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-026",
+    "mitre_software_id": "S1110",
+    "source_url": "https://attack.mitre.org/software/S1110/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nSLIGHTPULSE is a web shell that has been used by APT5 since at least 2020, including in attacks against Pulse Secure VPNs targeting U.S. Defense Industrial Base (DIB) entities. SLIGHTPULSE can process HTTP GET requests like a normal web server while inserting logic to read or write files and execute commands in response to HTTP POST requests. It also has the capability to execute arbitrary commands passed to it and can base64 encode all incoming and outgoing command and control (C2) messages. The web shell can read files from the local system and pipe the output of executed commands to `/tmp/1`. Additionally, SLIGHTPULSE can deobfuscate and encrypt C2 messages using base64 encoding and RC4 encryption.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1140",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-027",
+    "mitre_software_id": "S1112",
+    "source_url": "https://attack.mitre.org/software/S1112/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nSTEADYPULSE is a web shell that targets Pulse Secure VPN servers by modifying a legitimate Perl script. It has been used since at least 2020, including in attacks against U.S. Defense Industrial Base (DIB) entities. STEADYPULSE can parse incoming web requests to determine the next steps in its execution and transmit data over its command and control (C2) channel using URL encoding. It is also capable of URL decoding key/value pairs received over C2. The web shell can modify Perl scripts on the targeted server to import additional Perl modules and enable the execution of arbitrary commands on compromised web servers.",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-028",
+    "mitre_software_id": "S1120",
+    "source_url": "https://attack.mitre.org/software/S1120/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nFRAMESTING is a Python-based web shell used during the Cutting Edge campaign to infiltrate Ivanti Connect Secure environments by embedding itself into a Python package for command execution. FRAMESTING can retrieve command and control (C2) instructions from values stored in the DSID cookie of an HTTP request or from decompressed zlib data within the request's POST data. It is specifically designed to embed itself within the CAV Python package of an Ivanti Connect Secure VPN, located at `/home/venv3/lib/python3.6/site-packages/cav-0.1-py3.6.egg/cav/api/resources/category.py`. The web shell can send and receive zlib-compressed data through POST requests and decompress incoming data for processing. FRAMESTING enables the execution of arbitrary commands on compromised Ivanti Connect Secure VPNs.",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-029",
+    "mitre_software_id": "S1105",
+    "source_url": "https://attack.mitre.org/software/S1105/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nCOATHANGER is a remote access tool (RAT) designed to target FortiGate networking appliances. It was first deployed in 2023 in targeted intrusions against military and government entities in the Netherlands and other locations. Disclosed in early 2024, COATHANGER has been attributed with high confidence to a state-sponsored entity in the People's Republic of China. The malware uses an HTTP GET request to establish a follow-on TLS tunnel for command and control (C2) communication. COATHANGER provides a BusyBox reverse shell for C2 operations and creates a daemon for timed check-ins with the C2 infrastructure. It decodes configuration items from a bundled file to facilitate C2 activity and connects to the C2 infrastructure using SSL. The malware is installed after exploiting a vulnerable FortiGate device and surveys the contents of system files during installation. COATHANGER sets the GID of `httpsd` to 90 upon infection, installs itself into a hidden directory, and removes and writes malicious shared objects that replace legitimate system functions such as `read(2)`.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1140",
+      "T1190",
+      "T1222",
+      "T1543",
+      "T1564",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-030",
+    "mitre_software_id": "S1116",
+    "source_url": "https://attack.mitre.org/software/S1116/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nWARPWIRE is a JavaScript-based credential stealer that targets plaintext usernames and passwords for exfiltration. It was deployed during the Cutting Edge campaign to compromise Ivanti Connect Secure VPNs. WARPWIRE operates as a credential harvester written in JavaScript and can embed itself into legitimate files on compromised Ivanti Connect Secure VPNs. It Base64 encodes captured credentials using `btoa()` before transmitting them to its command and control (C2) server. The stolen credentials are sent via HTTP GET or POST requests. Additionally, WARPWIRE can intercept credentials submitted during the web logon process, enabling access to layer seven applications such as Remote Desktop Protocol (RDP).",
+    "ground_truth_techniques": [
+      "T1048",
+      "T1056",
+      "T1059",
+      "T1132",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-031",
+    "mitre_software_id": "S1125",
+    "source_url": "https://attack.mitre.org/software/S1125/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAcidRain is an ELF binary designed to target modems and routers using MIPS architecture. It is linked to the ViaSat KA-SAT communication outage that occurred during the early stages of the 2022 invasion of Ukraine. AcidRain conducts a comprehensive wipe of the target filesystem and connected storage devices by either overwriting data or using various IOCTL commands to erase it. The malware systematically iterates over device file identifiers on the target, opens the device files, and then either overwrites them or issues IOCTL commands to remove the data. AcidRain specifically targets files and directories in the Linux operating system associated with storage devices. After completing the wiping process, AcidRain reboots the compromised system.",
+    "ground_truth_techniques": [
+      "T1083",
+      "T1485",
+      "T1529",
+      "T1561"
+    ]
+  },
+  {
+    "id": "ATE-032",
+    "mitre_software_id": "S1101",
+    "source_url": "https://attack.mitre.org/software/S1101/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nLoFiSe has been used by ToddyCat since at least 2023 to identify and collect files of interest on targeted systems. LoFiSe is capable of collecting files into password-protected ZIP archives for exfiltration. It periodically gathers all files from the working directory every three hours, placing them into a password-protected archive for later extraction. The malware also targets specific files of interest on compromised systems, saving them in the `C:\\ProgramData\\Microsoft\\` and `C:\\Windows\\Temp\\` folders for further evaluation and exfiltration. LoFiSe monitors the file system to identify files smaller than 6.4 MB with extensions such as .doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf, .rtf, .tif, .odt, .ods, .odp, .eml, and .msg. It has been executed through DLL side-loading as a file named `DsNcDiag.dll`.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1074",
+      "T1083",
+      "T1119",
+      "T1560",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-033",
+    "mitre_software_id": "S1119",
+    "source_url": "https://attack.mitre.org/software/S1119/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nLIGHTWIRE is a Perl-based web shell used during the Cutting Edge campaign to maintain access and enable command execution by embedding itself into the legitimate `compcheckresult.cgi` component of Ivanti Secure Connect VPNs. LIGHTWIRE communicates with its command and control (C2) server over HTTP and can decrypt RC4-encrypted and Base64-decoded C2 commands. It also encrypts C2 commands using RC4. By embedding into the `compcheckresult.cgi` component, LIGHTWIRE facilitates command execution and establishes persistence on compromised Ivanti Secure Connect VPNs.",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-034",
+    "mitre_software_id": "S1122",
+    "source_url": "https://attack.mitre.org/software/S1122/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nMispadu is a banking trojan written in Delphi, first observed in 2019, that operates under a Malware-as-a-Service (MaaS) model. Managed and sold by the Malteiro cybercriminal group, Mispadu primarily targets victims in Brazil and Mexico, with confirmed operations across Latin America and Europe. Mispadu establishes persistence by creating a link in the startup folder and adding an entry to the registry key `HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run`. It utilizes malicious Google Chrome extensions to steal financial data and monitors browser activity for online banking actions, often displaying full-screen overlays to block user access to legitimate sites or to prompt for additional data. The trojan can capture and replace Bitcoin wallet addresses in the clipboard on compromised hosts. Mispadu’s dropper uses VBS files to install and execute its payloads. Additionally, the malware steals credentials from mail clients using NirSoft MailPassView and from Google Chrome. Before execution, Mispadu decrypts its encrypted configuration files. Mispadu includes a copy of the OpenSSL library to encrypt its command and control (C2) traffic, and it sends collected financial data to its C2 server.",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1115",
+      "T1140",
+      "T1176",
+      "T1217",
+      "T1547",
+      "T1555",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-035",
+    "mitre_software_id": "S1115",
+    "source_url": "https://attack.mitre.org/software/S1115/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nWIREFIRE is a web shell written in Python that exists as trojanized logic to the visits.py component of Ivanti Connect Secure VPN appliances. WIREFIRE was used during Cutting Edge for downloading files and command execution. WIREFIRE can respond to specific HTTP POST requests to /api/v1/cav/client/visits. WIREFIRE can modify the visits.py component of Ivanti Connect Secure VPNs for file download and arbitrary command execution. WIREFIRE can Base64 encode process output sent to C2. WIREFIRE can decode, decrypt, and decompress data received in C2 HTTP POST requests. WIREFIRE can AES encrypt process output sent from compromised devices to C2. WIREFIRE has the ability to download files to compromised devices. WIREFIRE is a web shell that can download files to and execute arbitrary commands from compromised Ivanti Connect Secure VPNs.",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-036",
+    "mitre_software_id": "S1121",
+    "source_url": "https://attack.mitre.org/software/S1121/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nLITTLELAMB.WOOLTEA is a backdoor that was used by UNC5325 during Cutting Edge to deploy malware on targeted Ivanti Connect Secure VPNs and to establish persistence across system upgrades and patches. LITTLELAMB.WOOLTEA can append malicious components to the tmp/tmpmnt/bin/samba_upgrade.tar archive inside the factory reset partition in attempt to persist post reset. LITTLELAMB.WOOLTEA can initialize itself as a daemon to run persistently in the background. LITTLELAMB.WOOLTEA can communicate over SSL using the private key from the Ivanti Connect Secure web server. LITTLELAMB.WOOLTEA can monitor for system upgrade events by checking for the presence of /tmp/data/root/dev. LITTLELAMB.WOOLTEA can function as a stand-alone backdoor communicating over the /tmp/clientsDownload.sock socket. LITTLELAMB.WOOLTEA has the ability to function as a SOCKS proxy. LITTLELAMB.WOOLTEA can check the type of Ivanti VPN device it is running on by executing first_run() to identify the first four bytes of the motherboard serial number.",
+    "ground_truth_techniques": [
+      "T1082",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1543",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-037",
+    "mitre_software_id": "S1109",
+    "source_url": "https://attack.mitre.org/software/S1109/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nPACEMAKER is a credential stealer that was used by APT5 as early as 2020 including activity against US Defense Industrial Base (DIB) companies. PACEMAKER can enter a loop to read /proc/ entries every 2 seconds in order to read a target application's memory. PACEMAKER can use a simple bash script for execution. PACEMAKER has written extracted data to tmp/dsserver-check.statementcounters. PACEMAKER can parse /proc/\"process_name\"/cmdline to look for the string dswsd within the command line. PACEMAKER has the ability to extract credentials from OS memory. PACEMAKER can use PTRACE to attach to a targeted process to read process memory.",
+    "ground_truth_techniques": [
+      "T1003",
+      "T1055",
+      "T1059",
+      "T1074",
+      "T1083",
+      "T1119"
+    ]
+  },
+  {
+    "id": "ATE-038",
+    "mitre_software_id": "S1114",
+    "source_url": "https://attack.mitre.org/software/S1114/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nZIPLINE is a passive backdoor that was used during Cutting Edge on compromised Secure Connect VPNs for reverse shell and proxy functionality. ZIPLINE can use /bin/sh to create a reverse shell and execute commands. ZIPLINE can use AES-128-CBC to encrypt data for both upload and download. ZIPLINE can find and append specific files on Ivanti Connect Secure VPNs based upon received commands. ZIPLINE can add itself to the exclusion list for the Ivanti Connect Secure Integrity Checker Tool if the --exclude parameter is passed by the tar process. ZIPLINE can download files to be saved on the compromised system. ZIPLINE can communicate with C2 using a custom binary protocol. ZIPLINE can identify running processes and their names. ZIPLINE can create a proxy server on compromised hosts. ZIPLINE can identify a specific string in intercepted network traffic, SSH-2.0-OpenSSH_0.3xx., to trigger its command functionality.",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1105",
+      "T1205",
+      "T1562",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-039",
+    "mitre_software_id": "S1100",
+    "source_url": "https://attack.mitre.org/software/S1100/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nNinja is a malware developed in C++ that has been used by ToddyCat to penetrate networks and control remote systems since at least 2020. Ninja is possibly part of a post exploitation toolkit exclusively used by ToddyCat and allows multiple operators to work simultaneously on the same machine. Ninja has been used against government and military entities in Europe and Asia and observed in specific infection chains being deployed by Samurai. Ninja can use HTTP for C2 communications. Ninja can create the services httpsvc and w3esvc for persistence. Ninja can encode C2 communications with a base64 algorithm using a custom alphabet. Ninja has the ability to modify headers and URL paths to hide malicious traffic in HTTP requests. Ninja has the ability to mimic legitimate services with customized HTTP URL paths and headers to hide malicious traffic. The Ninja loader component can decrypt and decompress the payload. Ninja can XOR and AES encrypt C2 messages. Ninja can store its final payload in the Registry under $HKLM\\SOFTWARE\\Classes\\Interface\\ encrypted with a dynamically generated key based on the drive’s serial number. Ninja has the ability to enumerate directory content. Ninja loaders can be side-loaded with legitimate and signed executables including the VLC.exe media player. Ninja can change or create the last access or write times.",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1132",
+      "T1140",
+      "T1480",
+      "T1543",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-040",
+    "mitre_software_id": "S1099",
+    "source_url": "https://attack.mitre.org/software/S1099/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nSamurai is a passive backdoor that has been used by ToddyCat since at least 2020. Samurai allows arbitrary C# code execution and is used with multiple modules for remote administration and lateral movement. Samurai can use a .NET HTTPListener class to receive and handle HTTP POST requests. Samurai can use a remote command module for execution via the Windows command line. Samurai can create a service at HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost to trigger execution and maintain persistence. Samurai can base64 encode data sent in C2 communications prior to its encryption. Samurai can leverage an exfiltration module to download arbitrary files from compromised machines. Samurai can encrypt C2 communications with AES. Samurai can use a specific module for file enumeration. Samurai has been used to deploy other malware including Ninja. Samurai has created the directory %COMMONPROGRAMFILES%\\Microsoft Shared\\wmi\\ to contain DLLs for loading successive stages. The Samurai loader component can create multiple Registry keys to force the svchost.exe process to load the final backdoor. Samurai has the ability to call Windows APIs.",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1036",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1132",
+      "T1543",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-041",
+    "mitre_software_id": "S1118",
+    "source_url": "https://attack.mitre.org/software/S1118/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nBUSHWALK is a web shell written in Perl that was inserted into the legitimate querymanifest.cgi file on compromised Ivanti Connect Secure VPNs during Cutting Edge. BUSHWALK can embed into the legitimate querymanifest.cgi file on compromised Ivanti Connect Secure VPNs. BUSHWALK can Base64 decode and RC4 decrypt malicious payloads sent through a web request’s command parameter. BUSHWALK can write malicious payloads sent through a web request’s command parameter. BUSHWALK can encrypt the resulting data generated from C2 commands with RC4. BUSHWALK is a web shell that has the ability to execute arbitrary commands or write files. BUSHWALK can modify the DSUserAgentCap.pm Perl module on Ivanti Connect Secure VPNs and either activate or deactivate depending on the value of the user agent in incoming HTTP requests.",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1105",
+      "T1140",
+      "T1205",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-042",
+    "mitre_software_id": "S1129",
+    "source_url": "https://attack.mitre.org/software/S1129/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nAkira ransomware, written in C++, is most prominently (but not exclusively) associated with the a ransomware-as-a-service entity Akira. Akira will execute PowerShell commands to delete system volume shadow copies. Akira executes from the Windows command line and can take various arguments for execution. Akira encrypts victim filesystems for financial extortion purposes. Akira examines files prior to encryption to determine if they meet requirements for encryption and can be encrypted by the ransomware. These checks are performed through native Windows functions such as GetFileAttributesW. Akira will delete system volume shadow copies via PowerShell commands. Akira executes native Windows functions such as GetFileAttributesW and GetSystemInfo. Akira can identify remote file shares for encryption. Akira verifies the deletion of volume shadow copies by checking for the existence of the process ID related to the process created to delete these items. Akira uses the GetSystemInfo Windows function to determine the number of processors on a victim machine. Akira will leverage COM objects accessed through WMI during execution to evade detection.",
+    "ground_truth_techniques": [
+      "T1047",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1083",
+      "T1106",
+      "T1135",
+      "T1486",
+      "T1490"
+    ]
+  },
+  {
+    "id": "ATE-043",
+    "mitre_software_id": "S1107",
+    "source_url": "https://attack.mitre.org/software/S1107/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nNKAbuse is a Go-based, multi-platform malware abusing NKN (New Kind of Network) technology for data exchange between peers, functioning as a potent implant, and equipped with both flooder and backdoor capabilities. NKAbuse is initially installed and executed through an initial shell script. NKAbuse enables multiple types of network denial of service capabilities across several protocols post-installation. NKAbuse will check victim systems to ensure only one copy of the malware is running. NKAbuse has abused the NKN public blockchain protocol for its C2 communications. NKAbuse uses a Cron job to establish persistence when infecting Linux hosts. NKAbuse can take screenshots of the victim machine. NKAbuse conducts multiple system checks and includes these in subsequent \"heartbeat\" messages to the malware's command and control server. NKAbuse utilizes external services such as ifconfig.me to identify the victim machine's IP address.[2]",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1053",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1090",
+      "T1113",
+      "T1498"
+    ]
+  },
+  {
+    "id": "ATE-044",
+    "mitre_software_id": "S1104",
+    "source_url": "https://attack.mitre.org/software/S1104/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nSLOWPULSE is a malware that was used by APT5 as early as 2020 including against U.S. Defense Industrial Base (DIB) companies. SLOWPULSE has several variants and can modify legitimate Pulse Secure VPN files in order to log credentials and bypass single and two-factor authentication flows. SLOWPULSE is applied in compromised environments through modifications to legitimate Pulse Secure files. SLOWPULSE can write logged ACE credentials to /home/perl/PAUS.pm in append mode, using the format string %s:%s\\n. SLOWPULSE can modify LDAP and two factor authentication flows by inspecting login credentials and forcing successful authentication if the provided password matches a chosen backdoor password. SLOWPULSE can insert malicious logic to bypass RADIUS and ACE two factor authentication (2FA) flows if a designated attacker-supplied password is provided. SLOWPULSE can log credentials on compromised Pulse Secure VPNs during the DSAuth::AceAuthServer::checkUsernamePasswordACE-2FA authentication procedure. SLOWPULSE can hide malicious code in the padding regions between legitimate functions in the Pulse Secure libdsplibs.so file.",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1074",
+      "T1111",
+      "T1554",
+      "T1556"
+    ]
+  },
+  {
+    "id": "ATE-045",
+    "mitre_software_id": "S1113",
+    "source_url": "https://attack.mitre.org/software/S1113/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nRAPIDPULSE is a web shell that exists as a modification to a legitimate Pulse Secure file that has been used by APT5 since at least 2021. RAPIDPULSE retrieves files from the victim system via encrypted commands sent to the web shell. RAPIDPULSE listens for specific HTTP query parameters in received communications. If specific parameters match, a hard-coded RC4 key is used to decrypt the HTTP query paremter hmacTime. This decrypts to a filename that is then open, read, encrypted with the same RC4 key, base64-encoded, written to standard out, then passed as a response to the HTTP request. RAPIDPULSE has the ability to RC4 encrypt and base64 encode decrypted files on compromised servers prior to writing them to stdout. RAPIDPULSE is a web shell that is capable of arbitrary file read on targeted web servers to exfiltrate items of interest on the victim device.[1]",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1140",
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-046",
+    "mitre_software_id": "S1108",
+    "source_url": "https://attack.mitre.org/software/S1108/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nPULSECHECK is a web shell written in Perl that was used by APT5 as early as 2020 including against Pulse Secure VPNs at US Defense Industrial Base (DIB) companies. PULSECHECK can check HTTP request headers for a specific backdoor key and if found will output the result of the command in the variable HTTP_X_CMD. PULSECHECK can use Unix shell script for command execution. PULSECHECK can base-64 encode encrypted data sent through C2. PULSECHECK is a web shell that can enable command execution on compromised servers.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1132",
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-047",
+    "mitre_software_id": "S1117",
+    "source_url": "https://attack.mitre.org/software/S1117/",
+    "question": "An analyst is investigating a piece of software with the following description. Which MITRE ATT&CK techniques does it use?\n\nGLASSTOKEN is a custom web shell used by threat actors during Cutting Edge to execute commands on compromised Ivanti Secure Connect VPNs. GLASSTOKEN can use PowerShell for command execution. GLASSTOKEN has hexadecimal and Base64 encoded C2 content. GLASSTOKEN has the ability to decode hexadecimal and Base64 C2 requests. GLASSTOKEN is a web shell capable of tunneling C2 connections and code execution on compromised Ivanti Secure Connect VPNs.",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1132",
+      "T1140",
+      "T1505"
+    ]
+  }
+]

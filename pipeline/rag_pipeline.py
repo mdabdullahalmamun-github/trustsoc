@@ -96,20 +96,39 @@ def retrieve(query, k=5, balance=True, threshold=RELEVANCE_THRESHOLD, fetch_mult
 # ground-truth matching.
 _TECHNIQUE_ID_RE = re.compile(r"\bT\d{4}(?:\.\d{3})?\b")
 _CVE_ID_RE = re.compile(r"\bCVE-\d{4}-\d{4,7}\b")
+_BRACKET_RE = re.compile(r"\[([^\]]+)\]")
 
 def validate_citations(answer, contexts_meta):
     """Return which IDs cited in `answer` were actually present in the retrieved
     context (grounded) vs not (fabricated). `contexts_meta` is the list of hit
-    dicts returned by retrieve() (needs the 'id' field)."""
+    dicts returned by retrieve() (needs the 'id' field).
+
+    Also flags bracketed references that don't use the required [MITRE ATT&CK
+    Txxxx] / [CVE-xxxx-xxxx] format at all -- e.g. "[Citation: ProofPoint
+    Serpent]" or "[FireEye APT28]". These previously passed through completely
+    invisibly: not counted as grounded, not counted as fabricated, since they
+    never matched the ID regex in the first place. Observed independently in
+    both Mistral and LLaMA 3 during Phase 4 SOC-scenario testing (SOC-010,
+    SOC-028) -- this makes that a measurable category instead of something
+    caught only by manually reading individual answers."""
     retrieved_ids = {h["id"] for h in contexts_meta if h.get("id")}
     cited_ids = set(_TECHNIQUE_ID_RE.findall(answer)) | set(_CVE_ID_RE.findall(answer))
     grounded = cited_ids & retrieved_ids
     fabricated = cited_ids - retrieved_ids
+
+    unrecognised = []
+    for bracket_content in _BRACKET_RE.findall(answer):
+        has_valid_id = bool(_TECHNIQUE_ID_RE.search(bracket_content) or _CVE_ID_RE.search(bracket_content))
+        if not has_valid_id:
+            unrecognised.append(bracket_content.strip())
+
     return {
         "cited": sorted(cited_ids),
         "grounded": sorted(grounded),
         "fabricated": sorted(fabricated),
         "has_fabrication": bool(fabricated),
+        "unrecognised_citations": unrecognised,
+        "has_unrecognised_citation": bool(unrecognised),
     }
 
 # ---- 3.2: the pipeline — one function, both models, RAG on/off ----

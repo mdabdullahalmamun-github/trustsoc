@@ -1,0 +1,1758 @@
+[
+  {
+    "id": "ATE-001",
+    "mitre_software_id": "S0066",
+    "ground_truth_techniques": [
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1573"
+    ],
+    "cited": [
+      "T1104",
+      "T1219"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1104",
+      "T1219"
+    ],
+    "false_negatives": [
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-002",
+    "mitre_software_id": "S0065",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1071",
+      "T1082",
+      "T1083",
+      "T1573"
+    ],
+    "cited": [
+      "T1104",
+      "T1546.004"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1104",
+      "T1546"
+    ],
+    "false_negatives": [
+      "T1057",
+      "T1059",
+      "T1071",
+      "T1082",
+      "T1083",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-003",
+    "mitre_software_id": "S0469",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1055",
+      "T1059",
+      "T1071",
+      "T1105",
+      "T1140",
+      "T1518"
+    ],
+    "cited": [
+      "T1020",
+      "T1059.010"
+    ],
+    "fabricated": [
+      "T1020"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.143,
+    "f1": 0.222,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1020"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1055",
+      "T1071",
+      "T1105",
+      "T1140",
+      "T1518"
+    ]
+  },
+  {
+    "id": "ATE-004",
+    "mitre_software_id": "S1028",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1140"
+    ],
+    "cited": [
+      "T1059.010",
+      "T1104"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.167,
+    "f1": 0.25,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1104"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1140"
+    ]
+  },
+  {
+    "id": "ATE-005",
+    "mitre_software_id": "S0202",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1546",
+      "T1573"
+    ],
+    "cited": [
+      "T1202",
+      "T1546.004"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.333,
+    "f1": 0.4,
+    "true_positives": [
+      "T1546"
+    ],
+    "false_positives": [
+      "T1202"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-006",
+    "mitre_software_id": "S0552",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1018",
+      "T1069",
+      "T1087",
+      "T1482"
+    ],
+    "cited": [
+      "T1078.002",
+      "T1087.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1": 0.286,
+    "true_positives": [
+      "T1087"
+    ],
+    "false_positives": [
+      "T1078"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1018",
+      "T1069",
+      "T1482"
+    ]
+  },
+  {
+    "id": "ATE-007",
+    "mitre_software_id": "S0045",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1547",
+      "T1560",
+      "T1573"
+    ],
+    "cited": [
+      "T1102",
+      "T1543.003",
+      "T1569"
+    ],
+    "fabricated": [
+      "T1569"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1102",
+      "T1543",
+      "T1569"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1547",
+      "T1560",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-008",
+    "mitre_software_id": "S0440",
+    "ground_truth_techniques": [
+      "T1404",
+      "T1406",
+      "T1577",
+      "T1628",
+      "T1630",
+      "T1643",
+      "T1655"
+    ],
+    "cited": [
+      "T1505.002",
+      "T1583.008"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1505",
+      "T1583"
+    ],
+    "false_negatives": [
+      "T1404",
+      "T1406",
+      "T1577",
+      "T1628",
+      "T1630",
+      "T1643",
+      "T1655"
+    ]
+  },
+  {
+    "id": "ATE-009",
+    "mitre_software_id": "S0331",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1087",
+      "T1115",
+      "T1140",
+      "T1185",
+      "T1547",
+      "T1555",
+      "T1560"
+    ],
+    "cited": [
+      "T1003",
+      "T1036.012",
+      "T1046",
+      "T1053",
+      "T1505.002"
+    ],
+    "fabricated": [
+      "T1003",
+      "T1046",
+      "T1053"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1003",
+      "T1036",
+      "T1046",
+      "T1053",
+      "T1505"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1087",
+      "T1115",
+      "T1140",
+      "T1185",
+      "T1547",
+      "T1555",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-010",
+    "mitre_software_id": "S0092",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1052",
+      "T1091",
+      "T1105",
+      "T1560"
+    ],
+    "cited": [
+      "T1080",
+      "T1505.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1080",
+      "T1505"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1033",
+      "T1052",
+      "T1091",
+      "T1105",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-011",
+    "mitre_software_id": "S1025",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1041",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1140",
+      "T1547",
+      "T1568"
+    ],
+    "cited": [
+      "T1204",
+      "T1608.001"
+    ],
+    "fabricated": [
+      "T1204"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1204",
+      "T1608"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1027",
+      "T1041",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1140",
+      "T1547",
+      "T1568"
+    ]
+  },
+  {
+    "id": "ATE-012",
+    "mitre_software_id": "S0504",
+    "ground_truth_techniques": [
+      "T1008",
+      "T1059",
+      "T1070",
+      "T1071",
+      "T1105",
+      "T1480",
+      "T1543",
+      "T1564"
+    ],
+    "cited": [
+      "T1059",
+      "T1204.001",
+      "T1566",
+      "T1598"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1566",
+      "T1598"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.25,
+    "recall": 0.125,
+    "f1": 0.167,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1204",
+      "T1566",
+      "T1598"
+    ],
+    "false_negatives": [
+      "T1008",
+      "T1070",
+      "T1071",
+      "T1105",
+      "T1480",
+      "T1543",
+      "T1564"
+    ]
+  },
+  {
+    "id": "ATE-013",
+    "mitre_software_id": "S1074",
+    "ground_truth_techniques": [
+      "T1036",
+      "T1055",
+      "T1071",
+      "T1091",
+      "T1105",
+      "T1547"
+    ],
+    "cited": [
+      "T1102",
+      "T1102.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1102"
+    ],
+    "false_negatives": [
+      "T1036",
+      "T1055",
+      "T1071",
+      "T1091",
+      "T1105",
+      "T1547"
+    ]
+  },
+  {
+    "id": "ATE-014",
+    "mitre_software_id": "S0584",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1543",
+      "T1546",
+      "T1548"
+    ],
+    "cited": [
+      "T1543.004",
+      "T1574.005"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.143,
+    "f1": 0.222,
+    "true_positives": [
+      "T1543"
+    ],
+    "false_positives": [
+      "T1574"
+    ],
+    "false_negatives": [
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1546",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-015",
+    "mitre_software_id": "S0622",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1025",
+      "T1059",
+      "T1071",
+      "T1119",
+      "T1134",
+      "T1547",
+      "T1560"
+    ],
+    "cited": [
+      "T1548.004"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1548"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1025",
+      "T1059",
+      "T1071",
+      "T1119",
+      "T1134",
+      "T1547",
+      "T1560"
+    ]
+  },
+  {
+    "id": "ATE-016",
+    "mitre_software_id": "S0073",
+    "ground_truth_techniques": [
+      "T1505"
+    ],
+    "cited": [
+      "T1220",
+      "T1505.003"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [
+      "1",
+      "2"
+    ],
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.667,
+    "true_positives": [
+      "T1505"
+    ],
+    "false_positives": [
+      "T1220"
+    ],
+    "false_negatives": []
+  },
+  {
+    "id": "ATE-017",
+    "mitre_software_id": "S0110",
+    "ground_truth_techniques": [
+      "T1053"
+    ],
+    "cited": [
+      "T1053",
+      "T1053.002"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "true_positives": [
+      "T1053"
+    ],
+    "false_positives": [],
+    "false_negatives": []
+  },
+  {
+    "id": "ATE-018",
+    "mitre_software_id": "S1029",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1041",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1095",
+      "T1518",
+      "T1547"
+    ],
+    "cited": [
+      "CVE-2024-11609",
+      "CVE-2024-11610",
+      "CVE-2024-11611",
+      "T1041",
+      "T1059.010"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "true_positives": [
+      "T1041",
+      "T1059"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "T1005",
+      "T1071",
+      "T1074",
+      "T1095",
+      "T1518",
+      "T1547"
+    ]
+  },
+  {
+    "id": "ATE-019",
+    "mitre_software_id": "S0129",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1083",
+      "T1132",
+      "T1548"
+    ],
+    "cited": [
+      "T1059.010"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "T1083",
+      "T1132",
+      "T1548"
+    ]
+  },
+  {
+    "id": "ATE-020",
+    "mitre_software_id": "S0515",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1016",
+      "T1033",
+      "T1095",
+      "T1105",
+      "T1140",
+      "T1560",
+      "T1571",
+      "T1573"
+    ],
+    "cited": [
+      "T1048",
+      "T1059",
+      "T1070.008",
+      "T1114"
+    ],
+    "fabricated": [
+      "T1048",
+      "T1059",
+      "T1114"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1048",
+      "T1059",
+      "T1070",
+      "T1114"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1016",
+      "T1033",
+      "T1095",
+      "T1105",
+      "T1140",
+      "T1560",
+      "T1571",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-021",
+    "mitre_software_id": "S1123",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1140",
+      "T1205",
+      "T1559",
+      "T1573"
+    ],
+    "cited": [
+      "T1205.002",
+      "T1546.004",
+      "T1572"
+    ],
+    "fabricated": [
+      "T1572"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.333,
+    "recall": 0.2,
+    "f1": 0.25,
+    "true_positives": [
+      "T1205"
+    ],
+    "false_positives": [
+      "T1546",
+      "T1572"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1140",
+      "T1559",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-022",
+    "mitre_software_id": "S1111",
+    "ground_truth_techniques": [
+      "T1010",
+      "T1071",
+      "T1098",
+      "T1119",
+      "T1134",
+      "T1548",
+      "T1583"
+    ],
+    "cited": [
+      "T1090",
+      "T1665"
+    ],
+    "fabricated": [
+      "T1090"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1090",
+      "T1665"
+    ],
+    "false_negatives": [
+      "T1010",
+      "T1071",
+      "T1098",
+      "T1119",
+      "T1134",
+      "T1548",
+      "T1583"
+    ]
+  },
+  {
+    "id": "ATE-023",
+    "mitre_software_id": "S1106",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1033",
+      "T1071",
+      "T1090",
+      "T1573"
+    ],
+    "cited": [
+      "T1102.002",
+      "T1102.003"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1102"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1033",
+      "T1071",
+      "T1090",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-024",
+    "mitre_software_id": "S1124",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1036",
+      "T1048",
+      "T1059",
+      "T1074",
+      "T1105",
+      "T1189",
+      "T1482",
+      "T1566"
+    ],
+    "cited": [
+      "T1105",
+      "T1204",
+      "T1583",
+      "T1608.001",
+      "T1608.004"
+    ],
+    "fabricated": [
+      "T1105",
+      "T1204",
+      "T1583",
+      "T1608.004"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.25,
+    "recall": 0.111,
+    "f1": 0.154,
+    "true_positives": [
+      "T1105"
+    ],
+    "false_positives": [
+      "T1204",
+      "T1583",
+      "T1608"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1036",
+      "T1048",
+      "T1059",
+      "T1074",
+      "T1189",
+      "T1482",
+      "T1566"
+    ]
+  },
+  {
+    "id": "ATE-025",
+    "mitre_software_id": "S1102",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1083",
+      "T1567",
+      "T1574"
+    ],
+    "cited": [
+      "T1027.015",
+      "T1204",
+      "T1204.002",
+      "T1566",
+      "T1566.001"
+    ],
+    "fabricated": [
+      "T1204",
+      "T1204.002",
+      "T1566",
+      "T1566.001"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1204",
+      "T1566"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1083",
+      "T1567",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-026",
+    "mitre_software_id": "S1110",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1140",
+      "T1573"
+    ],
+    "cited": [
+      "T1102.002",
+      "T1102.003"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1102"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1059",
+      "T1071",
+      "T1074",
+      "T1132",
+      "T1140",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-027",
+    "mitre_software_id": "S1112",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1505.003",
+      "T1546.004"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1": 0.286,
+    "true_positives": [
+      "T1505"
+    ],
+    "false_positives": [
+      "T1546"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140"
+    ]
+  },
+  {
+    "id": "ATE-028",
+    "mitre_software_id": "S1120",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1059",
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554"
+    ],
+    "cited": [
+      "T1027",
+      "T1059",
+      "T1620"
+    ],
+    "fabricated": [
+      "T1059"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.333,
+    "recall": 0.167,
+    "f1": 0.222,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [
+      "T1027",
+      "T1620"
+    ],
+    "false_negatives": [
+      "T1001",
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-029",
+    "mitre_software_id": "S1105",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1140",
+      "T1190",
+      "T1222",
+      "T1543",
+      "T1564",
+      "T1573",
+      "T1574"
+    ],
+    "cited": [
+      "T1219",
+      "T1546.016"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1219",
+      "T1546"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1140",
+      "T1190",
+      "T1222",
+      "T1543",
+      "T1564",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-030",
+    "mitre_software_id": "S1116",
+    "ground_truth_techniques": [
+      "T1048",
+      "T1056",
+      "T1059",
+      "T1132",
+      "T1554"
+    ],
+    "cited": [
+      "T1056.003",
+      "T1078"
+    ],
+    "fabricated": [
+      "T1078"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1": 0.286,
+    "true_positives": [
+      "T1056"
+    ],
+    "false_positives": [
+      "T1078"
+    ],
+    "false_negatives": [
+      "T1048",
+      "T1059",
+      "T1132",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-031",
+    "mitre_software_id": "S1125",
+    "ground_truth_techniques": [
+      "T1083",
+      "T1485",
+      "T1529",
+      "T1561"
+    ],
+    "cited": [
+      "T1561.001",
+      "T1574.005"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1": 0.333,
+    "true_positives": [
+      "T1561"
+    ],
+    "false_positives": [
+      "T1574"
+    ],
+    "false_negatives": [
+      "T1083",
+      "T1485",
+      "T1529"
+    ]
+  },
+  {
+    "id": "ATE-032",
+    "mitre_software_id": "S1101",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1074",
+      "T1083",
+      "T1119",
+      "T1560",
+      "T1574"
+    ],
+    "cited": [
+      "T1027",
+      "T1059",
+      "T1140",
+      "T1204"
+    ],
+    "fabricated": [
+      "T1059",
+      "T1140",
+      "T1204"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1059",
+      "T1140",
+      "T1204"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1074",
+      "T1083",
+      "T1119",
+      "T1560",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-033",
+    "mitre_software_id": "S1119",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [
+      "CVE-2023-41217",
+      "CVE-2023-51613",
+      "CVE-2023-51631",
+      "T1102.003",
+      "T1552.004"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1102",
+      "T1552"
+    ],
+    "false_negatives": [
+      "T1071",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-034",
+    "mitre_software_id": "S1122",
+    "ground_truth_techniques": [
+      "T1041",
+      "T1059",
+      "T1115",
+      "T1140",
+      "T1176",
+      "T1217",
+      "T1547",
+      "T1555",
+      "T1573"
+    ],
+    "cited": [
+      "T1105",
+      "T1204",
+      "T1486",
+      "T1586",
+      "T1608.001",
+      "T1657",
+      "T1684"
+    ],
+    "fabricated": [
+      "T1105",
+      "T1204",
+      "T1486",
+      "T1586",
+      "T1684"
+    ],
+    "unrecognised_citations": [
+      "Compromise Accounts",
+      "Impersonation",
+      "Data Encrypted for Impact",
+      "Exfiltration",
+      "User Execution",
+      "Ingress Tool Transfer"
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1105",
+      "T1204",
+      "T1486",
+      "T1586",
+      "T1608",
+      "T1657",
+      "T1684"
+    ],
+    "false_negatives": [
+      "T1041",
+      "T1059",
+      "T1115",
+      "T1140",
+      "T1176",
+      "T1217",
+      "T1547",
+      "T1555",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-035",
+    "mitre_software_id": "S1115",
+    "ground_truth_techniques": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [],
+    "false_negatives": [
+      "T1071",
+      "T1105",
+      "T1132",
+      "T1140",
+      "T1505",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-036",
+    "mitre_software_id": "S1121",
+    "ground_truth_techniques": [
+      "T1082",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1543",
+      "T1554",
+      "T1573"
+    ],
+    "cited": [
+      "T1090.003",
+      "T1187"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.143,
+    "f1": 0.222,
+    "true_positives": [
+      "T1090"
+    ],
+    "false_positives": [
+      "T1187"
+    ],
+    "false_negatives": [
+      "T1082",
+      "T1083",
+      "T1095",
+      "T1543",
+      "T1554",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-037",
+    "mitre_software_id": "S1109",
+    "ground_truth_techniques": [
+      "T1003",
+      "T1055",
+      "T1059",
+      "T1074",
+      "T1083",
+      "T1119"
+    ],
+    "cited": [
+      "T1003.007",
+      "T1055.009"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 0.333,
+    "f1": 0.5,
+    "true_positives": [
+      "T1003",
+      "T1055"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "T1059",
+      "T1074",
+      "T1083",
+      "T1119"
+    ]
+  },
+  {
+    "id": "ATE-038",
+    "mitre_software_id": "S1114",
+    "ground_truth_techniques": [
+      "T1057",
+      "T1059",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1105",
+      "T1205",
+      "T1562",
+      "T1573"
+    ],
+    "cited": [
+      "T1027.015",
+      "T1560.001"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1027",
+      "T1560"
+    ],
+    "false_negatives": [
+      "T1057",
+      "T1059",
+      "T1083",
+      "T1090",
+      "T1095",
+      "T1105",
+      "T1205",
+      "T1562",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-039",
+    "mitre_software_id": "S1100",
+    "ground_truth_techniques": [
+      "T1001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1132",
+      "T1140",
+      "T1480",
+      "T1543",
+      "T1573",
+      "T1574"
+    ],
+    "cited": [
+      "T1014",
+      "T1203"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1014",
+      "T1203"
+    ],
+    "false_negatives": [
+      "T1001",
+      "T1070",
+      "T1071",
+      "T1083",
+      "T1132",
+      "T1140",
+      "T1480",
+      "T1543",
+      "T1573",
+      "T1574"
+    ]
+  },
+  {
+    "id": "ATE-040",
+    "mitre_software_id": "S1099",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1036",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1132",
+      "T1543",
+      "T1573"
+    ],
+    "cited": [
+      "T1014",
+      "T1187"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1014",
+      "T1187"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1036",
+      "T1059",
+      "T1071",
+      "T1083",
+      "T1105",
+      "T1106",
+      "T1112",
+      "T1132",
+      "T1543",
+      "T1573"
+    ]
+  },
+  {
+    "id": "ATE-041",
+    "mitre_software_id": "S1118",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1105",
+      "T1140",
+      "T1205",
+      "T1505",
+      "T1554"
+    ],
+    "cited": [
+      "T1189",
+      "T1204",
+      "T1552.004"
+    ],
+    "fabricated": [
+      "T1204"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1189",
+      "T1204",
+      "T1552"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1105",
+      "T1140",
+      "T1205",
+      "T1505",
+      "T1554"
+    ]
+  },
+  {
+    "id": "ATE-042",
+    "mitre_software_id": "S1129",
+    "ground_truth_techniques": [
+      "T1047",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1083",
+      "T1106",
+      "T1135",
+      "T1486",
+      "T1490"
+    ],
+    "cited": [
+      "T1003",
+      "T1021",
+      "T1078",
+      "T1222",
+      "T1485",
+      "T1486",
+      "T1491"
+    ],
+    "fabricated": [
+      "T1003",
+      "T1021",
+      "T1078",
+      "T1222",
+      "T1491"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.143,
+    "recall": 0.111,
+    "f1": 0.125,
+    "true_positives": [
+      "T1486"
+    ],
+    "false_positives": [
+      "T1003",
+      "T1021",
+      "T1078",
+      "T1222",
+      "T1485",
+      "T1491"
+    ],
+    "false_negatives": [
+      "T1047",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1083",
+      "T1106",
+      "T1135",
+      "T1490"
+    ]
+  },
+  {
+    "id": "ATE-043",
+    "mitre_software_id": "S1107",
+    "ground_truth_techniques": [
+      "T1016",
+      "T1053",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1090",
+      "T1113",
+      "T1498"
+    ],
+    "cited": [
+      "T1189",
+      "T1190",
+      "T1203",
+      "T1211",
+      "T1552",
+      "T1566",
+      "T1611"
+    ],
+    "fabricated": [
+      "T1189",
+      "T1211",
+      "T1552",
+      "T1566",
+      "T1611"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1189",
+      "T1190",
+      "T1203",
+      "T1211",
+      "T1552",
+      "T1566",
+      "T1611"
+    ],
+    "false_negatives": [
+      "T1016",
+      "T1053",
+      "T1057",
+      "T1059",
+      "T1082",
+      "T1090",
+      "T1113",
+      "T1498"
+    ]
+  },
+  {
+    "id": "ATE-044",
+    "mitre_software_id": "S1104",
+    "ground_truth_techniques": [
+      "T1027",
+      "T1074",
+      "T1111",
+      "T1554",
+      "T1556"
+    ],
+    "cited": [
+      "T1546.009",
+      "T1678"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": [],
+    "false_positives": [
+      "T1546",
+      "T1678"
+    ],
+    "false_negatives": [
+      "T1027",
+      "T1074",
+      "T1111",
+      "T1554",
+      "T1556"
+    ]
+  },
+  {
+    "id": "ATE-045",
+    "mitre_software_id": "S1113",
+    "ground_truth_techniques": [
+      "T1005",
+      "T1027",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1027.015",
+      "T1056",
+      "T1110",
+      "T1552.004"
+    ],
+    "fabricated": [
+      "T1056",
+      "T1110"
+    ],
+    "unrecognised_citations": [],
+    "precision": 0.25,
+    "recall": 0.25,
+    "f1": 0.25,
+    "true_positives": [
+      "T1027"
+    ],
+    "false_positives": [
+      "T1056",
+      "T1110",
+      "T1552"
+    ],
+    "false_negatives": [
+      "T1005",
+      "T1140",
+      "T1505"
+    ]
+  },
+  {
+    "id": "ATE-046",
+    "mitre_software_id": "S1108",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1071",
+      "T1132",
+      "T1505"
+    ],
+    "cited": [
+      "T1505.003",
+      "T1595.001"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1": 0.333,
+    "true_positives": [
+      "T1505"
+    ],
+    "false_positives": [
+      "T1595"
+    ],
+    "false_negatives": [
+      "T1059",
+      "T1071",
+      "T1132"
+    ]
+  },
+  {
+    "id": "ATE-047",
+    "mitre_software_id": "S1117",
+    "ground_truth_techniques": [
+      "T1059",
+      "T1132",
+      "T1140",
+      "T1505"
+    ],
+    "cited": [
+      "T1059.001",
+      "T1059.009"
+    ],
+    "fabricated": [],
+    "unrecognised_citations": [],
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1": 0.4,
+    "true_positives": [
+      "T1059"
+    ],
+    "false_positives": [],
+    "false_negatives": [
+      "T1132",
+      "T1140",
+      "T1505"
+    ]
+  }
+]

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TrustSOC Triad &mdash; Phase 4 Evaluation Summary</title>
+<style>
+  :root {
+    --navy: #14233B; --teal: #0E6E6B; --coral: #C1502E;
+    --light-teal: #D9EDEA; --light-grey: #F4F7FA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #fff; color: #1a1a1a; margin: 0; padding: 0;
+  }
+  header {
+    background: var(--navy); color: #fff; padding: 36px 48px;
+  }
+  header h1 { margin: 0 0 6px 0; font-size: 28px; }
+  header p { margin: 0; color: #cfd8e6; font-size: 14px; }
+  main { max-width: 900px; margin: 0 auto; padding: 32px 48px 64px; }
+  .card {
+    background: var(--light-grey); border-radius: 10px;
+    padding: 24px 28px; margin-bottom: 28px;
+  }
+  .card h2 {
+    color: var(--navy); margin: 0 0 14px 0; font-size: 19px;
+    border-bottom: 2px solid var(--teal); padding-bottom: 8px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th {
+    background: var(--teal); color: #fff; text-align: left;
+    padding: 10px 14px; font-weight: 600;
+  }
+  th:not(:first-child), td:not(:first-child) { text-align: center; }
+  td { padding: 9px 14px; border-bottom: 1px solid #dde3ea; }
+  tbody tr:nth-child(even) { background: var(--light-teal); }
+  .bar-row { margin-bottom: 16px; }
+  .bar-label { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .bar-track {
+    position: relative; background: #e6ebf0; border-radius: 5px;
+    height: 26px; margin-bottom: 4px; overflow: hidden;
+  }
+  .bar-fill { height: 100%; border-radius: 5px 0 0 5px; }
+  .bar-fill.mistral { background: var(--teal); }
+  .bar-fill.llama { background: var(--coral); }
+  .bar-value {
+    position: absolute; left: 10px; top: 3px; font-size: 13px;
+    font-weight: 600; color: var(--navy); mix-blend-mode: normal;
+  }
+  .legend { font-size: 13px; color: #555; margin-bottom: 12px; }
+  .legend span { display: inline-block; width: 12px; height: 12px; border-radius: 2px;
+    margin-right: 6px; vertical-align: middle; }
+  .legend .m { background: var(--teal); }
+  .legend .l { background: var(--coral); margin-left: 18px; }
+  .missing-note { color: #888; font-style: italic; }
+  .warning { background: #FBEAE3; border-left: 4px solid var(--coral); }
+  .warning h2 { border-bottom-color: var(--coral); }
+  .warning code { background: #fff; padding: 1px 5px; border-radius: 3px; }
+  footer { text-align: center; color: #999; font-size: 12px; padding: 24px; }
+  @media print {
+    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TrustSOC Triad &mdash; Phase 4 Evaluation Summary</h1>
+  <p>Generated 17 September 2026, 05:17 from result files in <code>results/</code></p>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>Faithfulness &mdash; SOC Scenarios</h2>
+    <table><thead><tr><th>Metric</th><th>Mistral 7B</th><th>LLaMA 3 8B</th></tr></thead><tbody><tr><td>Mean score</td><td>0.420</td><td>0.360</td></tr><tr><td>Fabricated citations</td><td>14/50</td><td>6/50</td></tr><tr><td>Unrecognised-format citations</td><td>11/50</td><td>12/50</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Faithfulness &mdash; CTIBench-ATE</h2>
+    <table><thead><tr><th>Metric</th><th>Mistral 7B</th><th>LLaMA 3 8B</th></tr></thead><tbody><tr><td>Precision</td><td>0.247</td><td>0.257</td></tr><tr><td>Recall</td><td>0.245</td><td>0.129</td></tr><tr><td>F1</td><td>0.234</td><td>0.157</td></tr><tr><td>Total fabricated citations</td><td>246</td><td>45</td></tr></tbody></table>
+  </section>
+
+  <section class="card">
+    <h2>Uncertainty Expression &mdash; Adversarial Probes</h2>
+    <div class="legend">
+      <span class="m"></span>Mistral 7B
+      <span class="l"></span>LLaMA 3 8B
+    </div>
+    
+    <div class="bar-row">
+      <div class="bar-label">Clean hedge</div>
+      <div class="bar-track">
+        <div class="bar-fill mistral" style="width:16.7%"></div>
+        <span class="bar-value">5/30 (17%)</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill llama" style="width:100.0%"></div>
+        <span class="bar-value">30/30 (100%)</span>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Hedge then answer</div>
+      <div class="bar-track">
+        <div class="bar-fill mistral" style="width:53.3%"></div>
+        <span class="bar-value">16/30 (53%)</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill llama" style="width:0.0%"></div>
+        <span class="bar-value">0/30 (0%)</span>
+      </div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">No hedge, confident</div>
+      <div class="bar-track">
+        <div class="bar-fill mistral" style="width:30.0%"></div>
+        <span class="bar-value">9/30 (30%)</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill llama" style="width:0.0%"></div>
+        <span class="bar-value">0/30 (0%)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Consistency &mdash; Paraphrase Pairs</h2>
+    <table><thead><tr><th>Metric</th><th>Mistral 7B</th><th>LLaMA 3 8B</th></tr></thead><tbody><tr><td>Mean cosine similarity</td><td>0.858</td><td>0.785</td></tr><tr><td>Technique agreement</td><td>32/50 (64%)</td><td>25/50 (50%)</td></tr></tbody></table>
+  </section>
+
+  
+
+</main>
+
+<footer>TrustSOC &mdash; automatically generated by build_triad_summary.py</footer>
+
+</body>
+</html>

@@ -1,0 +1,652 @@
+[
+  {
+    "id": "SOC-001",
+    "category": "alert_triage",
+    "ground_truth": "T1059.001",
+    "cited": [
+      "T1059",
+      "T1059.001",
+      "T1553",
+      "T1553.005"
+    ],
+    "score": 1.0,
+    "fabricated": [
+      "T1059",
+      "T1553"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-002",
+    "category": "alert_triage",
+    "ground_truth": "T1053.005",
+    "cited": [
+      "T1053",
+      "T1053.005",
+      "T1087"
+    ],
+    "score": 1.0,
+    "fabricated": [
+      "T1087"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-003",
+    "category": "alert_triage",
+    "ground_truth": "T1003.001",
+    "cited": [
+      "T1003.001"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-004",
+    "category": "alert_triage",
+    "ground_truth": "T1071.001",
+    "cited": [
+      "T1686",
+      "T1686.003"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-005",
+    "category": "alert_triage",
+    "ground_truth": "T1098",
+    "cited": [
+      "T1114.003"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-006",
+    "category": "alert_triage",
+    "ground_truth": "T1110.003",
+    "cited": [
+      "CVE-2023-46665",
+      "T1110",
+      "T1558",
+      "T1558.003",
+      "T1558.004"
+    ],
+    "score": 0.5,
+    "fabricated": [
+      "T1110",
+      "T1558"
+    ],
+    "unrecognised_citations": [
+      "Brute Force",
+      "Kerberoasting",
+      "AS-REP Roasting"
+    ]
+  },
+  {
+    "id": "SOC-007",
+    "category": "alert_triage",
+    "ground_truth": "T1204.002",
+    "cited": [
+      "T1059",
+      "T1059.001"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1059"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-008",
+    "category": "alert_triage",
+    "ground_truth": "T1560.001",
+    "cited": [
+      "CVE-2024-5569",
+      "T1546.009",
+      "T1679"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-009",
+    "category": "alert_triage",
+    "ground_truth": "T1547.001",
+    "cited": [
+      "T1547.001"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-010",
+    "category": "alert_triage",
+    "ground_truth": "T1021.001",
+    "cited": [
+      "CVE-2024-40717",
+      "T1053"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-011",
+    "category": "alert_triage",
+    "ground_truth": "T1218.011",
+    "cited": [
+      "T1218.011"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-012",
+    "category": "alert_triage",
+    "ground_truth": "T1490",
+    "cited": [
+      "T1070.004",
+      "T1490"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-013",
+    "category": "alert_triage",
+    "ground_truth": "T1570",
+    "cited": [
+      "T1021.002",
+      "T1047",
+      "T1053",
+      "T1078",
+      "T1569"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1047",
+      "T1053",
+      "T1078",
+      "T1569"
+    ],
+    "unrecognised_citations": [
+      "Valid Accounts",
+      "Scheduled Task/Job",
+      "Service Execution",
+      "Windows Management Instrumentation"
+    ]
+  },
+  {
+    "id": "SOC-014",
+    "category": "alert_triage",
+    "ground_truth": "T1071.004",
+    "cited": [
+      "CVE-2024-33655",
+      "CVE-2024-41812",
+      "CVE-2024-41813",
+      "T1071.004"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-015",
+    "category": "alert_triage",
+    "ground_truth": "T1136.001",
+    "cited": [
+      "CVE-2023-37755",
+      "T1136.001"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": [
+      "MITRE ATT&CK"
+    ]
+  },
+  {
+    "id": "SOC-016",
+    "category": "alert_triage",
+    "ground_truth": "T1055",
+    "cited": [
+      "CVE-2018-8653",
+      "CVE-2019-1367",
+      "T1055",
+      "T1055.011"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-017",
+    "category": "alert_triage",
+    "ground_truth": "T1528",
+    "cited": [
+      "T1021.007"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-018",
+    "category": "threat_classification",
+    "ground_truth": "T1190",
+    "cited": [
+      "T1190"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-019",
+    "category": "threat_classification",
+    "ground_truth": "T1203",
+    "cited": [
+      "CVE-2023-28744",
+      "T1204",
+      "T1566.001"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1204"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-020",
+    "category": "threat_classification",
+    "ground_truth": "T1036.005",
+    "cited": [
+      "T1036.005"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-021",
+    "category": "threat_classification",
+    "ground_truth": "T1219",
+    "cited": [
+      "T1588.002"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-022",
+    "category": "threat_classification",
+    "ground_truth": "T1195.002",
+    "cited": [
+      "T1195"
+    ],
+    "score": 0.5,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-023",
+    "category": "threat_classification",
+    "ground_truth": "T1069.002",
+    "cited": [
+      "T1059",
+      "T1087.002"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1059"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-024",
+    "category": "threat_classification",
+    "ground_truth": "T1132.001",
+    "cited": [
+      "T1027",
+      "T1027.013"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1027"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-025",
+    "category": "threat_classification",
+    "ground_truth": "T1559.001",
+    "cited": [
+      "T1546.015"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-026",
+    "category": "threat_classification",
+    "ground_truth": "T1497",
+    "cited": [
+      "T1497",
+      "T1622"
+    ],
+    "score": 1.0,
+    "fabricated": [
+      "T1497"
+    ],
+    "unrecognised_citations": [
+      "MITRE ATT&CK"
+    ]
+  },
+  {
+    "id": "SOC-027",
+    "category": "threat_classification",
+    "ground_truth": "T1133",
+    "cited": [
+      "T1078"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-028",
+    "category": "threat_classification",
+    "ground_truth": "T1583.001",
+    "cited": [
+      "T1566"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1566"
+    ],
+    "unrecognised_citations": [
+      "Link"
+    ]
+  },
+  {
+    "id": "SOC-029",
+    "category": "threat_classification",
+    "ground_truth": "T1105",
+    "cited": [
+      "T1218"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-030",
+    "category": "threat_classification",
+    "ground_truth": "T1070.006",
+    "cited": [
+      "T1070.006"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": [
+      "Timestomp",
+      "MITRE ATT&CK"
+    ]
+  },
+  {
+    "id": "SOC-031",
+    "category": "threat_classification",
+    "ground_truth": "T1567.002",
+    "cited": [
+      "T1567.002"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-032",
+    "category": "threat_classification",
+    "ground_truth": "T1557",
+    "cited": [
+      "T1557"
+    ],
+    "score": 1.0,
+    "fabricated": [
+      "T1557"
+    ],
+    "unrecognised_citations": [
+      "Adversary-in-the-Middle (AiTM)"
+    ]
+  },
+  {
+    "id": "SOC-033",
+    "category": "threat_classification",
+    "ground_truth": "T1098.003",
+    "cited": [
+      "T1098.003"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-034",
+    "category": "threat_classification",
+    "ground_truth": "T1562.002",
+    "cited": [
+      "T1685.001"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": [
+      "MITRE ATT&CK"
+    ]
+  },
+  {
+    "id": "SOC-035",
+    "category": "incident_summary",
+    "ground_truth": "T1486",
+    "cited": [
+      "T1486"
+    ],
+    "score": 1.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-036",
+    "category": "incident_summary",
+    "ground_truth": "T1070.001",
+    "cited": [
+      "T1070.003",
+      "T1685.005"
+    ],
+    "score": 0.5,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-037",
+    "category": "incident_summary",
+    "ground_truth": "T1568.002",
+    "cited": [
+      "T1568"
+    ],
+    "score": 0.5,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-038",
+    "category": "incident_summary",
+    "ground_truth": "T1656",
+    "cited": [
+      "T1078"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-039",
+    "category": "incident_summary",
+    "ground_truth": "T1030",
+    "cited": [
+      "T1485"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-040",
+    "category": "incident_summary",
+    "ground_truth": "T1210",
+    "cited": [
+      "CVE-2023-2235",
+      "T1546"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-041",
+    "category": "incident_summary",
+    "ground_truth": "T1195.001",
+    "cited": [
+      "T1027.004"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-042",
+    "category": "incident_summary",
+    "ground_truth": "T1053.005",
+    "cited": [
+      "T1053.005",
+      "T1564"
+    ],
+    "score": 1.0,
+    "fabricated": [
+      "T1564"
+    ],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-043",
+    "category": "incident_summary",
+    "ground_truth": "T1555.003",
+    "cited": [
+      "T1185"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": [
+      "provided context"
+    ]
+  },
+  {
+    "id": "SOC-044",
+    "category": "incident_summary",
+    "ground_truth": "T1222.001",
+    "cited": [
+      "T1574.010"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-045",
+    "category": "incident_summary",
+    "ground_truth": "T1528",
+    "cited": [
+      "T1550.001"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-046",
+    "category": "incident_summary",
+    "ground_truth": "T1484.001",
+    "cited": [
+      "T1037.003"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-047",
+    "category": "incident_summary",
+    "ground_truth": "T1518.001",
+    "cited": [
+      "T1518",
+      "T1622"
+    ],
+    "score": 0.5,
+    "fabricated": [
+      "T1518"
+    ],
+    "unrecognised_citations": [
+      "silent abort"
+    ]
+  },
+  {
+    "id": "SOC-048",
+    "category": "incident_summary",
+    "ground_truth": "T1074.001",
+    "cited": [
+      "CVE-2023-34362",
+      "T1029",
+      "T1074"
+    ],
+    "score": 0.5,
+    "fabricated": [],
+    "unrecognised_citations": [
+      "Not specified in the context"
+    ]
+  },
+  {
+    "id": "SOC-049",
+    "category": "incident_summary",
+    "ground_truth": "T1553.002",
+    "cited": [
+      "T1588.003"
+    ],
+    "score": 0.0,
+    "fabricated": [],
+    "unrecognised_citations": []
+  },
+  {
+    "id": "SOC-050",
+    "category": "incident_summary",
+    "ground_truth": "T1078.003",
+    "cited": [
+      "T1091",
+      "T1505",
+      "T1525"
+    ],
+    "score": 0.0,
+    "fabricated": [
+      "T1505"
+    ],
+    "unrecognised_citations": []
+  }
+]

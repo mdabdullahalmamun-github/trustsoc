@@ -1,0 +1,959 @@
+[
+  {
+    "id": "PARA-001",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1059.001",
+    "phrasing_a": "An EDR alert fires for powershell.exe launched with a base64-encoded -EncodedCommand argument from an Office document's child process. What ATT&CK technique does this match?",
+    "phrasing_b": "PowerShell is running with an encoded command-line argument, spawned as a child process of an Office document, and EDR has flagged it. Which technique covers this?",
+    "answer_a": "The provided context matches the MITRE ATT&CK Technique T1059.001: PowerShell [MITRE ATT&CK T1059.001]. The base64-encoded argument suggests that the PowerShell command or script is being executed using a method other than directly invoking the powershell.exe binary, possibly through an interface to PowerShell's underlying System.Management.Automation assembly DLL.",
+    "answer_b": "The provided context does not contain enough information to definitively answer the question. However, the scenario described could potentially align with the MITRE ATT&CK Technique T1036.011: Overwrite Process Arguments, as the command-line argument is encoded and being run as a child process of an Office document, which could imply an attempt to modify the process's arguments to change its name and appear as a legitimate process.",
+    "cited_a": [
+      "T1059.001"
+    ],
+    "cited_b": [
+      "T1036.011"
+    ],
+    "cosine_similarity": 0.7798,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-002",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1053.005",
+    "phrasing_a": "A host shows a new scheduled task created under SYSTEM context immediately after a suspicious binary ran, set to re-launch that binary every reboot. What technique is this?",
+    "phrasing_b": "Right after a suspicious executable ran, a new scheduled task appeared under the SYSTEM account, configured to relaunch that same binary on every reboot. What's the matching technique?",
+    "answer_a": "The technique used is MITRE ATT&CK T1053.005: Scheduled Task [MITRE ATT&CK T1053]. The adversary has abused the Windows Task Scheduler to create a scheduled task under the SYSTEM context, which is set to re-launch the binary every reboot for persistence [MITRE ATT&CK T1053, T1087]. The binary may have been executed initially in a suspicious manner, leading to the creation of the scheduled task [MITRE ATT&CK T1053].",
+    "answer_b": "The matching technique is [MITRE ATT&CK T1053.005: Scheduled Task] [MITRE ATT&CK T1053]. The technique involves the abuse of the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code, specifically creating a scheduled task under the SYSTEM account to relaunch the binary on every reboot. [CVE-2024-49039] is not directly related to this scenario as it is a privilege escalation vulnerability in Microsoft Windows Task Scheduler, not a technique for creating scheduled tasks.",
+    "cited_a": [
+      "T1053",
+      "T1053.005",
+      "T1087"
+    ],
+    "cited_b": [
+      "CVE-2024-49039",
+      "T1053",
+      "T1053.005"
+    ],
+    "cosine_similarity": 0.9022,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-003",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1003.001",
+    "phrasing_a": "Antivirus flags a process reading LSASS memory using MiniDumpWriteDump shortly before network beaconing begins. Which technique should this be triaged as?",
+    "phrasing_b": "Just before outbound network beaconing started, antivirus caught a process reading LSASS memory via MiniDumpWriteDump. How should this be triaged?",
+    "answer_a": "The provided context suggests that the technique should be triaged as MITRE ATT&CK Technique T1003.001: LSASS Memory [MITRE ATT&CK T1003.001]. This technique involves adversaries attempting to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). The use of MiniDumpWriteDump indicates an attempt to create a memory dump of LSASS, which can be used to harvest credentials.",
+    "answer_b": "This event should be triaged as a potential credential theft attempt [MITRE ATT&CK T1003.001]. The process reading LSASS memory via MiniDumpWriteDump could be an indicator of an adversary attempting to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). It is recommended to investigate the process further, gather more information about the involved system, and check for any signs of lateral movement or unauthorized access to sensitive data.",
+    "cited_a": [
+      "T1003.001"
+    ],
+    "cited_b": [
+      "T1003.001"
+    ],
+    "cosine_similarity": 0.915,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-004",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1071.001",
+    "phrasing_a": "A firewall alert shows an internal workstation making repeated outbound connections to the same external IP over port 443 at regular 60-second intervals, even when the user is idle.",
+    "phrasing_b": "Even while the user is away from their keyboard, an internal workstation keeps reaching out to the same external IP over HTTPS every 60 seconds like clockwork. What does a firewall alert like this indicate?",
+    "answer_a": "The provided context does not contain enough information to definitively determine the cause of the observed behavior. However, it is possible that an adversary is attempting to exploit the vulnerability CVE-2024-43392 or CVE-2024-43393 to perform a Denial of Service (DoS) attack by modifying firewall services through the FW_OUTGOING.FROM_IP FW_OUTGOING.IN_IP, FW_INCOMING.FROM_IP FW_INCOMING.IN_IP, FW_RULESETS.FROM_IP FW_RULESETS.IN_IP environment variables [MITRE ATT&CK T1686, T1686.003]. The observed behavior could also be a result of legitimate software or service running on the internal workstation. Further investigation is required to confirm the cause and determine if any defensive measures are necessary.",
+    "answer_b": "This firewall alert could indicate a potential lateral movement attempt using Remote Desktop Protocol (RDP) or Secure Shell (SSH) hijacking [MITRE ATT&CK Techniques T1563.002 and T1563.001]. The internal workstation repeatedly connecting to the same external IP over HTTPS every 60 seconds might be a sign of an active session being hijacked, especially if the user is away from their keyboard. However, the provided context does not contain enough information to definitively confirm the specific technique being used.",
+    "cited_a": [
+      "CVE-2024-43392",
+      "CVE-2024-43393",
+      "T1686",
+      "T1686.003"
+    ],
+    "cited_b": [
+      "T1563.001",
+      "T1563.002"
+    ],
+    "cosine_similarity": 0.7749,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-005",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1098",
+    "phrasing_a": "A user's account shows a successful login from a country they have never travelled to, immediately followed by mailbox rule creation that forwards all mail to an external address.",
+    "phrasing_b": "An account that's never logged in from abroad before just did, and immediately after, a mail-forwarding rule to an external address was created. What technique applies here?",
+    "answer_a": "The provided context suggests that adversaries may use email forwarding rules (MITRE ATT&CK T1114.003) to monitor activities, steal information, and maintain persistent access to victim's emails. In this case, the unusual login from an unfamiliar country and the subsequent creation of a mailbox rule could be indicative of such an attack. However, it's important to note that additional investigation would be required to confirm if this is indeed an instance of email forwarding rule abuse. [MITRE ATT&CK T1114.003]",
+    "answer_b": "The technique that applies here is MITRE ATT&CK T1114.003: Email Forwarding Rule [MITRE ATT&CK T1114.003].",
+    "cited_a": [
+      "T1114.003"
+    ],
+    "cited_b": [
+      "T1114.003"
+    ],
+    "cosine_similarity": 0.847,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-006",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1110.003",
+    "phrasing_a": "A SIEM correlation rule fires because a domain controller received an unusually large number of failed Kerberos authentication attempts against many different usernames within a short window.",
+    "phrasing_b": "A domain controller logged an unusually high volume of failed Kerberos logons spread across many distinct usernames, all within a short window. Which technique does this correlation rule suggest?",
+    "answer_a": "The SIEM correlation rule may indicate an attempt of [Brute Force](https://attack.mitre.org/techniques/T1110) attacks against Kerberos credentials using techniques such as [Kerberoasting](https://attack.mitre.org/techniques/T1558/003) or [AS-REP Roasting](https://attack.mitre.org/techniques/T1558/004) [MITRE ATT&CK T1558.003, T1558.004]. The vulnerability CVE-2023-46665 in Sielco PolyEco1000, which allows unauthorized access with administrative privileges through an authentication bypass, could also be exploited in this scenario [CVE-2023-46665].",
+    "answer_b": "The correlation rule suggests that the technique in question is [Kerberoasting](https://attack.mitre.org/techniques/T1558) [MITRE ATT&CK]. The high volume of failed Kerberos logons spread across many distinct usernames, all within a short window, could indicate an adversary attempting to brute force Kerberos tickets for various user accounts.",
+    "cited_a": [
+      "CVE-2023-46665",
+      "T1110",
+      "T1558",
+      "T1558.003",
+      "T1558.004"
+    ],
+    "cited_b": [
+      "T1558"
+    ],
+    "cosine_similarity": 0.8494,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-007",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1204.002",
+    "phrasing_a": "An endpoint alert shows a Microsoft Office process spawning cmd.exe, which then spawns powershell.exe with no visible window. What technique covers the initial spawn chain from Office to a command interpreter?",
+    "phrasing_b": "cmd.exe was spawned by a Microsoft Office process, and it in turn launched a hidden powershell.exe window. What covers the initial link in that chain, from Office to the command interpreter?",
+    "answer_a": "The initial spawn chain from Office to a command interpreter can be covered by MITRE ATT&CK Technique T1059.001: PowerShell [MITRE ATT&CK T1059]. The alert shows a Microsoft Office process spawning cmd.exe, which then spawns powershell.exe, indicating the use of PowerShell for execution.",
+    "answer_b": "The provided context does not contain enough information to definitively answer the question. However, it is possible that the initial link in the chain could be a PowerShell command executed within a Microsoft Office process, which then spawns cmd.exe to launch a hidden PowerShell window. This is based on the information about PowerShell's ability to execute cmd.exe and the mention of PowerShell being used within Microsoft Office processes. [MITRE ATT&CK T1059.001] [MITRE ATT&CK T1086]",
+    "cited_a": [
+      "T1059",
+      "T1059.001"
+    ],
+    "cited_b": [
+      "T1059.001",
+      "T1086"
+    ],
+    "cosine_similarity": 0.8507,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-008",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1560.001",
+    "phrasing_a": "A DLP alert triggers because a large ZIP archive was created in a temp directory just before a large outbound transfer to a cloud storage domain not used by the organisation.",
+    "phrasing_b": "Just before a large upload to a cloud storage domain the organisation doesn't normally use, a sizeable ZIP file appeared in a temp folder. What triggered this DLP alert, technique-wise?",
+    "answer_a": "The vulnerability CVE-2024-5569 [MITRE ATT&CK T1679] could potentially be related to the creation of a large ZIP archive in a temp directory. The vulnerability allows for an infinite loop when processing a specially crafted zip file, which could prevent the application from responding. However, without more context, it's not possible to definitively say if this vulnerability was exploited in this case. Additionally, the MITRE ATT&CK technique T1546.009 [MITRE ATT&CK T1546.009] could also be a concern as it involves the use of AppCert DLLs to establish persistence and/or elevate privileges. The creation of a large ZIP archive in a temp directory could potentially be used as part of such an attack. Further investigation is needed to confirm if either of these vulnerabilities were exploited.",
+    "answer_b": "The DLP alert was triggered due to the use of the MITRE ATT&CK Technique T1027.015 - Compression, as a sizeable ZIP file appeared in a temp folder just before a large upload to a cloud storage domain that the organization doesn't normally use. [MITRE ATT&CK T1027.015]",
+    "cited_a": [
+      "CVE-2024-5569",
+      "T1546.009",
+      "T1679"
+    ],
+    "cited_b": [
+      "T1027.015"
+    ],
+    "cosine_similarity": 0.8309,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-009",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1547.001",
+    "phrasing_a": "A workstation's registry Run key gains a new value pointing to an executable in the user's AppData folder, and the change coincides with a phishing email being opened.",
+    "phrasing_b": "A phishing email was opened around the same time a brand-new value showed up in a workstation's Run registry key, pointing to an AppData executable. Which technique matches?",
+    "answer_a": "The provided context does not indicate a direct link between the phishing email and the modification of the Run key in the registry. However, it is possible that the phishing email could contain malware that modifies the Run key to execute an executable located in the user's AppData folder [MITRE ATT&CK T1547.001]. The phishing email could be used as a vector for the malware to gain access to the system and modify the Run key.",
+    "answer_b": "The technique that matches is MITRE ATT&CK Technique T1036.005: Match Legitimate Resource Name or Location [MITRE ATT&CK T1036.005]. The new value in the Run registry key pointing to an AppData executable could be an attempt to evade defenses and observation by mimicking the name or location of a legitimate file.",
+    "cited_a": [
+      "T1547.001"
+    ],
+    "cited_b": [
+      "T1036.005"
+    ],
+    "cosine_similarity": 0.7175,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-010",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1021.001",
+    "phrasing_a": "An alert shows a service account, which normally only runs scheduled backups, being used interactively to RDP into three other servers within the same hour.",
+    "phrasing_b": "A backup service account, of all things, was just used to interactively RDP into three separate servers inside of an hour. What's the right technique classification?",
+    "answer_a": "The provided context does not contain enough information to definitively determine the cause of the observed behavior. However, the interaction of the service account with the servers could potentially be explained by the following:\n\n1. The service account may have been granted additional cloud roles or credentials, allowing it to perform interactive tasks such as RDP [MITRE ATT&CK T1098/001, T1098/003].\n2. The service account could be abusing task scheduling functionality to facilitate initial or recurring execution of malicious code, such as running a script that initiates RDP sessions [MITRE ATT&CK T1053].\n3. The vulnerability CVE-2024-40717 in Veeam Backup & Replication allows a low-privileged user with certain roles to perform remote code execution (RCE), which could potentially be exploited to grant the service account interactive capabilities.\n4. The vulnerability CVE-2999-9999 (hypothetical) in a remote desktop protocol (RDP) client or server could allow an unauthorized user to gain interactive access to servers, if the service account uses RDP for its scheduled backups.\n\nTo confirm the cause, further investigation is required, including analyzing logs, network traffic, and system configurations related to the service account and the servers in question.",
+    "answer_b": "The right technique classification for this scenario would be MITRE ATT&CK Technique T1021: Remote Services [MITRE ATT&CK T1021]. The backup service account is being used to interactively RDP into servers, which falls under the category of Remote Services.",
+    "cited_a": [
+      "CVE-2024-40717",
+      "CVE-2999-9999",
+      "T1053",
+      "T1098"
+    ],
+    "cited_b": [
+      "T1021"
+    ],
+    "cosine_similarity": 0.7278,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-011",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1218.011",
+    "phrasing_a": "A host's process tree shows rundll32.exe being invoked with an unusual, obfuscated argument string and no legitimate parent application context.",
+    "phrasing_b": "rundll32.exe fired with a strange, obfuscated set of arguments, and there's no legitimate parent application in sight. What technique should this be flagged as?",
+    "answer_a": "The provided context suggests that the use of rundll32.exe with an unusual, obfuscated argument string could potentially be indicative of MITRE ATT&CK Technique T1218.011, \"Rundll32 Proxy Execution.\" This technique is often used to execute malicious code, scripts, or payloads, possibly evading detection by security tools due to allowlists or false positives from normal operations [MITRE ATT&CK T1218.011]. However, it's important to note that not all uses of rundll32.exe with obfuscated argument strings are malicious. The context does not provide enough information to definitively label this activity as malicious. Further investigation, such as analyzing the content of the argument string, would be necessary to confirm any malicious intent.",
+    "answer_b": "This should be flagged as MITRE ATT&CK Technique T1218.011: Rundll32, with a focus on the obfuscated set of arguments potentially being used to execute malicious code or scripts [MITRE ATT&CK T1218.011]. The absence of a legitimate parent application could indicate an attempt to evade detection [MITRE ATT&CK T1055.001: Dynamic-link Library Injection]. However, without more context about the specific arguments and behavior observed, it's not possible to definitively confirm the presence of DLL injection or other related techniques.",
+    "cited_a": [
+      "T1218.011"
+    ],
+    "cited_b": [
+      "T1055.001",
+      "T1218.011"
+    ],
+    "cosine_similarity": 0.8927,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-012",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1490",
+    "phrasing_a": "Backup software logs show shadow copies being deleted on a file server minutes before files on that server are found renamed with a new, unfamiliar extension.",
+    "phrasing_b": "Right before files on a file server turned up renamed with an unfamiliar extension, the backup logs showed shadow copies being deleted. What does that sequence point to?",
+    "answer_a": "The provided context suggests that the deletion of volume shadow copies (T1490) may be performed using various native Windows utilities such as `vssadmin.exe`, `wmic`, `wbadmin.exe`, `bcdedit.exe`, `REAgentC.exe`, and `diskshadow.exe`. The deletion of shadow copies could be a precursor to file renaming with unfamiliar extensions, as this technique is often used to inhibit system recovery [MITRE ATT&CK T1490]. However, without specific command logs or additional context, it is not possible to definitively confirm which utility was used in this instance. [MITRE ATT&CK T1070.004]",
+    "answer_b": "The sequence points to the use of the MITRE ATT&CK Technique T1485: Data Destruction [MITRE ATT&CK T1485]. The shadow copies being deleted could be a precursor to the files being renamed with an unfamiliar extension, as both actions suggest an attempt to destroy data and disrupt availability. This could be part of a larger operation to cause Denial of Service (DoS) or data integrity issues, as mentioned in the context.",
+    "cited_a": [
+      "T1070.004",
+      "T1490"
+    ],
+    "cited_b": [
+      "T1485"
+    ],
+    "cosine_similarity": 0.8521,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-013",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1570",
+    "phrasing_a": "A network alert flags SMB traffic from a compromised host attempting to write an executable to the ADMIN$ share of several other machines on the same subnet.",
+    "phrasing_b": "SMB traffic from an already-compromised host is trying to drop an executable into the ADMIN$ share of other machines on the same subnet. Which technique is this?",
+    "answer_a": "The alert indicates a potential lateral movement attempt using the MITRE ATT&CK Technique T1021.002: SMB/Windows Admin Shares [MITRE ATT&CK T1021.002]. The adversary is attempting to write an executable to the ADMIN$ share of other machines, which is a common practice for moving laterally throughout a network. This technique often relies on administrator-level [Valid Accounts](https://attack.mitre.org/techniques/T1078). The execution of the transferred binary could be facilitated by various techniques such as [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053), [Service Execution](https://attack.mitre.org/techniques/T1569/002), and [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047). However, the provided context does not contain enough information to determine the exact execution technique used in this case.",
+    "answer_b": "The provided context indicates that the technique being described is [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021.002), specifically the use of this technique for lateral movement and file transfer. [CVE-2017-0146, CVE-2017-0148, and CVE-2017-0145] are vulnerabilities related to SMB, but they are not directly related to the technique of dropping an executable into the ADMIN$ share.",
+    "cited_a": [
+      "T1021.002",
+      "T1047",
+      "T1053",
+      "T1078",
+      "T1569"
+    ],
+    "cited_b": [
+      "CVE-2017-0145",
+      "CVE-2017-0146",
+      "CVE-2017-0148",
+      "T1021.002"
+    ],
+    "cosine_similarity": 0.8646,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-014",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1071.004",
+    "phrasing_a": "A proxy log shows a workstation querying an unusual number of DNS TXT records for a single external domain over a short period, with no corresponding web browsing activity.",
+    "phrasing_b": "A workstation is issuing an unusually high number of DNS TXT record lookups for one external domain, with no matching web browsing activity to explain it. What's the likely technique?",
+    "answer_a": "The observed behavior could potentially indicate a case of DNS beaconing [T1071.004] using TXT records. The workstation may be communicating with a remote system controlled by an adversary, sending commands embedded within the DNS protocol traffic. However, without additional context such as the specific domain or IP addresses involved, it's not possible to confirm this definitively. It's also important to note that this unusual DNS activity could also be due to a legitimate application or service using TXT records for a specific purpose. For further investigation, it would be beneficial to analyze the network traffic patterns, correlate them with system logs, and check for any signs of malicious activity or known vulnerabilities (e.g., CVE-2024-41812, CVE-2024-41813, or CVE-2024-33655).",
+    "answer_b": "The likely technique is DNS beaconing [MITRE ATT&CK T1071.004], as the workstation is issuing an unusually high number of DNS TXT record lookups for one external domain without matching web browsing activity, which could indicate malicious DNS traffic concealed within normal DNS traffic.",
+    "cited_a": [
+      "CVE-2024-33655",
+      "CVE-2024-41812",
+      "CVE-2024-41813",
+      "T1071.004"
+    ],
+    "cited_b": [
+      "T1071.004"
+    ],
+    "cosine_similarity": 0.8874,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-015",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1136.001",
+    "phrasing_a": "EDR flags a new local administrator account being created on a workstation outside of the organisation's change window, shortly after a suspicious executable ran.",
+    "phrasing_b": "Outside the change window, EDR caught a new local admin account being created on a workstation, right after a suspicious executable had run. What technique fits?",
+    "answer_a": "The EDR event indicates a potential case of MITRE ATT&CK Technique T1136.001: Local Account [MITRE ATT&CK]. This technique is used for persistence, and the creation of a local administrator account outside of the organization's change window, following a suspicious executable, could be an attempt to maintain access to the victim system. The suspicious executable might be related to a malicious activity or unauthorized software installation. It is also worth noting that the vulnerability CVE-2023-37755 allows unauthenticated attackers to obtain Administrator privileges [CVE-2023-37755], which could potentially be related to the observed event. However, further investigation is required to confirm the nature and intent of the local administrator account creation.",
+    "answer_b": "The technique that fits is MITRE ATT&CK Technique T1136.001: Local Account [MITRE ATT&CK T1136.001]. The creation of a new local admin account suggests the adversary created a local account to maintain access to the victim system. This technique is associated with persistence, privilege escalation, and initial access tactics. The suspicious executable running before the account creation might indicate the initial access phase.",
+    "cited_a": [
+      "CVE-2023-37755",
+      "T1136.001"
+    ],
+    "cited_b": [
+      "T1136.001"
+    ],
+    "cosine_similarity": 0.9063,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-016",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1055",
+    "phrasing_a": "An alert fires because a process was observed injecting code into the memory space of explorer.exe on a workstation that was recently reimaged.",
+    "phrasing_b": "A recently reimaged workstation shows a process injecting code straight into explorer.exe's memory space. What's the matching technique?",
+    "answer_a": "The alert suggests an instance of MITRE ATT&CK Technique T1055: Process Injection [MITRE ATT&CK T1055], where malicious code was injected into the memory space of explorer.exe. This technique is often used to evade process-based defenses and potentially elevate privileges [MITRE ATT&CK T1055]. The provided context does not specify the method used for the injection, but it could be through Extra Window Memory Injection (T1055.011) or other methods. The workstation was recently reimaged, which might indicate that the malware persisted despite the reimage, suggesting a more sophisticated threat. However, without additional context, it's not possible to determine the exact exploit used, such as CVE-2019-1367 or CVE-2018-8653.",
+    "answer_b": "The matching technique is MITRE ATT&CK Technique T1055.011: Extra Window Memory Injection [MITRE ATT&CK T1055.011]. The provided context describes a method of injecting malicious code into the memory space of a separate live process, such as explorer.exe, using Extra Window Memory (EWM).",
+    "cited_a": [
+      "CVE-2018-8653",
+      "CVE-2019-1367",
+      "T1055",
+      "T1055.011"
+    ],
+    "cited_b": [
+      "T1055.011"
+    ],
+    "cosine_similarity": 0.8634,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-017",
+    "category": "alert_triage",
+    "ground_truth_technique": "T1528",
+    "phrasing_a": "A cloud audit log shows a user's access token being used from two geographically distant IP addresses within minutes of each other, without an intervening logout.",
+    "phrasing_b": "The same user's cloud access token was used from two IP addresses on opposite sides of the world, minutes apart, with no logout in between. What does this suggest?",
+    "answer_a": "The provided context suggests that the use of a user's access token from geographically distant IP addresses within a short timeframe, without an intervening logout, could potentially indicate a case of lateral movement using Cloud Services [MITRE ATT&CK T1021.007]. However, it's important to note that this behavior alone is not definitive evidence of a security incident, as legitimate users could also access cloud services from multiple locations. To confirm if this is a security concern, additional context such as the user's typical behavior, the presence of any suspicious activities, and the specific cloud service being used would be required. [MITRE ATT&CK T1021.007]",
+    "answer_b": "This suggests that the user's cloud access token may have been compromised, potentially allowing an adversary to bypass the typical authentication process and access the user's account from different locations [MITRE ATT&CK T1550.001]. The token could have been stolen and used in lieu of login credentials, granting the adversary access to resources of the user account. This could be a sign of lateral movement or unauthorized access [MITRE ATT&CK T1059, T1021.007]. The user should immediately change their access token and review their security practices.",
+    "cited_a": [
+      "T1021.007"
+    ],
+    "cited_b": [
+      "T1021.007",
+      "T1059",
+      "T1550.001"
+    ],
+    "cosine_similarity": 0.8903,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-018",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1190",
+    "phrasing_a": "Which ATT&CK technique best classifies an attacker exploiting a known, unpatched vulnerability in a public-facing web application to gain their initial foothold?",
+    "phrasing_b": "An attacker's initial foothold came from exploiting a known, unpatched flaw in a web application exposed to the internet. Which technique best describes this?",
+    "answer_a": "The attacker exploiting a known, unpatched vulnerability in a public-facing web application to gain their initial foothold best classifies under MITRE ATT&CK Technique T1190: Exploit Public-Facing Application [MITRE ATT&CK T1190].",
+    "answer_b": "The attacker's initial foothold came from exploiting a known, unpatched flaw in a web application exposed to the internet. This best describes the MITRE ATT&CK Technique T1190: Exploit Public-Facing Application [MITRE ATT&CK T1190].",
+    "cited_a": [
+      "T1190"
+    ],
+    "cited_b": [
+      "T1190"
+    ],
+    "cosine_similarity": 0.9625,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-019",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1203",
+    "phrasing_a": "An attacker gains a foothold after an employee opens an attachment in a spearphishing email that exploits a vulnerability in the document viewer itself, rather than relying on the user running a macro. Classify the technique.",
+    "phrasing_b": "Rather than getting the user to enable a macro, the attacker's spearphishing attachment exploited a vulnerability in the document viewer itself. What's the correct technique here?",
+    "answer_a": "The technique used by the attacker in this scenario can be classified as [MITRE ATT&CK T1566.001: Spearphishing Attachment] [MITRE ATT&CK T1204: User Execution]. The attacker exploits a vulnerability in the document viewer itself, rather than relying on the user running a macro. The vulnerability CVE-2023-28744 in Foxit Software's PDF Reader could potentially be the one exploited in this scenario, as it allows arbitrary code execution through a specially crafted PDF document.",
+    "answer_b": "The correct MITRE ATT&CK Technique for the scenario described is T1566.001: Spearphishing Attachment [MITRE ATT&CK T1566.001]. The attacker's spearphishing attachment exploited a vulnerability in the document viewer, specifically the macro-pdfviewer in this case.",
+    "cited_a": [
+      "CVE-2023-28744",
+      "T1204",
+      "T1566.001"
+    ],
+    "cited_b": [
+      "T1566.001"
+    ],
+    "cosine_similarity": 0.9158,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-020",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1036.005",
+    "phrasing_a": "Which technique describes an attacker renaming a malicious executable to match a legitimate Windows system process name (e.g. svchost.exe) to blend in with normal system activity?",
+    "phrasing_b": "To blend into normal system activity, the attacker renamed their malicious binary to something like svchost.exe. Which technique covers this?",
+    "answer_a": "The technique that describes an attacker renaming a malicious executable to match a legitimate Windows system process name (e.g. `svchost.exe`) to blend in with normal system activity is MITRE ATT&CK Technique T1036.005: Match Legitimate Resource Name or Location [MITRE ATT&CK T1036.005].",
+    "answer_b": "The provided context does not contain enough information to answer this reliably. However, the technique of Compromise Host Software Binary (T1546) mentioned in the context involves modifying host software binaries, which could potentially include renaming them. But the specific technique of renaming a binary to blend into normal system activity is not explicitly mentioned in the provided context.",
+    "cited_a": [
+      "T1036.005"
+    ],
+    "cited_b": [
+      "T1546"
+    ],
+    "cosine_similarity": 0.7428,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-021",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1219",
+    "phrasing_a": "An adversary is observed using a legitimate, signed remote-support tool already present on the network to move between hosts instead of deploying their own malware. What technique covers this?",
+    "phrasing_b": "Instead of deploying custom malware, the adversary moved between hosts using a legitimate, already-installed remote-support tool. What technique is that?",
+    "answer_a": "The technique that covers an adversary using a legitimate, signed remote-support tool already present on the network to move between hosts instead of deploying their own malware is MITRE ATT&CK Technique T1588.002: Tool [MITRE ATT&CK T1588.002].",
+    "answer_b": "The technique used by the adversary is T1080: Taint Shared Content [MITRE ATT&CK T1080]. The adversary moved between hosts by adding malicious programs to a shared remote-support tool (SimpleHelp).",
+    "cited_a": [
+      "T1588.002"
+    ],
+    "cited_b": [
+      "T1080"
+    ],
+    "cosine_similarity": 0.846,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-022",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1195.002",
+    "phrasing_a": "Classify an attack where the adversary compromises a trusted software vendor's update mechanism to distribute malware to that vendor's downstream customers.",
+    "phrasing_b": "A trusted software vendor's own update mechanism was compromised and used to push malware out to that vendor's customers. How should this be classified?",
+    "answer_a": "The attack can be classified as a Supply Chain Compromise (MITRE ATT&CK T1195) under the Initial Access tactic. The adversary manipulates the software update/distribution mechanism of a trusted software vendor to distribute malware to downstream customers.",
+    "answer_b": "This incident can be classified under MITRE ATT&CK Technique T1566: Phishing, specifically the subtechnique T1566.002: Spearphishing Attachment, as the attacker used a compromised software update mechanism to distribute malware to the vendor's customers, which is a form of targeted phishing [MITRE ATT&CK T1566].",
+    "cited_a": [
+      "T1195"
+    ],
+    "cited_b": [
+      "T1566",
+      "T1566.002"
+    ],
+    "cosine_similarity": 0.792,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-023",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1069.002",
+    "phrasing_a": "An adversary is found querying Active Directory for all accounts belonging to the Domain Admins group before attempting any privilege escalation. What technique is this reconnaissance step?",
+    "phrasing_b": "Before making any move toward privilege escalation, the attacker was seen enumerating every account in the Domain Admins group. What's this reconnaissance step called?",
+    "answer_a": "The reconnaissance step is MITRE ATT&CK Technique T1087.002: Domain Account Discovery [MITRE ATT&CK T1087.002]. The adversary is attempting to get a listing of domain accounts, specifically those belonging to the Domain Admins group, to aid in follow-on behavior such as targeting specific accounts which possess particular privileges. In this case, the PowerShell cmdlet <code>Get-ADGroupMember</code> could potentially be used to enumerate members of the Active Directory group [MITRE ATT&CK T1059/001].",
+    "answer_b": "The reconnaissance step of enumerating every account in the Domain Admins group is called Account Discovery [MITRE ATT&CK T1087].",
+    "cited_a": [
+      "T1059",
+      "T1087.002"
+    ],
+    "cited_b": [
+      "T1087"
+    ],
+    "cosine_similarity": 0.8066,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-024",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1132.001",
+    "phrasing_a": "Which technique classifies an attacker encoding stolen data before sending it out over normal-looking outbound HTTPS traffic, so it is not obviously distinguishable from legitimate encrypted web traffic?",
+    "phrasing_b": "Stolen data was encoded with a custom scheme and folded into what otherwise looked like normal outbound HTTPS traffic. Which technique matches?",
+    "answer_a": "The technique that classifies an attacker encoding stolen data before sending it out over normal-looking outbound HTTPS traffic, so it is not obviously distinguishable from legitimate encrypted web traffic, is [Encrypted/Encoded File (T1027.013)](https://attack.mitre.org/techniques/T1027/013). This technique aims to impede detection by obfuscating the stolen data.",
+    "answer_b": "The technique that matches is MITRE ATT&CK Technique T1560.003: Archive via Custom Method [MITRE ATT&CK T1560.003]. This technique involves compressing or encrypting data that is collected prior to exfiltration using a custom method, which could include encoding the data with a custom scheme.",
+    "cited_a": [
+      "T1027",
+      "T1027.013"
+    ],
+    "cited_b": [
+      "T1560.003"
+    ],
+    "cosine_similarity": 0.7999,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-025",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1559.001",
+    "phrasing_a": "An attacker is observed abusing a Windows COM object to achieve code execution without writing a new file to disk. Which technique fits?",
+    "phrasing_b": "Code execution was achieved by abusing a Windows COM object, with no new file ever written to disk. What technique covers that?",
+    "answer_a": "The technique that fits is MITRE ATT&CK Technique T1546.015: Component Object Model Hijacking [MITRE ATT&CK T1546.015]. This technique involves the execution of malicious content triggered by hijacked references to Component Object Model (COM) objects, without the need to write a new file to disk.",
+    "answer_b": "The technique that covers code execution achieved by abusing a Windows COM object, with no new file ever written to disk, is MITRE ATT&CK Technique T1059.001: Component Object Model [MITRE ATT&CK T1059.001].",
+    "cited_a": [
+      "T1546.015"
+    ],
+    "cited_b": [
+      "T1059.001"
+    ],
+    "cosine_similarity": 0.8339,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-026",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1497",
+    "phrasing_a": "Classify a technique where malware checks for the presence of known analyst tools, VM artefacts, or a debugger before deciding whether to execute its payload.",
+    "phrasing_b": "Before running its payload, a piece of malware checked for known analyst tools, VM artefacts, and an attached debugger. What's this technique called?",
+    "answer_a": "The technique can be classified as a combination of Debugger Evasion (T1622) and Virtualization/Sandbox Evasion (T1497). These techniques involve malware checking for the presence of known analyst tools, debuggers, VM artifacts, or a sandbox environment before deciding whether to execute its payload [MITRE ATT&CK].",
+    "answer_b": "The technique used by the malware is called \"System Checks\" [MITRE ATT&CK T1497]. This technique involves the malware checking for artifacts indicative of a virtual machine environment (VME) or sandbox, analyst tools, and an attached debugger before running its payload.",
+    "cited_a": [
+      "T1497",
+      "T1622"
+    ],
+    "cited_b": [
+      "T1497"
+    ],
+    "cosine_similarity": 0.8845,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-027",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1133",
+    "phrasing_a": "An adversary uses valid, stolen VPN credentials belonging to a contractor to access the internal network directly, without exploiting any vulnerability. Which technique?",
+    "phrasing_b": "Rather than exploiting anything, the attacker just used a contractor's stolen but entirely valid VPN credentials to get straight onto the internal network. Which technique is this?",
+    "answer_a": "The adversary's action can be categorized under MITRE ATT&CK Technique T1078: Valid Accounts [MITRE ATT&CK T1078]. This technique involves the use of compromised credentials for Initial Access, Persistence, Privilege Escalation, or Defense Evasion. In this case, the adversary is using the valid, stolen VPN credentials for Initial Access.",
+    "answer_b": "The attacker's action falls under MITRE ATT&CK Technique T1078: Valid Accounts [MITRE ATT&CK T1078]. This technique involves obtaining and abusing credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. In this case, the attacker used a contractor's stolen but entirely valid VPN credentials to gain access to the internal network.",
+    "cited_a": [
+      "T1078"
+    ],
+    "cited_b": [
+      "T1078"
+    ],
+    "cosine_similarity": 0.9733,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-028",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1583.001",
+    "phrasing_a": "Which technique covers an attacker registering a domain that closely resembles the target organisation's real domain, for use in a later phishing campaign?",
+    "phrasing_b": "As groundwork for an upcoming phishing campaign, the attacker registered a domain that closely mimics the target organisation's real one. What covers this preparatory step?",
+    "answer_a": "The technique that covers an attacker registering a domain that closely resembles the target organization's real domain, for use in a later phishing campaign, is MITRE ATT&CK Technique T1566: Phishing [Link]. This technique involves using email or websites to induce victims to reveal sensitive information or take actions that may result in the compromise of their system. In this case, the attacker uses a domain that is similar to the target organization's real domain to deceive the victims. [MITRE ATT&CK T1566]",
+    "answer_b": "The preparatory step for the upcoming phishing campaign, where the attacker registered a domain that closely mimics the target organization's real one, is covered by MITRE ATT&CK Technique T1583.001: Domain Acquisition [MITRE ATT&CK T1583.001].",
+    "cited_a": [
+      "T1566"
+    ],
+    "cited_b": [
+      "T1583.001"
+    ],
+    "cosine_similarity": 0.8732,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-029",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1105",
+    "phrasing_a": "An attacker uses living-off-the-land binary certutil.exe to download a second-stage payload from an external server. Classify this technique.",
+    "phrasing_b": "certutil.exe, a built-in Windows binary, was used to pull down a second-stage payload from an external server. What's the matching technique?",
+    "answer_a": "The technique used by the attacker can be classified as MITRE ATT&CK Technique T1218: System Binary Proxy Execution [MITRE ATT&CK T1218]. The attacker is using a trusted binary (certutil.exe) to download a second-stage payload, bypassing process and/or signature-based defenses.",
+    "answer_b": "The provided context does not contain enough information to determine if certutil.exe was used for a matching technique. Certutil.exe is a built-in Windows utility for managing certificates, and it can be used for various purposes, including downloading certificates from external servers. However, the context does not specify that certutil.exe was used for executing malicious payloads or bypassing application control, which are characteristics of the MITRE ATT&CK techniques T1218.004 (InstallUtil) and T1218.007 (Msiexec). Therefore, it is not possible to definitively say that certutil.exe was used for a matching technique based on the provided context.",
+    "cited_a": [
+      "T1218"
+    ],
+    "cited_b": [
+      "T1218.004",
+      "T1218.007"
+    ],
+    "cosine_similarity": 0.8025,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-030",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1070.006",
+    "phrasing_a": "Which technique describes an adversary modifying timestamps on a dropped malicious file to match the timestamps of legitimate nearby system files, to evade timeline-based forensic review?",
+    "phrasing_b": "To throw off a timeline-based forensic review, the attacker altered the timestamps on a dropped malicious file to match nearby legitimate system files. Which technique is this?",
+    "answer_a": "The technique that describes an adversary modifying timestamps on a dropped malicious file to match the timestamps of legitimate nearby system files, to evade timeline-based forensic review, is [Timestomp](https://attack.mitre.org/techniques/T1070.006) [MITRE ATT&CK].",
+    "answer_b": "The attacker's action of altering the timestamps on a dropped malicious file to match nearby legitimate system files is an example of [MITRE ATT&CK Technique T1070.006: Timestomp] [MITRE ATT&CK T1070.006].",
+    "cited_a": [
+      "T1070.006"
+    ],
+    "cited_b": [
+      "T1070.006"
+    ],
+    "cosine_similarity": 0.9284,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-031",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1567.002",
+    "phrasing_a": "An attacker exfiltrates a small number of highly sensitive documents by uploading them to a personal cloud storage account, using the same protocol and port as normal corporate cloud backups. Classify the exfiltration technique.",
+    "phrasing_b": "A handful of highly sensitive documents were uploaded to a personal cloud storage account, using the same port and protocol as the organisation's normal cloud backups. What's the exfiltration technique here?",
+    "answer_a": "The exfiltration technique used by the attacker can be classified as MITRE ATT&CK Technique T1567.002: Exfiltration to Cloud Storage [MITRE ATT&CK T1567.002]. This technique involves exfiltrating data to a cloud storage service, such as Dropbox or Google Docs, rather than over their primary command and control channel. The attacker is using the same protocol and port as normal corporate cloud backups to blend into normal traffic.",
+    "answer_b": "The exfiltration technique here is likely MITRE ATT&CK Technique T1567.002: Exfiltration to Cloud Storage [MITRE ATT&CK T1567.002], as the documents were uploaded to a personal cloud storage account using the same port and protocol as the organization's normal cloud backups, which suggests that the adversary may have exploited the organization's existing communication with the cloud storage service to exfiltrate the data. However, without more specific details about the cloud storage service and the method used for uploading the documents, this is an educated guess and further investigation would be required to confirm the exact technique.",
+    "cited_a": [
+      "T1567.002"
+    ],
+    "cited_b": [
+      "T1567.002"
+    ],
+    "cosine_similarity": 0.953,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-032",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1557",
+    "phrasing_a": "Which technique covers an adversary intercepting and manipulating traffic between two parties on a local network in order to steal credentials passed between them?",
+    "phrasing_b": "Traffic between two parties on the local network was intercepted and modified so a trojanised software update could be delivered. Which technique applies?",
+    "answer_a": "The technique that covers an adversary intercepting and manipulating traffic between two parties on a local network in order to steal credentials passed between them is [Adversary-in-the-Middle (AiTM)](https://attack.mitre.org/techniques/T1557). This technique is mentioned in the context as a tactic used during network sniffing to passively gain additional knowledge about the environment.",
+    "answer_b": "The provided context does not contain enough information to definitively answer the question. However, the technique that might be related to the described scenario is MITRE ATT&CK Technique T1565.002: Transmitted Data Manipulation [MITRE ATT&CK T1565.002]. This technique involves altering data en route to storage or other systems, which could potentially be used to deliver a trojanised software update. However, without more specific details about the method used to intercept and modify the traffic, it's not possible to confirm this with certainty.",
+    "cited_a": [
+      "T1557"
+    ],
+    "cited_b": [
+      "T1565.002"
+    ],
+    "cosine_similarity": 0.7268,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-033",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1098.003",
+    "phrasing_a": "An adversary abuses a misconfigured cloud IAM role to grant themselves broader permissions than they were originally issued. Classify this.",
+    "phrasing_b": "A misconfigured cloud IAM role was abused by the attacker to grant themselves more permissions than they originally had. What technique fits this?",
+    "answer_a": "The provided context indicates that the adversary's action falls under the MITRE ATT&CK Technique T1098.003: Additional Cloud Roles, which is associated with the tactics of persistence and privilege-escalation [MITRE ATT&CK T1098.003].",
+    "answer_b": "The technique that fits this scenario is MITRE ATT&CK T1098.003: Additional Cloud Roles [MITRE ATT&CK T1098.003].",
+    "cited_a": [
+      "T1098.003"
+    ],
+    "cited_b": [
+      "T1098.003"
+    ],
+    "cosine_similarity": 0.8524,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-034",
+    "category": "threat_classification",
+    "ground_truth_technique": "T1562.002",
+    "phrasing_a": "Which technique describes an attacker disabling a host's security event logging service before carrying out further malicious activity on that host?",
+    "phrasing_b": "Before doing anything else malicious on the host, the attacker disabled its security event logging service. What's the matching technique?",
+    "answer_a": "The technique that describes an attacker disabling a host's security event logging service before carrying out further malicious activity on that host is MITRE ATT&CK Technique T1685.001: Disable or Modify Windows Event Log [MITRE ATT&CK]. This technique can be achieved by various methods as mentioned in the context, such as using commands like `Set-Service -Name EventLog -Status Stopped`, `sc config eventlog start=disabled`, modifying registry keys, or using `auditpol` to disable auditing or clear the audit policy.",
+    "answer_b": "The matching technique is MITRE ATT&CK T1685.001: Disable or Modify Windows Event Log [MITRE ATT&CK T1685.001].",
+    "cited_a": [
+      "T1685.001"
+    ],
+    "cited_b": [
+      "T1685.001"
+    ],
+    "cosine_similarity": 0.8712,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-035",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1486",
+    "phrasing_a": "Summarise the technique: an incident report states the attacker's final action was encrypting files across multiple file servers and dropping a ransom note demanding payment for the decryption key.",
+    "phrasing_b": "The final step of the incident was encrypting files across several file servers and leaving a ransom note demanding payment for decryption. What technique describes this?",
+    "answer_a": "The attacker's final action was an instance of the MITRE ATT&CK Technique T1486: Data Encrypted for Impact. This technique involves encrypting data on target systems to interrupt availability to system and network resources, often for ransomware purposes. In this case, the attacker encrypted files across multiple file servers and dropped a ransom note demanding payment for the decryption key. [MITRE ATT&CK T1486]",
+    "answer_b": "The final step of the incident described can be associated with the MITRE ATT&CK Technique T1486: Data Encrypted for Impact [MITRE ATT&CK T1486]. This technique involves adversaries encrypting data on target systems or large numbers of systems in a network to interrupt availability to system and network resources, often for ransomware purposes.",
+    "cited_a": [
+      "T1486"
+    ],
+    "cited_b": [
+      "T1486"
+    ],
+    "cosine_similarity": 0.9628,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-036",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1070.001",
+    "phrasing_a": "An incident write-up describes the attacker methodically deleting event logs and clearing PowerShell history on every host they touched, right before disconnecting. What technique covers this closing behaviour?",
+    "phrasing_b": "Right before disconnecting, the attacker methodically wiped event logs and cleared PowerShell history on every host they'd touched. What covers this closing move?",
+    "answer_a": "The technique that covers the attacker's closing behavior of deleting event logs and clearing PowerShell history is MITRE ATT&CK Technique T1685.005: Clear Windows Event Logs [MITRE ATT&CK T1685.005] and MITRE ATT&CK Technique T1070.003: Clear Command History [MITRE ATT&CK T1070.003].",
+    "answer_b": "The provided context indicates that the attacker methodically wiped event logs using the utility commands `wevtutil cl system`, `wevtutil cl application`, and `wevtutil cl security` [MITRE ATT&CK T1685.005]. They also cleared PowerShell history by running the PowerShell command `Clear-History` [MITRE ATT&CK T1070.003]. This covers the closing move of the attacker in wiping event logs and clearing PowerShell history on every host they'd touched.",
+    "cited_a": [
+      "T1070.003",
+      "T1685.005"
+    ],
+    "cited_b": [
+      "T1070.003",
+      "T1685.005"
+    ],
+    "cosine_similarity": 0.9091,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-037",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1568.002",
+    "phrasing_a": "The post-incident report notes the compromised host repeatedly resolved the same handful of internal-looking domain names that turned out to be attacker-controlled, used to relay commands to the malware in short bursts.",
+    "phrasing_b": "The compromised host kept resolving the same small set of internal-looking domains, which turned out to be attacker-controlled and used to relay commands in short bursts. Which technique is this?",
+    "answer_a": "The compromised host may be using MITRE ATT&CK Technique T1568: Dynamic Resolution [MITRE ATT&CK T1568] to establish connections with attacker-controlled command and control infrastructure, potentially as a fallback mechanism when primary command and control servers are unreachable. This technique allows the malware to dynamically adjust parameters such as the domain name, IP address, or port number used for command and control, helping it evade common detections and remediations.",
+    "answer_b": "The compromised host's behavior of resolving a small set of internal-looking domains, which are attacker-controlled and used to relay commands in short bursts, aligns with the MITRE ATT&CK Technique T1568: Dynamic Resolution [MITRE ATT&CK T1568]. This technique is used for establishing dynamic connections to command and control infrastructure to evade common detections and remediations.",
+    "cited_a": [
+      "T1568"
+    ],
+    "cited_b": [
+      "T1568"
+    ],
+    "cosine_similarity": 0.9464,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-038",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1656",
+    "phrasing_a": "Summarise the initial-access technique in an incident where the attacker called the IT helpdesk, impersonating an employee, and convinced staff to reset that employee's password over the phone.",
+    "phrasing_b": "The attacker called the helpdesk pretending to be an employee and talked staff into resetting that employee's password over the phone. What's the initial-access technique here?",
+    "answer_a": "The initial-access technique in this incident can be associated with MITRE ATT&CK Technique T1078: Valid Accounts [MITRE ATT&CK T1078]. The attacker impersonated an employee and convinced staff to reset the employee's password over the phone, effectively obtaining valid account credentials through social engineering. This technique allows the attacker to bypass access controls and gain initial access to the network, systems, or services associated with the compromised account.",
+    "answer_b": "The initial-access technique here is MITRE ATT&CK Technique T1078: Valid Accounts [MITRE ATT&CK T1078]. The attacker obtained valid credentials through social engineering, specifically by pretending to be an employee and convincing staff to reset the employee's password over the phone.",
+    "cited_a": [
+      "T1078"
+    ],
+    "cited_b": [
+      "T1078"
+    ],
+    "cosine_similarity": 0.9696,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-039",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1030",
+    "phrasing_a": "The incident report describes attackers compressing an entire database export, splitting it into small chunks, and uploading each chunk slowly over several days to avoid triggering data-volume alerts.",
+    "phrasing_b": "A full database export was compressed, split into small pieces, and trickled out over several days specifically to dodge data-volume alerts. What technique covers that?",
+    "answer_a": "The incident report describes an attack using the MITRE ATT&CK Technique T1485: Data Destruction [MITRE ATT&CK T1485]. The attackers are manipulating data (in this case, a database) to render it irrecoverable by overwriting it with randomly generated data, which is a form of data destruction. However, the provided context does not contain enough information to confirm if the attackers are using the technique to interfere with the availability of systems, services, or network resources, as mentioned in the description of T1485.",
+    "answer_b": "The provided context does not contain enough information to answer this reliably. However, the technique of splitting a file into smaller parts and sending them over time could potentially be associated with the MITRE ATT&CK Technique T1583.003: Data Compression Evasion, which is a method used to evade data-volume thresholds or other detection mechanisms by compressing data and then decompressing it in smaller chunks [MITRE ATT&CK T1583.003]. But this technique is not directly related to file compression or software packing as mentioned in the context.",
+    "cited_a": [
+      "T1485"
+    ],
+    "cited_b": [
+      "T1583.003"
+    ],
+    "cosine_similarity": 0.7942,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-040",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1210",
+    "phrasing_a": "An incident timeline shows the attacker pivoting from a compromised low-privilege workstation to a domain controller by exploiting a known unpatched vulnerability in an internal server that had not been exposed to the internet.",
+    "phrasing_b": "The attacker pivoted from a low-privilege workstation to a domain controller by exploiting an unpatched flaw in an internal-only server. Which technique applies here?",
+    "answer_a": "The attacker likely exploited the local privilege escalation vulnerability CVE-2023-2235 in the Linux Kernel Performance Events system, as it allows for such escalation [MITRE ATT&CK T1546]. The incident timeline suggests that the internal server was not patched past commit fd0815f632c24878e325821943edccc7fde947a2, which is a recommended upgrade to mitigate this vulnerability.",
+    "answer_b": "The attacker's action of pivoting from a low-privilege workstation to a domain controller by exploiting an unpatched flaw can be associated with the MITRE ATT&CK Technique T1077 - \"Credential Access\" [MITRE ATT&CK T1077]. This technique involves the acquisition, dumping, or theft of credentials, which the attacker then uses to gain higher privileges, such as accessing a domain controller. However, the specific sub-technique for pivoting might be T1077.001 - \"Pass-the-Hash/Pass-the-Ticket\" or T1077.002 - \"Mimikatz\" [MITRE ATT&CK T1077.001, MITRE ATT&CK T1077.002], depending on the exact method used to obtain the credentials.",
+    "cited_a": [
+      "CVE-2023-2235",
+      "T1546"
+    ],
+    "cited_b": [
+      "T1077",
+      "T1077.001",
+      "T1077.002"
+    ],
+    "cosine_similarity": 0.7368,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-041",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1195.001",
+    "phrasing_a": "The report notes the attacker used a compromised build server to insert malicious code directly into the organisation's own software before it was compiled and shipped to customers.",
+    "phrasing_b": "Malicious code was inserted directly into the organisation's own software via a compromised build server, before it was even compiled and shipped. What's the matching technique?",
+    "answer_a": "The provided context does not contain enough information to confirm if the attacker used a compromised build server to insert malicious code into the organization's own software. However, the MITRE ATT&CK Technique T1027.004 (Compile After Delivery) suggests that adversaries may deliver files as uncompiled code and compile them later, which could potentially be used in a scenario where a compromised build server is involved. [MITRE ATT&CK T1027.004]",
+    "answer_b": "The matching technique is MITRE ATT&CK Technique T1027.004: Compile After Delivery [MITRE ATT&CK T1027.004]. The attacker delivered the malicious code as uncompiled code, which needed to be compiled before execution, potentially bypassing protections targeting executables/binaries.",
+    "cited_a": [
+      "T1027.004"
+    ],
+    "cited_b": [
+      "T1027.004"
+    ],
+    "cosine_similarity": 0.8891,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-042",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1053.005",
+    "phrasing_a": "Summarise the technique: the attacker was found to have created a hidden scheduled task disguised with a name resembling a legitimate Windows maintenance task, which re-established their access after every reboot for three weeks before detection.",
+    "phrasing_b": "Disguised under a name resembling a routine Windows maintenance job, a hidden scheduled task kept restoring the attacker's access after every reboot for three weeks. What technique is this?",
+    "answer_a": "The attacker utilized the MITRE ATT&CK Technique T1053.005: Scheduled Task, specifically hiding a task (T1564) to maintain persistence. They disguised the hidden scheduled task as a legitimate Windows maintenance task, allowing re-establishment of access after every reboot for a period of three weeks, before detection [CONTEXT].",
+    "answer_b": "The technique used is \"Hide Artifacts (T1564)\" [MITRE ATT&CK]. The hidden scheduled task is disguised as a routine Windows maintenance job and is used for persistence, keeping the attacker's access after every reboot for three weeks.",
+    "cited_a": [
+      "T1053.005",
+      "T1564"
+    ],
+    "cited_b": [
+      "T1564"
+    ],
+    "cosine_similarity": 0.9391,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-043",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1555.003",
+    "phrasing_a": "The incident report states the attacker harvested browser-saved passwords from several employees' machines during the early stages of the compromise, well before any lateral movement occurred.",
+    "phrasing_b": "Early in the compromise, well before any lateral movement, the attacker harvested passwords saved in employees' browsers. Which technique covers this?",
+    "answer_a": "The incident report suggests that the attacker used Browser Session Hijacking (MITRE ATT&CK T1185) to harvest browser-saved passwords from several employees' machines. This technique involves taking advantage of security vulnerabilities and inherent functionality in browser software to intercept information during various browser session hijacking techniques [MITRE ATT&CK T1185]. The attacker may have injected software into a browser that allows them to inherit cookies, HTTP sessions, and SSL client certificates of a user, then use the browser as a way to pivot into an authenticated intranet [MITRE AT&CK T1185]. The affected products in this case are ABB ASPECT - Enterprise v3.08.02, NEXUS Series v3.08.02, and MATRIX Series v3.08.02 [provided context].",
+    "answer_b": "The attacker harvested passwords saved in employees' browsers by exploiting the vulnerability CVE-2024-51989, which is related to the technique T1185: Browser Session Hijacking [MITRE ATT&CK]. This technique allows adversaries to intercept information as part of various browser session hijacking techniques, including injecting software into a browser that allows them to inherit cookies, HTTP sessions, and SSL client certificates of a user. [MITRE ATT&CK T1185]",
+    "cited_a": [
+      "T1185"
+    ],
+    "cited_b": [
+      "CVE-2024-51989",
+      "T1185"
+    ],
+    "cosine_similarity": 0.9351,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-044",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1222.001",
+    "phrasing_a": "Summarise the technique: forensic analysis found the attacker had modified a legitimate scheduled Windows binary's discretionary access control list so that a low-privileged account they controlled could also execute it with SYSTEM privileges.",
+    "phrasing_b": "Forensics found the attacker had altered a legitimate scheduled binary's DACL so a low-privileged account they controlled could run it with SYSTEM rights. What's the matching technique?",
+    "answer_a": "The technique found in the forensic analysis involves the Services File Permissions Weakness (T1574.010) [MITRE ATT&CK T1574.010]. The attacker modified a legitimate scheduled Windows binary's discretionary access control list, allowing a low-privileged account they controlled to execute it with SYSTEM privileges. This technique is part of the stealth and execution tactics, and it can be used for persistence and privilege escalation.",
+    "answer_b": "The matching technique is MITRE ATT&CK Technique T1574.010: Services File Permissions Weakness [MITRE ATT&CK T1574.010]. The attacker altered the DACL (Discretionary Access Control List) of a legitimate scheduled binary to gain higher privileges, specifically SYSTEM rights. This technique allows adversaries to execute their own malicious payloads by hijacking the binaries used by services, and in this case, it was used to bypass normal user-level permissions.",
+    "cited_a": [
+      "T1574.010"
+    ],
+    "cited_b": [
+      "T1574.010"
+    ],
+    "cosine_similarity": 0.8581,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-045",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1528",
+    "phrasing_a": "The write-up describes the attacker registering a malicious OAuth application and tricking a user into granting it broad access to their mailbox and files, without ever needing the user's actual password.",
+    "phrasing_b": "A malicious OAuth application was registered, and a user was tricked into granting it broad mailbox and file access -- no password ever needed. Which technique fits?",
+    "answer_a": "Yes, the write-up describes a scenario that aligns with the MITRE ATT&CK Technique T1550.001: Application Access Token. The attacker registers a malicious OAuth application and tricks a user into granting it broad access to their mailbox and files, bypassing the need for the user's actual password. This technique is used for lateral movement and can potentially grant the adversary access to resources of other sites through the malicious application. [MITRE ATT&CK T1550.001]",
+    "answer_b": "The technique that fits is MITRE ATT&CK Technique T1528: Steal Application Access Token [MITRE ATT&CK T1528]. The malicious OAuth application was registered, and the user was tricked into granting it broad mailbox and file access without needing a password, which is a method of stealing application access tokens.",
+    "cited_a": [
+      "T1550.001"
+    ],
+    "cited_b": [
+      "T1528"
+    ],
+    "cosine_similarity": 0.8968,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-046",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1484.001",
+    "phrasing_a": "Summarise the persistence technique: the attacker modified a Group Policy Object applied to an entire business unit so that their malicious script would run automatically for every user in that unit at next logon.",
+    "phrasing_b": "The attacker modified a Group Policy Object covering an entire business unit so their malicious script would run automatically at every user's next logon. What technique is this?",
+    "answer_a": "The attacker used the MITRE ATT&CK Technique T1037.003: Network Logon Script, specifically modifying a Group Policy Object. This technique allows for a malicious script to run automatically for every user in the affected business unit at their next logon, as Group Policy Objects can be assigned to an entire business unit [MITRE ATT&CK T1037.003].",
+    "answer_b": "The attacker's action can be associated with the MITRE ATT&CK Technique T1053: Scheduled Task/Job [MITRE ATT&CK T1053], as they modified a Group Policy Object (GPO) to automate the creation of a malicious scheduled task that would run at every user's next logon. This technique is often used to execute malicious scripts or programs automatically.",
+    "cited_a": [
+      "T1037.003"
+    ],
+    "cited_b": [
+      "T1053"
+    ],
+    "cosine_similarity": 0.8875,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-047",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1518.001",
+    "phrasing_a": "The incident report notes the attacker's malware queried the host's installed antivirus product and available system memory before deciding whether to proceed, aborting silently on machines with certain endpoint protection installed.",
+    "phrasing_b": "Before proceeding, the malware quietly checked what antivirus product and how much memory the host had, silently aborting on machines with certain endpoint protection. What covers this?",
+    "answer_a": "The attacker's malware may be employing the MITRE ATT&CK Technique T1518/001: Security Software Discovery [MITRE ATT&CK T1518/001], to determine the installed antivirus product on the host. Additionally, the malware might be checking the available system memory to assess the potential impact of its actions, as running on machines with certain endpoint protection installed could lead to its detection and possible termination [silent abort]. [The provided context does not contain enough information to definitively confirm if the malware is also using any other technique to evade detection, such as T1622: Debugger Evasion.]",
+    "answer_b": "The malware's behavior of checking for the presence of Avira antivirus product and aborting on affected machines is covered by the MITRE ATT&CK Technique T1059.001: PowerShell, specifically the part about adversaries using PowerShell to obtain system information and search for VME artifacts such as antivirus products [MITRE ATT&CK T1059].",
+    "cited_a": [
+      "T1518",
+      "T1622"
+    ],
+    "cited_b": [
+      "T1059",
+      "T1059.001"
+    ],
+    "cosine_similarity": 0.8692,
+    "technique_agreement": false,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-048",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1074.001",
+    "phrasing_a": "Summarise the technique: after gaining access, the attacker created a scheduled export of the victim's entire customer database to a staging file every night for a week before the final exfiltration occurred.",
+    "phrasing_b": "Every night for a week, the attacker exported the victim's entire customer database to a staging file, ahead of a single final exfiltration event. Which technique describes the repeated staging step?",
+    "answer_a": "The attacker used the technique of [Scheduled Transfer (T1029)] and [Data Staging (T1074)] in combination. After gaining access, they scheduled an export of the victim's entire customer database to a staging file every night for a week [CVE-2023-34362]. The final exfiltration occurred after this period [Not specified in the context].",
+    "answer_b": "The technique that describes the repeated staging step is MITRE ATT&CK Technique T1074.002: Remote Data Staging [MITRE ATT&CK T1074.002]. This technique involves an adversary staging data collected from multiple systems in a central location or directory on one system prior to Exfiltration. In this case, the attacker is staging the victim's entire customer database every night for a week.",
+    "cited_a": [
+      "CVE-2023-34362",
+      "T1029",
+      "T1074"
+    ],
+    "cited_b": [
+      "T1074.002"
+    ],
+    "cosine_similarity": 0.766,
+    "technique_agreement": true,
+    "both_correct": true
+  },
+  {
+    "id": "PARA-049",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1553.002",
+    "phrasing_a": "The incident report describes the attacker abusing a trusted internal certificate authority to issue themselves a valid code-signing certificate, which they then used to sign their malware so it would bypass application allow-listing.",
+    "phrasing_b": "A trusted internal certificate authority was abused to issue the attacker a valid code-signing certificate, used to get their malware past application allow-listing. What technique is this?",
+    "answer_a": "The incident report describes an instance of the MITRE ATT&CK Technique T1588.003 - Code Signing Certificates [T1588.003]. The attacker abused a trusted internal certificate authority to issue themselves a valid code-signing certificate, which they then used to sign their malware, bypassing application allow-listing.",
+    "answer_b": "The technique used is [Code Signing Certificates Abuse](https://attack.mitre.org/techniques/T1588/003), as per the context provided. This technique involves adversaries buying or stealing code signing certificates that can be used during targeting, and in this case, it was used to get their malware past application allow-listing.",
+    "cited_a": [
+      "T1588.003"
+    ],
+    "cited_b": [
+      "T1588"
+    ],
+    "cosine_similarity": 0.8618,
+    "technique_agreement": true,
+    "both_correct": false
+  },
+  {
+    "id": "PARA-050",
+    "category": "incident_summary",
+    "ground_truth_technique": "T1078.003",
+    "phrasing_a": "Summarise the technique: three months after the original breach was believed contained, investigators found a small, dormant implant on a single low-priority print server that had never been remediated, which the attacker used to regain full access.",
+    "phrasing_b": "Three months after the breach was thought contained, investigators found a small dormant implant on an overlooked print server, which the attacker used to regain full access. What's the matching technique?",
+    "answer_a": "The technique described is an example of persistence [MITRE ATT&CK T1525: Implant Internal Image] and lateral movement [MITRE ATT&CK T1091]. Three months after the original breach, a dormant implant was found on a low-priority print server that had not been remediated. This implant, possibly a web shell [MITRE ATT&CK T1505/003], allowed the attacker to regain full access.",
+    "answer_b": "The matching technique is [Implant Internal Image (T1525)](https://attack.mitre.org/techniques/T1525), as the attacker may have implanted a backdoor such as a Web Shell on the print server by exploiting a compromised AWS instance and using permissions to list the available container images.",
+    "cited_a": [
+      "T1091",
+      "T1505",
+      "T1525"
+    ],
+    "cited_b": [
+      "T1525"
+    ],
+    "cosine_similarity": 0.786,
+    "technique_agreement": true,
+    "both_correct": false
+  }
+]
